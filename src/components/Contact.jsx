@@ -3,10 +3,10 @@ import React from 'react'
 const Contact = () => {
     return (
         <>
-            <div className='dark:bg-[#202124] w-[375px] dark:text-white dark:mt-[-50px] dark:border-t-2 dark:border-2 dark:border-[#5f6368] '>
+            <div className='dark:bg-[#202124] w-[420px] dark:text-white dark:mt-[-50px] dark:border-t-2 dark:border-2 dark:border-[#5f6368] '>
                 <div className='pb-10'>
                     <h1 className='text-7xl font-bold flex items-center justify-center pl-5 mt-10'>Developer Newsletter</h1>
-                    <p className='text-xl font-semibold flex items-center justify-center mt-10 pl-5 '>Get the latest news, techniques and updates straight to your inbox.</p>
+                    <p className='text-xl font-semibold flex items-center justify-center mt-10 pl-2 '>Get the latest news, techniques and updates straight to your inbox.</p>
 
                     <div className='dark:bg-[#353536] pl-4  pb-5 '>
                         <div className="mt-10 grid grid-cols-1 mb-10">
@@ -21,7 +21,7 @@ const Contact = () => {
                                         name="first-name"
                                         type="text"
                                         autoComplete="given-name"
-                                        className="block p-2 w-96 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536]"
+                                        className="block p-2 w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536]"
                                         placeholder='First Name'
                                     />
                                 </div>
@@ -37,7 +37,7 @@ const Contact = () => {
                                         name="last-name"
                                         type="text"
                                         autoComplete="family-name"
-                                        className="block p-2 w-96 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536]"
+                                        className="block p-2 w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536]"
                                         placeholder='Last Name'
 
                                     />
@@ -55,7 +55,7 @@ const Contact = () => {
                                         type="email"
                                         autoComplete="email"
                                         placeholder='Your Email'
-                                        className="block w-96 p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6 dark:bg-[#353536]"
+                                        className="block w-80 p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6 dark:bg-[#353536]"
                                     />
                                 </div>
                             </div >
@@ -73,7 +73,7 @@ const Contact = () => {
                                             name="country"
                                             autoComplete="country-name"
                                             defaultValue='India'
-                                            className="block p-2 w-96 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-black sm:max-w-xs sm:text-sm/6 dark:bg-[#353536] dark:text-white dark:font-bold"
+                                            className="block p-2 w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-black sm:max-w-xs sm:text-sm/6 dark:bg-[#353536] dark:text-white dark:font-bold"
                                         >
                                             <option value="IN: India">India (भारत)</option>
                                             <option value="AF: Afghanistan">Afghanistan (افغانستان)</option>
@@ -382,14 +382,14 @@ const Contact = () => {
                             </fieldset>
                         </div >
 
-                        <div className='pl-[550px] mt-5 mb-10'>
-                            <div className='border-black dark:border-[#3c4043] hover:bg-sky-200 border-2 dark:border-2 border-solid dark:border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 dark:bg-[#3c4043] dark:hover:bg-[#394457]'>
+                        <div className='pl-20 mt-5 mb-10'>
+                            <div className='border-[#8ab4f8] dark:border-[#3c4043] hover:bg-sky-200 border-2 dark:border-2 border-solid dark:border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 dark:bg-[#3c4043] dark:hover:bg-[#394457]'>
                                 <button className='text-[#1a73e8] dark:text-[#8ab4f8]'>Subscribe</button>
                             </div>
                         </div>
-                    </div >
+                    </div>
 
-                </div >
+                </div>
             </div>
         </>
     )

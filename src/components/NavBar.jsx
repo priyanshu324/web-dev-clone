@@ -31,9 +31,9 @@ const NavBar = ({ darkMode, toggleDarkMode }) => {
     ]
     return (
         <>
-            <header className='bg-slate-100 fixed left-0 right-0 top-0 text-black w-[375px] dark:bg-[#202124] '>
-                <nav className='px-5 py-4 flex justify-between items-center'>
-                    <div className='md:hidden flex items-center'>
+            <header className='bg-slate-100 fixed left-0 right-0 top-0 text-black w-[420px] dark:bg-[#202124] z-50'>
+                <nav className='px-5 py-4 flex justify-between items-center mt-5 mb-[20px]'>
+                    <div className='sm:hidden flex items-center'>
                         <button onClick={openModal} className='text-black dark:text-white'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -125,12 +125,12 @@ const NavBar = ({ darkMode, toggleDarkMode }) => {
 
                         {/* Search Bar */}
                         {isSearchOpen && (
-                            <div className="fixed  transform -translate-x-1/2 bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded flex items-center justify-center ">
+                            <div className="fixed transform mt-10 ml-28 -translate-x-1/2 bg-gray-100 dark:bg-gray-800 p-4 shadow-lg rounded flex items-center justify-center ">
                                 {/* Input Field */}
                                 <input
                                     type="text"
                                     placeholder="Search..."
-                                    className="rounded border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring focus:ring-blue-500 text-gray-800 dark:text-white bg-white dark:bg-gray-700"
+                                    className="rounded border p-3 border-gray-300 dark:border-gray-700 focus:outline-none focus:ring focus:ring-blue-500 text-gray-800 dark:text-white bg-white dark:bg-gray-700"
                                 />
 
                                 {/* Close Button */}
@@ -158,7 +158,7 @@ const NavBar = ({ darkMode, toggleDarkMode }) => {
                     </div>
                     {/* Dark Mode Toggle Button */}
                     {!isSearchOpen && (
-                        <div className="mt-4">
+                        <div>
                             <label className="flex cursor-pointer select-none items-center ">
                                 <div className="relative">
                                     <input

@@ -25,7 +25,7 @@ const Card = () => {
     ]
     return (
         <>
-            <div className='bg-[#f5f6f7] w-[375px] grid grid-cols-1 dark:bg-[#202124] dark:text-white mt-[-50px] pb-20'>
+            <div className='bg-[#f5f6f7] w-[420px] grid grid-cols-1 dark:bg-[#202124] dark:text-white mt-[-50px] pb-20'>
                 {
                     cardItems.map(({ id, img, title, description }) => <div className='pl-4 '>
                         <div key={id} className='bg-white border-white border-2 border-solid w-[350px] h-[600px] mt-10 mb-10 rounded-2xl dark:bg-[#202124]'>

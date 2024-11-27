@@ -3,7 +3,7 @@ import React from 'react'
 const Box_4 = () => {
     return (
         <>
-            <div className=' bg-white w-[375px] border-solid border-b-2 dark:bg-[#202124] dark:text-white '>
+            <div className=' bg-white w-[420px] border-solid border-b-2 dark:bg-[#202124] dark:text-white '>
                 <div className='mb-10'>
                     <div className='grid grid-cols-1 '>
                         <h1 className='text-3xl font-bold pl-5 mt-10'>Accessible for all</h1>

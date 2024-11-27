@@ -4,19 +4,19 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6'
 const Footer = () => {
     return (
         <>
-            <div className='border-y-2 border-0 border-solid mb-10 border-[#dadce0] dark:bg-[#202124] '>
+            <div className='border-y-2 border-0 border-solid mb-10 border-[#dadce0] dark:bg-[#202124] w-[420px]'>
                 <nav>
-                    <ul className='grid grid-cols-6 '>
+                    <ul className='grid grid-cols-1 '>
                         <ul>
                             <li>
                                 <h3 className='text-slate-400 text-xl font-bold mt-5 pl-5'>WEB <span className='text-slate-400'>.dev </span></h3>
-                                <div className='mt-7 pl-5 w-[680px] font-bold text-lg dark:text-[#9aa0a6]'>
+                                <div className='mt-7 pl-5 font-bold text-lg dark:text-[#9aa0a6] w-[375px]'>
                                     We want to help you build beautiful, accessible, fast, and secure websites that work cross-browser, and for all of your users. This site is our home for content to help you on that journey, written by members of the Chrome team, and external experts.
                                 </div>
                             </li>
                         </ul>
                         <p></p>
-                        <ul className='pl-96 w-[884px]'>
+                        <ul className=' w-[375px] pl-5'>
                             <div className='px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 '>
                                 <div>
                                     <p className='font-medium tracking-wide text-black dark:text-white'>Contribute</p>
@@ -33,7 +33,7 @@ const Footer = () => {
                         </ul>
 
                         {/* catergoty 2 */}
-                        <ul className='pl-64 w-[884px]'>
+                        <ul className='pl-5 w-[375px]'>
                             <div className='px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 '>
                                 <p className='font-medium tracking-wide text-black dark:text-white'>Related Content</p>
                                 <ul className='mt-2 space-y-2'>
@@ -54,7 +54,7 @@ const Footer = () => {
 
                         </ul>
                         {/* catergoty 3 */}
-                        <ul className='pl-56 w-[884px]'>
+                        <ul className='pl-5 w-[375px]'>
                             <div className='px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 '>
                                 <p className='font-medium tracking-wide text-black dark:text-white'>Follow</p>
                                 <ul className='mt-2 space-y-2'>
@@ -81,16 +81,16 @@ const Footer = () => {
                             <a href="#" className='font-bold text-black pl-2 hover:text-[#1a73e8] hover:underline hover:underline-offset-2 dark:text-white dark:hover:text-[#1a73e8]'>Privacy</a>
                         </div>
 
-                        <p className='text-sm text-gray-900 flex items-center justify-center dark:text-white'>© copyright 2024 | All right reserved.</p>
+                        <p className='text-sm text-gray-900 flex pl-5 dark:text-white mt-5'>© copyright 2024 | All right reserved.</p>
 
-                        <div className=' flex items-center justify-center space-x-4 sm:mt-0'>
+                        <div className=' flex pl-5 mt-5 space-x-4 sm:mt-0'>
                             <a href="/" className=' text-gray-900 transition-all duration-300 hover:text-[#1a73e8] dark:text-white dark:hover:text-[#1a73e8]'><FaTwitter className='h-6 w-6' /></a>
                             <a href="/" className=' text-gray-900 transition-all duration-300 hover:text-[#1a73e8] dark:text-white dark:hover:text-[#1a73e8]'><FaInstagram className='h-6 w-6' /></a>
                             <a href="/" className=' text-gray-900 transition-all duration-300 hover:text-[#1a73e8] dark:text-white dark:hover:text-[#1a73e8]'><FaFacebook className='h-6 w-6' /></a>
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div >
         </>
     )
 }
