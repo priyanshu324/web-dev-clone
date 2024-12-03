@@ -12,10 +12,10 @@ import Contact from '../components/Contact'
 const Home = () => {
     return (
         <>
-            <div className='bg-[#1a73e8] mt-24 w-[420px] h-[72px] flex items-center justify-center pl-1 '>
-                <p className='text-white'>Guidance to build modern web experiences that work on any browser.</p>
+            <div className='bg-[#1a73e8] mt-24 w-[420px] h-[72px] flex items-center justify-center pl-1 sm:w-[640px] md:w-[768px] lg:w-[1045px] lg:mt-36 xl:w-auto'>
+                <p className='text-white sm:text-lg md:text-xl lg:ml-[-270px] xl:ml-[-320px] lg:text-2xl xl:text-3xl '>Guidance to build modern web experiences that work on any browser.</p>
             </div>
-            <div className='w-[420px]'>
+            <div className='w-[420px] sm:w-[640px] xl:w-auto'>
                 <Banner />
                 <Card />
                 <Box />

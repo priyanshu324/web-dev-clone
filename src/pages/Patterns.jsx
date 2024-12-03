@@ -82,20 +82,20 @@ const Patterns = () => {
 
     return (
         <>
-            <div className=' pt-20'>
-                <div className='grid grid-cols-3 pt-16 bg-white dark:bg-[#202124] dark:text-white '>
+            <div className=' pt-20 lg:pt-48'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-white dark:bg-[#202124] dark:text-white '>
                     {
-                        blogs.map((blog) => <div>
-                            <div key={blog.id} className='bg-white dark:bg-[#202124] dark:text-white  border-[#f5f6f7] border-2 border-solid w-[550px] h-[670px] mb-7 rounded-2xl'>
+                        blogs.map((blog) => <div className='pl-5 sm:pl-2 '>
+                            <div key={blog.id} className='bg-[#f5f6f7] border-[#858686] border-2 border-solid w-[375px] h-[550px] sm:w-[300px] md:w-[375px] lg:w-[300px] xl:w-auto rounded-2xl dark:bg-[#202124] dark:text-white mb-7 '>
                                 <div className='rounded-full m-10'>
                                     <a href="#">
                                         <img src={blog.img} alt={blog.id} />
                                     </a>
                                 </div>
                                 <a href="#" className='hover:underline hover:underline-offset-2 '>
-                                    <h3 className=' text-2xl font-extrabold text-black w-[540px] pl-16 flex justify-center items-center dark:text-white'>{blog.title}</h3>
+                                    <h3 className=' text-2xl font-extrabold text-black  dark:text-white pl-2'>{blog.title}</h3>
                                 </a>
-                                <p className='text-lg w-[500px] ml-14 mt-3'>{blog.content}</p>
+                                <p className='text-lg pl-2  mt-3'>{blog.content}</p>
                                 <div className='flex justify-center items-center mt-10'>
                                     <div className='border-[#185abc] text-[#185abc] font-bold border-2 border-solid rounded-3xl flex items-center justify-center w-[250px] h-11 hover:border-black hover:text-black dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white'>
                                         <a href='#'>{blog.button}</a>

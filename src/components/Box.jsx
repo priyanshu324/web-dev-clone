@@ -3,12 +3,12 @@ import React from 'react'
 const Box = () => {
     return (
         <>
-            <div className='bg-white  border-2 mt-8 border-y-2 dark:bg-[#202124] dark:text-white dark:mt-[-10px] dark:border-y-2 dark:border-2 dark:border-[#5f6368]'>
+            <div className='bg-white md:w-[768px] lg:w-[1024px] xl:w-auto border-2 mt-8 border-y-2 dark:bg-[#202124] dark:text-white dark:mt-[-10px] dark:border-y-2 dark:border-2 dark:border-[#5f6368]'>
                 <div className='mt-10 mb-10 '>
                     <h1 className='text-5xl font-bold pl-4'>What's new?</h1>
-                    <div className='grid grid-cols-1'>
-                        <div className='pl-4 mt-5'>
-                            <img src="../src/assets/new-avaiable.png" alt="nre" className='rounded-3xl w-[350px]' />
+                    <div className='grid grid-cols-1 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3'>
+                        <div className='pl-4 mt-5 lg:pl-0'>
+                            <img src="../src/assets/new-avaiable.png" alt="nre" className='rounded-3xl w-[350px] xl:w-auto' />
                             <a href="#" className='hover:underline underline-offset-2'>
                                 <h3 className=' text-3xl mt-4 flex items-center justify-center'>Baseline Newly</h3>
                                 <h3 className=' text-3xl flex items-center justify-center'>available</h3>
@@ -22,7 +22,7 @@ const Box = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='pl-4 mt-5'>
+                        <div className='pl-4 mt-5 lg:pl-2'>
                             <img src="../src/assets/new-to-the-web.jpg" alt="nre" className='rounded-3xl w-[350px]' />
                             <a href="#" className='hover:underline underline-offset-2'>
                                 <h3 className='text-3xl mt-4 flex items-center justify-center'>New to the</h3>
@@ -37,7 +37,7 @@ const Box = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='pl-4 mt-5'>
+                        <div className='pl-4 mt-5 lg:pl-2'>
                             <img src="../src/assets/css-podcast.png" alt="nre" className='rounded-3xl w-[350px]' />
                             <a href="#" className='hover:underline underline-offset-2'>
                                 <h3 className='flex items-center justify-center text-3xl mt-4 '>The CSS Podcast</h3>

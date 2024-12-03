@@ -4,7 +4,7 @@ import Banner_1 from '../components/Banner_1'
 const About = () => {
     return (
         <>
-            <div className='mt-10'>
+            <div className='mt-10 w-[375px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto'>
                 <Banner_1 />
             </div>
         </>

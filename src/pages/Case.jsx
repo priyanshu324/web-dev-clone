@@ -372,49 +372,49 @@ const Case = () => {
 
     return (
         <>
-            <div className='mt-10'>
+            <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
 
-                <div className='grid grid-cols-2 bg-[#f5f6f7]  dark:bg-[#202124] dark:text-white'>
+                <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto sm:grid sm:grid-cols-2 pb-10'>
                     <div>
-                        <a href="#" className='hover:underline underline-offset-2'> <h3 className='text-7xl pl-28 mt-20 w-[800px]' >Case studies</h3></a>
-                        <p className='text-[25px] leading-relaxed pl-28 mt-10 w-[1250px]'>Learn why and how other developers have used the web to create amazing web experiences for their users.</p>
+                        <a href="#" className='hover:underline underline-offset-2'> <h3 className='text-7xl  mt-20 pl-5' >Case studies</h3></a>
+                        <p className='text-2xl leading-relaxed mt-10 pl-5 lg:w-[650px] xl:w-auto '>Learn why and how other developers have used the web to create amazing web experiences for their users.</p>
                     </div>
                     <div className='mb-12'>
                         <figure className='bg-none'>
                             <a href="#">
                                 <picture>
-                                    <img src="../src/assets/case/case-studies-header.png" alt="peroid" className=' max-w-[600px] max-h-[200px]  mt-36 ml-[450px]' />
+                                    <img src="../src/assets/case/case-studies-header.png" alt="peroid" className='max-w-[600px] max-h-[200px] mt-20 pl-0 sm:pl-3 sm:mt-56 md:pl-14 lg:mt-36 lg:pl-36' />
                                 </picture>
                             </a>
                         </figure>
                     </div>
                 </div>
 
-                <div className=''>
-                    <div className='grid grid-cols-3 pt-16  bg-white dark:bg-[#202124] dark:text-white'>
+                <div>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-white dark:bg-[#202124] dark:text-white '>
                         {
-                            blogs.map((blog) => <div>
-                                <div key={blog.id} className=' border-[#f5f6f7] border-2 border-solid w-[550px] h-[670px] mb-7 rounded-2xl'>
+                            blogs.map((blog) => <div className='pl-5 sm:pl-2 '>
+                                <div key={blog.id} className='bg-[#f5f6f7] border-[#858686] border-2 border-solid w-[375px] h-[550px] sm:w-[300px] md:w-[375px] lg:w-[300px] xl:w-auto rounded-2xl dark:bg-[#202124] dark:text-white mb-7 '>
                                     <div className='rounded-full m-10'>
                                         <a href="#">
                                             <img src={blog.img} alt={blog.id} />
                                         </a>
                                     </div>
                                     <a href="#" className='hover:underline hover:underline-offset-2'>
-                                        <h3 className=' text-2xl font-extrabold text-black w-[540px] pl-16 dark:text-white'>{blog.title}</h3>
+                                        <h3 className=' text-2xl font-extrabold text-black  dark:text-white pl-2'>{blog.title}</h3>
                                     </a>
-                                    <p className='text-lg w-[500px] ml-14 mt-3'>{blog.content}</p>
+                                    <p className='text-lg pl-2  mt-3'>{blog.content}</p>
                                     <div className='mb-4 mt-5'>
                                         <div className='flex items-center justify-center gap-11'>
-                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] max-w-[850px]'>{blog.item}</p>
-                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] max-w-[850px]'>{blog.category}</p>
-                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] max-w-[850px]'>{blog.category_1}</p>
-                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] max-w-[850px]'>{blog.category_2}</p>
+                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] '>{blog.item}</p>
+                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] '>{blog.category}</p>
+                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] '>{blog.category_1}</p>
+                                            <p className='bg-[#f5f6f7] dark:bg-[#202124] dark:text-[#9aa0a6] '>{blog.category_2}</p>
                                         </div>
                                     </div>
 
-                                    <div className='border-t-2 border-solid dark:border-[#9aa0a6] border-[#f5f6f7] w-[400px] ml-10'> </div>
-                                    <div className='pl-96 font-bold'>
+                                    <div className='border-t-2 border-solid border-[#f5f6f7] dark:border-[#9aa0a6]'> </div>
+                                    <div className=' font-bold'>
                                         {blog.author}
                                         <br />
                                         {blog.time_stamp}

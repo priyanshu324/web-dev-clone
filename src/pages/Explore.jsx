@@ -146,39 +146,39 @@ const Explore = () => {
     ]
     return (
         <>
-            <div className='mt-20'>
-                <div className='grid grid-cols-2 bg-white pb-10 dark:bg-[#202124] dark:text-white'>
+            <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
+                <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto sm:grid sm:grid-cols-2 pb-10'>
                     <div>
-                        <a href="#" className='hover:underline underline-offset-2'> <h3 className='text-7xl pl-28 mt-20 w-[800px]' >Explore</h3></a>
-                        <p className='text-[25px] leading-relaxed pl-28 mt-10 w-[1250px]'>Explore our structured learning paths to discover everything you need to know about building for the web.</p>
+                        <a href="#" className='hover:underline underline-offset-2'> <h3 className='text-7xl  mt-20 pl-5' >Explore</h3></a>
+                        <p className='text-2xl leading-relaxed mt-10 pl-5 lg:w-[650px] xl:w-auto '>Explore our structured learning paths to discover everything you need to know about building for the web.</p>
                     </div>
                     <div className='mb-12'>
                         <figure className='bg-none'>
                             <a href="#">
                                 <picture>
-                                    <img src="../src/assets/explore/explore-header.png" alt="peroid" className='max-w-[600px] max-h-[200px]  mt-36 ml-[450px]' />
+                                    <img src="../src/assets/explore/explore-header.png" alt="peroid" className=' max-w-[600px] max-h-[200px] mt-20 pl-0 sm:pl-3 sm:mt-56 md:pl-14 lg:mt-36 lg:pl-36' />
                                 </picture>
                             </a>
                         </figure>
                     </div>
                 </div>
 
-                <div className='bg-white pl-28  dark:bg-[#202124] dark:text-white'>
-                    <h3 className='text-2xl font-bold pt-10 ml-10'>Performance</h3>
-                    <div className='bg-white  dark:bg-[#202124] dark:text-white'>
-                        <div className='bg-white grid grid-cols-4   dark:bg-[#202124] dark:text-white'>
+                <div className='bg-white dark:bg-[#202124] dark:text-white'>
+                    <h3 className='text-2xl font-bold pt-10'>Performance</h3>
+                    <div className='mt-10'>
+                        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-white  dark:text-white'>
                             {
-                                docs.map(({ id, title, content, img }) => <div className='ml-10'>
-                                    <div key={id} className='bg-white dark:bg-[#202124] dark:text-white border-[#f5f6f7] border-2 border-solid w-[350px] h-[570px] mt-10 mb-10 rounded-2xl '>
+                                docs.map(({ id, title, content, img }) => <div className='pl-5 sm:pl-2'>
+                                    <div key={id} className='bg-[#f5f6f7] border-[#858686] border-2 border-solid w-[375px] h-[550px] sm:w-[300px] md:w-[375px] lg:w-[300px] xl:w-auto rounded-2xl dark:bg-[#202124] dark:text-white mb-7'>
                                         <div className='rounded-full m-10'>
                                             <a href="#">
                                                 <img src={img} alt={id} />
                                             </a>
                                         </div>
                                         <a href="#">
-                                            <h3 className='mt-10 text-2xl font-extrabold text-black hover:underline hover:underline-offset-2 pl-24 w-[300px] dark:text-white'>{title}</h3>
+                                            <h3 className='text-2xl font-extrabold text-black  dark:text-white pl-2'>{title}</h3>
                                         </a>
-                                        <p className='text-lg w-[280px] ml-14 mt-3'>{content}</p>
+                                        <p className='text-lg  mt-3 pl-2'>{content}</p>
 
                                     </div>
                                 </div>)
@@ -187,22 +187,22 @@ const Explore = () => {
                     </div>
                 </div>
 
-                <div className='bg-[#f5f6f7] pl-28 dark:bg-[#202124] dark:text-white'>
-                    <h3 className='text-2xl font-bold pt-10 ml-10'>Build excellent websites</h3>
+                <div className='bg-[#f5f6f7] mt-10 w-[420px] pb-10 dark:bg-[#202124] dark:text-white sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto'>
+                    <h3 className='text-3xl font-bold flex items-center justify-center mt-10  sm:flex-none sm:items-start sm:justify-start md:pl-5'>Build excellent websites</h3>
                     <div className='bg-[#f5f6f7] mt-10 pb-10 dark:bg-[#202124] dark:text-white'>
-                        <div className='bg-[#f5f6f7] grid grid-cols-3 mt-16 dark:bg-[#202124] dark:text-white'>
+                        <div className='bg-[#f5f6f7] grid grid-cols-1 sm:grid sm:grid-cols-2 mt-16 dark:bg-[#202124] dark:text-white'>
                             {
-                                docs_1.map(({ id, title, content, img }) => <div className='ml-2'>
-                                    <div key={id} className='bg-white dark:bg-[#202124] dark:text-white border-[#f5f6f7] border-2 border-solid w-[350px] h-[500px] mt-10 mb-10 rounded-2xl'>
-                                        <div className='rounded-full m-10'>
+                                docs_1.map(({ id, title, content, img }) => <div className='m-5 sm:m-2'>
+                                    <div key={id} className='bg-white border-[#858686] border-2 border-solid w-[380px] h-[540px]  sm:w-[310px] md:w-[350px] lg:w-[300px] xl:w-auto lg:h-[650px] mt-10 mb-10  rounded-2xl dark:bg-[#202124] dark:text-white'>
+                                        <div className='flex items-center justify-center  rounded-full text-7xl pt-10 m-10'>
                                             <a href="#">
                                                 <img src={img} alt={id} />
                                             </a>
                                         </div>
                                         <a href="#">
-                                            <h3 className='mt-10 text-2xl font-extrabold text-black hover:underline hover:underline-offset-2 pl-24 w-[300px] dark:text-white'>{title}</h3>
+                                            <h3 className='mt-10 text-2xl font-extrabold text-[#1a73e8] hover:underline hover:underline-offset-2 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start lg:flex lg:items-center lg:justify-center'>{title}</h3>
                                         </a>
-                                        <p className='text-lg w-[280px] ml-14 mt-3'>{content}</p>
+                                        <p className='text-lg mt-3'>{content}</p>
 
                                     </div>
                                 </div>)
@@ -211,45 +211,45 @@ const Explore = () => {
                     </div>
                 </div>
 
-                <div className='bg-white  w-full pb-10 dark:bg-[#202124] dark:text-white'>
-                    <div className='grid grid-cols-2'>
-                        <div className='pl-28 pt-10'>
-                            <h3 className='text-2xl font-boldmt-5'>Baseline</h3>
-                            <p className='mt-10 w-[1000px] text-lg'>Baseline brings clarity to information about browser support for web platform features.</p>
+                <div className='bg-white mt-10 w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto pb-10 dark:bg-[#202124] dark:text-white'>
+                    <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white sm:grid sm:grid-cols-2 pb-10'>
+                        <div className=''>
+                            <h3 className='text-7xl  mt-20 pl-5'>Baseline</h3>
+                            <p className='text-2xl leading-relaxed mt-10 pl-5 lg:w-[650px] xl:w-auto'>Baseline brings clarity to information about browser support for web platform features.</p>
                         </div>
                         <div className='mb-12'>
                             <figure className='bg-none'>
                                 <a href="#">
                                     <picture>
-                                        <img src="../src/assets/explore/baseline-wordmark.png" alt="peroid" className='rounded-3xl' />
+                                        <img src="../src/assets/explore/baseline-wordmark.png" alt="peroid" className='max-w-[600px] sm:max-w-[300px] max-h-[200px] mt-20 pl-0 sm:pl-3 sm:mt-32 md:pl-14 lg:mt-36 lg:pl-36' />
                                     </picture>
                                 </a>
                             </figure>
                         </div>
                     </div>
-                    <div className='pl-[450px] mt-[-150px] mb-10'>
-                        <div className='border-[#185abc] text-[#185abc] font-bold border-2 border-solid rounded-3xl flex items-center justify-center w-[250px] h-11'>
+                    <div className=' flex items-center justify-center mt-[-90px]'>
+                        <div className='border-[#1a73e8] cursor-pointer text-[#1a73e8] font-bold hover:text-black border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 hover:border-black  hover:border-2 hover:border-soild dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white'>
                             <a href='#' >Explore</a>
                         </div>
                     </div>
                 </div>
 
-                <div className='bg-[#f5f6f7] pl-28 mt-10 dark:bg-[#202124] dark:text-white'>
-                    <h3 className='text-2xl font-bold pt-10 ml-10'>Build excellent websites</h3>
+                <div className='bg-[#f5f6f7] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto  mt-10 dark:bg-[#202124] dark:text-white'>
+                    <h3 className='text-7xl mt-20 pl-5'>Build excellent websites</h3>
                     <div className='bg-[#f5f6f7] mt-10 pb-10 dark:bg-[#202124] dark:text-white'>
-                        <div className='bg-[#f5f6f7] grid grid-cols-4 mt-16 dark:bg-[#202124] dark:text-white'>
+                        <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white  sm:grid sm:grid-cols-2 pb-10'>
                             {
-                                docs_3.map(({ id, title, content, img }) => <div className='ml-96'>
-                                    <div key={id} className='bg-white dark:bg-[#202124] dark:text-white border-[#f5f6f7] border-2 border-solid w-[350px] h-[400px] mt-10 mb-10 rounded-2xl'>
+                                docs_3.map(({ id, title, content, img }) => <div className='m-5 sm:m-2'>
+                                    <div key={id} className='bg-white border-white border-2 border-solid w-[380px] h-[540px]  sm:w-[310px] md:w-[350px] lg:w-[300px] xl:w-auto lg:h-[650px] mt-10 mb-10  rounded-2xl dark:bg-[#202124] dark:text-white'>
                                         <div className='rounded-full m-10'>
                                             <a href="#">
                                                 <img src={img} alt={id} />
                                             </a>
                                         </div>
                                         <a href="#">
-                                            <h3 className='mt-10 text-2xl font-extrabold text-black hover:underline hover:underline-offset-2 pl-24 w-[300px] dark:text-white'>{title}</h3>
+                                            <h3 className='mt-10 text-2xl font-extrabold text-[#1a73e8] hover:underline hover:underline-offset-2 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start lg:flex lg:items-center lg:justify-center'>{title}</h3>
                                         </a>
-                                        <p className='text-lg w-[280px] ml-14 mt-3'>{content}</p>
+                                        <p className='text-lg mt-3'>{content}</p>
 
                                     </div>
                                 </div>)
@@ -258,15 +258,15 @@ const Explore = () => {
                     </div>
                 </div>
 
-                <div className='bg-white  w-full pb-10 dark:bg-[#202124] dark:text-white'>
-                    <div className='grid grid-cols-2'>
-                        <div className='pl-28 pt-10'>
-                            <h3 className='text-2xl font-bold mt-5 ml-10'>Explorations</h3>
-                            <h3 className='text-2xl font-bold mt-5 ml-10'>Mini apps</h3>
-                            <p className='mt-10 w-[1000px] text-lg ml-10'>A web developer's exploration into mini apps—apps that are built with web technologies, but that don't run in browsers.</p>
+                <div className='bg-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto pb-10 dark:bg-[#202124] dark:text-white'>
+                    <div className='grid grid-cols-1'>
+                        <div className=''>
+                            <h3 className='text-2xl font-bold mt-5 '>Explorations</h3>
+                            <h3 className='text-2xl font-bold mt-5 '>Mini apps</h3>
+                            <p className='pt-7 text-2xl sm:pl-5'>A web developer's exploration into mini apps—apps that are built with web technologies, but that don't run in browsers.</p>
                         </div>
                     </div>
-                    <div className='pl-[450px] mt-10 mb-10'>
+                    <div className=' mt-10 mb-10'>
                         <div className='border-[#185abc] text-[#185abc] font-bold border-2 border-solid rounded-3xl flex items-center justify-center w-[250px] h-11 hover:border-black hover:text-black dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white'>
                             <a href='#'>Explore</a>
                         </div>

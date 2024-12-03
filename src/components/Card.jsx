@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = () => {
+const  Card = () => {
 
     const cardItems = [
         {
@@ -25,15 +25,15 @@ const Card = () => {
     ]
     return (
         <>
-            <div className='bg-[#f5f6f7] w-[420px] grid grid-cols-1 dark:bg-[#202124] dark:text-white mt-[-50px] pb-20'>
+            <div className='bg-[#f5f6f7] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto grid grid-cols-1 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3 dark:bg-[#202124] dark:text-white mt-[-50px] pb-20 '>
                 {
-                    cardItems.map(({ id, img, title, description }) => <div className='pl-4 '>
-                        <div key={id} className='bg-white border-white border-2 border-solid w-[350px] h-[600px] mt-10 mb-10 rounded-2xl dark:bg-[#202124]'>
+                    cardItems.map(({ id, img, title, description }) => <div className='pl-4 sm:pl-0 md:pl-10 lg:pl-4'>
+                        <div key={id} className='bg-white border-white border-2 border-solid w-[350px] h-[600px] sm:w-[300px] sm:h-[450px] xl:w-auto mt-10 mb-10 rounded-2xl dark:bg-[#202124]'>
                             <img src={img} alt={title} className='p-10 rounded-[50px]' />
-                            <h3 className='mt-[-20px] pl-14 text-4xl font-bold'>{title}</h3>
-                            <p className='text-lg w-[355px] pl-10 mt-3'>{description}</p>
-                            <div className='pl-28 mt-5'>
-                                <div className='border-[#1a73e8] border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 hover:border-black  hover:border-2 hover:border-soild dark:hover:border-white dark:hover:border-2 dark:hover:border-solid'>
+                            <h3 className='mt-[-20px] pl-14 text-4xl sm:text-2xl font-bold'>{title}</h3>
+                            <p className='text-lg w-[355px] sm:text-sm sm:w-[280px] xl:w-auto pl-10 mt-3'>{description}</p>
+                            <div className='pl-28 sm:pl-16 mt-5'>
+                                <div className='border-[#1a73e8] border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] xl:w-auto h-11 hover:border-black  hover:border-2 hover:border-soild dark:hover:border-white dark:hover:border-2 dark:hover:border-solid'>
                                     <button className='text-[#1a73e8] font-bold hover:text-black dark:hover:text-white'>Learn More..</button>
                                 </div>
                             </div>
