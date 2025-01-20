@@ -1,54 +1,64 @@
-import React from 'react'
-
+import React from 'react';
+// Contact Component
 const Contact = () => {
+
     return (
         <>
-            <div className='dark:bg-[#202124] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto dark:text-white dark:mt-[-50px] dark:border-t-2 dark:border-2 dark:border-[#5f6368] '>
+            {/* Main container for the contact form */}
+            <div className='dark:bg-[#202124] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1340px] 2xl:w-[1536px]  dark:text-white dark:mt-[-50px] dark:border-t-2 dark:border-2 dark:border-[#5f6368] '>
+                {/* Content container */}
                 <div className='pb-10'>
-                    <h1 className='text-7xl font-bold flex items-center sm:text-6xl justify-center pl-5 mt-10 sm:pl-0'>Developer Newsletter</h1>
-                    <p className='text-xl font-semibold flex items-center justify-center mt-10 pl-2 '>Get the latest news, techniques and updates straight to your inbox.</p>
-
-
+                    {/* Heading for the Newsletter */}
+                    <h1 className='text-7xl font-bold flex items-center sm:text-6xl justify-center pl-5 mt-10 sm:pl-0 2xl:text-7xl'>Developer Newsletter</h1>
+                    {/* Subheading for the newsletter */}
+                    <p className='text-xl font-semibold flex items-center justify-center mt-10 pl-2 2xl:text-xl'>Get the latest news, techniques and updates straight to your inbox.</p>
+                    {/* Container for the form fields */}
                     <div className='dark:bg-[#353536] pl-4  pb-5 '>
+                        {/* Grid container for form layout */}
                         <div className="mt-10 grid grid-cols-1 lg:grid lg:grid-cols-6 lg:gap-6 mb-10">
-                            {/* first name */}
+                            {/* First Name input */}
                             <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm/6 font-medium lg:ml-64 xl:w-auto text-gray-900  dark:text-white ">
+                                {/* Label for first name */}
+                                <label htmlFor="first-name" className="block text-sm/6 font-medium lg:ml-64 text-gray-900  dark:text-white 2xl:text-sm">
                                     First name
                                 </label>
-                                <div className="mt-2 " >
+                                {/* Input field for the first name */}
+                                <div className="mt-2 ">
                                     <input
                                         id="first-name"
                                         name="first-name"
                                         type="text"
                                         autoComplete="given-name"
-                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-64 lg:w-[300px] xl:w-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536]"
+                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-64 lg:w-[300px]  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536] 2xl:text-sm 2xl:w-[300px]"
                                         placeholder='First Name'
                                     />
                                 </div>
-                            </div >
-                            {/* last name  */}
-                            <div div className="sm:col-span-3 " >
-                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-28 xl:w-auto text-gray-900  dark:text-white ">
+                            </div>
+                            {/* Last Name input */}
+                            <div className="sm:col-span-3 ">
+                                {/* Label for the last name */}
+                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-28  text-gray-900  dark:text-white 2xl:text-sm">
                                     Last name
                                 </label>
+                                {/* Input field for the last name */}
                                 <div className="mt-2 ">
                                     <input
                                         id="last-name"
                                         name="last-name"
                                         type="text"
                                         autoComplete="family-name"
-                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-28 lg:w-[300px] xl:w-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536]"
+                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-28 lg:w-[300px]  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536] 2xl:text-sm 2xl:w-[300px]"
                                         placeholder='Last Name'
-
                                     />
                                 </div>
                             </div >
-                            {/* email */}
-                            <div div className="sm:col-span-3" >
-                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-64 xl:w-auto text-gray-900  dark:text-white ">
+                            {/* Email input */}
+                            <div className="sm:col-span-3">
+                                {/* Label for the email */}
+                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-64  text-gray-900  dark:text-white 2xl:text-sm">
                                     Your Email
                                 </label>
+                                {/* Input field for the email */}
                                 <div className="mt-2">
                                     <input
                                         id="email"
@@ -56,29 +66,28 @@ const Contact = () => {
                                         type="email"
                                         autoComplete="email"
                                         placeholder='Your Email'
-                                        className="block w-80 sm:w-[500px] md:w-[700px] lg:w-full lg:ml-64 xl:w-auto p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6 dark:bg-[#353536]"
+                                        className="block w-80 sm:w-[500px] md:w-[700px] lg:w-full lg:ml-64 p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6 dark:bg-[#353536] 2xl:text-sm"
                                     />
                                 </div>
                             </div >
-
-
-
                         </div >
-                        {/* country slection */}
-
+                        {/* Country select */}
                         <div >
                             <div className="sm:col-span-3 ">
-                                <label htmlFor="country" className="block text-sm/6 font-medium lg:ml-64 xl:w-auto text-gray-900  dark:text-white lg:mt-[-30px]">
+                                {/* Label for the country dropdown */}
+                                <label htmlFor="country" className="block text-sm/6 font-medium lg:ml-64  text-gray-900  dark:text-white lg:mt-[-30px] 2xl:text-sm">
                                     Country
                                 </label>
+                                {/* Dropdown select for country */}
                                 <div>
                                     <select
                                         id="country"
                                         name="country"
                                         autoComplete="country-name"
                                         defaultValue='India'
-                                        className="block p-2 w-80 md:w-[700px] lg:ml-64 lg:w-[490px] xl:w-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-black sm:w-[500px] sm:text-sm/6 dark:bg-[#353536] dark:text-white dark:font-bold"
+                                        className="block p-2 w-80 md:w-[700px] lg:ml-64 lg:w-[650px]  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-black sm:w-[500px] sm:text-sm/6 dark:bg-[#353536] dark:text-white dark:font-bold 2xl:text-sm 2xl:w-[700px]"
                                     >
+                                        {/* Country option */}
                                         <option value="IN: India">India (भारत)</option>
                                         <option value="AF: Afghanistan">Afghanistan (افغانستان)</option>
                                         <option value="AX: Åland Islands">Åland Islands (Åland)</option>
@@ -182,7 +191,7 @@ const Contact = () => {
                                         <option value="GW: Guinea-Bissau">Guinea-Bissau (Guiné Bissau)</option>
                                         <option value="GY: Guyana">Guyana</option>
                                         <option value="HT: Haiti">Haiti (Haïti)</option>
-                                        <option value="HM: Heard &amp; McDonald Islands">Heard &amp; McDonald Islands</option>
+                                        <option value="HM: Heard & McDonald Islands">Heard & McDonald Islands</option>
                                         <option value="HN: Honduras">Honduras</option>
                                         <option value="HK: Hong Kong">Hong Kong (香港)</option>
                                         <option value="HU: Hungary">Hungary (Magyarország)</option>
@@ -204,7 +213,7 @@ const Contact = () => {
                                         <option value="XK: Kosovo">Kosovo</option>
                                         <option value="KW: Kuwait">Kuwait (الكويت)</option>
                                         <option value="KG: Kyrgyzstan">Kyrgyzstan (Кыргызстан)</option>
-                                        <option value="LA: Laos">Laos (ลาว)</option>
+                                        <option value="LA: Laos">Laos (ລາວ)</option>
                                         <option value="LV: Latvia">Latvia (Latvija)</option>
                                         <option value="LB: Lebanon">Lebanon (لبنان)</option>
                                         <option value="LS: Lesotho">Lesotho</option>
@@ -290,12 +299,12 @@ const Contact = () => {
                                         <option value="SB: Solomon Islands">Solomon Islands</option>
                                         <option value="SO: Somalia">Somalia (Somali)</option>
                                         <option value="ZA: South Africa">South Africa</option>
-                                        <option value="GS: South Georgia &amp; South Sandwich Islands">South Georgia &amp; South Sandwich Islands</option>
+                                        <option value="GS: South Georgia & South Sandwich Islands">South Georgia & South Sandwich Islands</option>
                                         <option value="KR: South Korea">South Korea (대한민국)</option>
                                         <option value="SS: South Sudan">South Sudan</option>
                                         <option value="ES: Spain">Spain (España)</option>
                                         <option value="LK: Sri Lanka">Sri Lanka (இலங்கை)</option>
-                                        <option value="VC: St. Vincent &amp; Grenadines">St. Vincent &amp; Grenadines</option>
+                                        <option value="VC: St. Vincent & Grenadines">St. Vincent & Grenadines</option>
                                         <option value="SD: Sudan">Sudan (السودان)</option>
                                         <option value="SR: Suriname">Suriname</option>
                                         <option value="SJ: Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
@@ -325,7 +334,7 @@ const Contact = () => {
                                         <option value="UA: Ukraine">Ukraine (Україна)</option>
                                         <option value="AE: United Arab Emirates">United Arab Emirates (الامارات العربية المتحدة)</option>
                                         <option value="GB: United Kingdom">United Kingdom</option>
-                                        <option value="US: United States" selected="">United States</option>
+                                        <option value="US: United States" selected>United States</option>
                                         <option value="UY: Uruguay">Uruguay</option>
                                         <option value="UZ: Uzbekistan">Uzbekistan (Ўзбекистон)</option>
                                         <option value="VU: Vanuatu">Vanuatu</option>
@@ -339,18 +348,20 @@ const Contact = () => {
                                         <option value="ZW: Zimbabwe">Zimbabwe</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div >
                         </div >
+                        {/* Disclaimer */}
                         <div>
-                            <p className='text-lg dark:text-white lg:w-[500px] lg:ml-64 lg:mt-5 xl:w-auto'>
+                            <p className='text-lg dark:text-white lg:w-[500px] lg:ml-64 lg:mt-5 2xl:text-lg 2xl:w-[700px]'>
                                 Don't worry, no spam here! Your information will only be used for web.dev and Chrome related updates and our emails are typically no more than 1-2 times a month. You can unsubscribe anytime.
                             </p>
                         </div>
-
+                        {/* Term and Conditions Checkboxes */}
                         <div className="pl-4">
                             <fieldset>
-                                <div className="mt-6 space-y-6">
-                                    <div className="relative flex gap-x-3 lg:ml-64">
+                                <div className="mt-6 space-y-6 ml-36">
+                                    {/* Add me to the web.dev mailing list checkbox */}
+                                    <div className="relative flex gap-x-3 lg:ml-64 2xl:ml-[100px]">
                                         <div className="flex h-6 items-center">
                                             <input
                                                 id="comments"
@@ -359,13 +370,14 @@ const Contact = () => {
                                                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                                             />
                                         </div>
-                                        <div className="text-sm/6">
+                                        <div className="text-sm/6 2xl:text-sm">
                                             <label htmlFor="comments" className="font-medium text-gray-900 dark:text-white ">
                                                 Add me to the web.dev mailing list.
                                             </label>
                                         </div>
                                     </div>
-                                    <div className="relative flex gap-x-3 lg:ml-64">
+                                    {/* I accept Google's terms and policy checkbox */}
+                                    <div className="relative flex gap-x-3 lg:ml-64 2xl:ml-[100px]">
                                         <div className="flex h-6 items-center">
                                             <input
                                                 id="comments"
@@ -374,7 +386,7 @@ const Contact = () => {
                                                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                                             />
                                         </div>
-                                        <div className="text-sm/6 sm:w-[500px] xl:w-auto">
+                                        <div className="text-sm/6 sm:w-[500px] 2xl:text-sm 2xl:w-[700px]">
                                             <label htmlFor="comments" className="font-medium text-gray-900 dark:text-white ">
                                                 I accept Google's <span className='text-[#1a73e8] hover:underline hover:underline-offset-2 '> Terms and Conditions</span> and acknowledge that my information will be used in accordance with Google's <span className='text-[#1a73e8] hover:underline hover:underline-offset-2'>Privacy Policy</span>.
                                             </label>
@@ -382,19 +394,21 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </fieldset>
-                        </div >
-
-                        <div className='pl-20 mt-5 mb-10 sm:flex sm:items-center sm:justify-center sm:ml-[-130px]'>
-                            <div className='border-[#8ab4f8] dark:border-[#3c4043] hover:bg-sky-200 border-2 dark:border-2 border-solid dark:border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 dark:bg-[#3c4043] dark:hover:bg-[#394457]'>
+                        </div>
+                        {/* Button for subcribe */}
+                        <div className='flex items-center justify-center mt-10'>
+                            {/* Subscribe Button */}
+                            <div className='border-[#8ab4f8] dark:border-[#3c4043] hover:bg-sky-200 border-2 dark:border-2 border-solid dark:border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 dark:bg-[#3c4043] dark:hover:bg-[#394457] 2xl:w-[200px]'>
                                 <button className='text-[#1a73e8] dark:text-[#8ab4f8]'>Subscribe</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Contact
+
+export default Contact;

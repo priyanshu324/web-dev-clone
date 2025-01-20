@@ -1,165 +1,142 @@
-import React from 'react'
-import hero_1 from '../assets/learn/card-1.png';
-import hero_2 from '../assets/learn/card-2.png';
-import hero_3 from '../assets/learn/card-3.png';
-import hero_4 from '../assets/learn/card-4.png';
-import hero_5 from '../assets/learn/card-5.png';
-import hero_6 from '../assets/learn/card-6.png';
-import hero_7 from '../assets/learn/card-7.png';
-import hero_8 from '../assets/learn/card-8.png';
-import hero_9 from '../assets/learn/card-9.png';
-import hero_10 from '../assets/learn/card-10.png';
-import hero_11 from '../assets/learn/card-11.png';
+import React from 'react';
+import useFetch from '../hooks/useFetch';
 
-
-const Learn = () => {
-    const blogs = [
-        {
-            id: 1,
-            title: "Learn HTML",
-            content: "A solid overview of HTML for developers, from novice to expert level HTML.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_1,
-        },
-        {
-            id: 2,
-            title: "Learn CSS",
-            content: "A guide to CSS with modules covering everything from accessibility to z-index.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_2,
-        },
-        {
-            id: 3,
-            title: "Learn JavaScript",
-            content: "An in-depth course on the basics of JavaScript.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_3,
-        },
-        {
-            id: 4,
-            title: "Learn Performance",
-            content: "A course for those new to web performance, a vital aspect of the user experience.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_4,
-        },
-        {
-            id: 5,
-            title: "Learn Privacy",
-            content: "A course to help you build more privacy-preserving websites.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_5,
-        },
-        {
-            id: 6,
-            title: "Learn Accessibility",
-            content: "Discover how to make your websites and web apps more accessible.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_6,
-        },
-        {
-            id: 7,
-            title: "Learn Images",
-            content: "A course covering everything from selecting the right formats, to responsive images, and performance.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_7,
-        },
-        {
-            id: 8,
-            title: "Learn Design",
-            content: "Let's explore all aspects of responsive design, learning how to make sites that look great and work well for everyone.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_8,
-        },
-        {
-            id: 9,
-            title: "Learn Forms",
-            content: "A course about HTML forms to help you improve your web developer expertise.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_9,
-        },
-        {
-            id: 10,
-            title: "Learn PWA",
-            content: "A course that breaks down every aspect of modern progressive web app development.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_10,
-        },
-        {
-            id: 11,
-            title: "Learn Testing",
-            content: "An in-depth course on software testing.",
-            item: "Course",
-            button: "Start Course",
-            img: hero_11,
-        },
-
-
-    ]
-
-
+// lsit 1
+export const List_1 = ({ items }) => {
     return (
         <>
-            <div className='mt-20'>
-                <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-auto sm:grid sm:grid-cols-2 pb-10'>
-                    <div>
-                        <a href="#" className='hover:underline underline-offset-2'> <h3 className='text-6xl  mt-20 pl-5' >Learn web development</h3></a>
-                        <p className='text-2xl leading-relaxed mt-10 pl-5 lg:w-[690px]'>Explore our growing collection of courses on key web design and development subjects. An industry expert has written each course, helped by members of the Chrome team. Follow the modules sequentially, or dip into the topics you most want to learn about.</p>
-                    </div>
-                    <div className=''>
-                        <figure className='bg-none'>
-                            <a href="#">
-                                <picture>
-                                    <img src="../src/assets/learn/learn-header.png" alt="peroid" className=' max-w-[600px] max-h-[200px] mt-20 pl-5 sm:pl-3 sm:mt-56 md:pl-14 lg:mt-36 lg:pl-36' />
-                                </picture>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
-                <div className=''>
+            {
+                items.map((item) => (
+                    <>
+
+                        {/* Main container for the ai page */}
+                        <div className='block bg-[#f5f6f7] dark:bg-[#202124] dark:text-white pb-20 dark:mt-[-20px]  sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-2 mt-32'>
+                            {/* Left section of the banner */}
+                            <div>
+                                {/* Heading of the section */}
+                                <a href="#" className='hover:underline underline-offset-2'>
+                                    <h3 className='text-6xl pl-4 mt-5 w-[800px] xl:text-5xl xl:font-bold 2xl:text-6xl'>
+                                        {item.title}
+                                    </h3>
+                                </a>
+                                {/* Description of the section */}
+                                <p className='text-[25px] w-[350px]  leading-relaxed pl-4 mt-10 lg:w-[600px] xl:w-[750px] 2xl:w-[900px]'>
+                                    {item.content}
+                                </p>
+                            </div>
+                            {/* Right section of the banner */}
+                            <div className='mt-5'>
+                                {/* Image container */}
+                                <figure className='bg-none'>
+                                    <a href="#">
+                                        <picture>
+                                            {/* Image */}
+                                            <img src={item.imglink} alt={item.title} className=' w-[375px] h-[300px] pl-4 sm:w-[300px] sm:h-[200px] sm:mt-52 sm:ml-5 sm:mr-20 md:ml-28 lg:ml-80 xl:mt-10 xl:ml-[300px] xl:w-[50%] xl:h-[50%]  xl:max-w-auto 2xl:ml-[270px] 2xl:mt-10 2xl:w-[60%] 2xl:h-[60%] ' />
+                                        </picture>
+                                    </a>
+                                </figure>
+                            </div>
+
+
+                        </div>
+
+                    </>
+                ))
+            }
+        </>
+    )
+}
+// List_2 Component
+export const List_2 = ({ items }) => {
+    return (
+        // Main container for the list
+        <div>
+            {/* Container for the background color */}
+            <div className='bg-white dark:bg-[#202124] dark:text-white'>
+                {/* Heading for the section (not rendered) */}
+                {/* <h3 className='text-2xl font-bold pt-10'>Performance</h3> */}
+                {/* Container for the list items */}
+                <div className='mt-10'>
+                    {/* Grid container for the items */}
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-white   dark:text-white'>
-                        {
-                            blogs.map((blog) => <div className='pl-5 sm:pl-2 '>
-                                <div key={blog.id} className='bg-[#f5f6f7] border-[#858686] border-2 border-solid w-[375px] h-[550px] sm:w-[300px] md:w-[375px] lg:w-[300px] xl:w-auto rounded-2xl dark:bg-[#202124] dark:text-white mb-7 '>
+                        {/* Mapping through the item from the `items` array */}
+                        {items.map((blog) => (
+                            // Container for each item
+                            <div className='pl-5 sm:pl-2 xl:pl-10' key={blog.key}>
+                                {/* Container for the individual card */}
+                                <div className='bg-[#f5f6f7] border-[#858686] border-2 border-solid w-[375px] h-[550px] sm:w-[300px] md:w-[375px] lg:w-[300px] xl:w-[420px] rounded-2xl dark:bg-[#202124] dark:text-white mb-7 2xl:w-[420px] 2xl:h-[600px]'>
+                                    {/* Image Container */}
                                     <div className='rounded-full m-10'>
+                                        {/* Link to the image */}
                                         <a href="#">
-                                            <img src={blog.img} alt={blog.id} />
+                                            {/* Image of the card */}
+                                            <img src={blog.imglink} alt={blog.id} />
                                         </a>
                                     </div>
+                                    {/* Container for the item name */}
                                     <div className='mb-4 mt-5'>
+                                        {/* The item name */}
                                         <div className='flex items-center justify-center '>
-                                            <p className='font-bold text-2xl dark:text-white'>{blog.item}</p>
+                                            <p className='font-bold text-2xl dark:text-white 2xl:text-2xl'>{blog.item}</p>
                                         </div>
                                     </div>
+                                    {/* Link for the title */}
                                     <a href="#" className='hover:underline hover:underline-offset-2'>
-                                        <h3 className=' text-2xl font-extrabold text-black flex items-center justify-center dark:text-white'>{blog.title}</h3>
+                                        {/* Title of the card */}
+                                        <h3 className='text-2xl font-extrabold text-black flex items-center justify-center dark:text-white 2xl:text-2xl'>{blog.title}</h3>
                                     </a>
-                                    <p className='text-lg pl-5 mt-3'>{blog.content}</p>
-
+                                    {/* Content of the card */}
+                                    <p className='text-lg pl-5 mt-3 2xl:text-lg'>{blog.content}</p>
+                                    {/* Container for the button */}
                                     <div className='flex items-center justify-center mt-5'>
-                                        <div className='border-[#1a73e8] cursor-pointer text-[#1a73e8] font-bold hover:text-black border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 hover:border-black  hover:border-2 hover:border-soild dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white'>
-                                            <a href="#">
+                                        {/* Button */}
+                                        <div className='border-[#1a73e8] cursor-pointer text-[#1a73e8] font-bold hover:text-black border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 hover:border-black  hover:border-2 hover:border-soild dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white 2xl:w-[200px]'>
+                                            {/* Link to the button */}
+                                            <a href={blog.path}>
                                                 {blog.button}
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>)
-                        }
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
 
-export default Learn
+
+// Learn Component
+const Learn = () => {
+    // Fetch data using custom hook
+    const api1 = 'http://localhost:1337/api/learn-banners';
+    const api2 = 'http://localhost:1337/api/learns?populate=*';
+
+    // Fetch data using custom hook
+    const { data: data1, loading: loading1, error: error1 } = useFetch(api1);
+    const { data: data2, loading: loading2, error: error2 } = useFetch(api2);
+    return (
+        <>
+            {/* Main container for the learn page */}
+            <div className=''>
+
+                {/* Data loading and error handling */}
+                {loading1 && <p>Loading...</p>}
+                {error1 && <p className="text-red-500">{error1}</p>}
+                {/* List component to display the courses */}
+                {!loading1 && !error1 && <List_1 items={data1.data || []} />}
+
+                {/* Data loading and error handling */}
+                {loading2 && <p>Loading...</p>}
+                {error2 && <p className="text-red-500">{error2}</p>}
+                {/* List component to display the courses */}
+                {!loading2 && !error2 && <List_2 items={data2.data || []} />}
+
+            </div>
+        </>
+    );
+};
+
+export default Learn;
