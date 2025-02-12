@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_jumps",
+  "info": {
+    "singularName": "accessibility-jump",
+    "pluralName": "accessibility-jumps",
+    "displayName": "accessibility-jump"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

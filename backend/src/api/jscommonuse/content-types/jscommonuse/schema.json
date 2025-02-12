@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jscommonuses",
+  "info": {
+    "singularName": "jscommonuse",
+    "pluralName": "jscommonuses",
+    "displayName": "jscommonuse",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "default": "article",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

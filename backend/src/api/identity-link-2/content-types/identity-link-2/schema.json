@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_link_2s",
+  "info": {
+    "singularName": "identity-link-2",
+    "pluralName": "identity-link-2s",
+    "displayName": "identity-link-2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "link_1": {
+      "type": "text"
+    },
+    "link_2": {
+      "type": "text"
+    }
+  }
+}

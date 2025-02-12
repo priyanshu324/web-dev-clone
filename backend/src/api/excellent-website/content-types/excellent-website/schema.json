@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "excellent_websites",
+  "info": {
+    "singularName": "excellent-website",
+    "pluralName": "excellent-websites",
+    "displayName": "excellentWebsite"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

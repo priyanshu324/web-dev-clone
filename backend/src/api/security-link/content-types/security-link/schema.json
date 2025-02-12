@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_links",
+  "info": {
+    "singularName": "security-link",
+    "pluralName": "security-links",
+    "displayName": "security-link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text"
+    },
+    "link_1": {
+      "type": "text"
+    },
+    "link_2": {
+      "type": "text"
+    },
+    "link_3": {
+      "type": "text"
+    }
+  }
+}

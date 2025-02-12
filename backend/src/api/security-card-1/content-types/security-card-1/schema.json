@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_card_1s",
+  "info": {
+    "singularName": "security-card-1",
+    "pluralName": "security-card-1s",
+    "displayName": "security-card-1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basline_jump_cards",
+  "info": {
+    "singularName": "basline-jump-card",
+    "pluralName": "basline-jump-cards",
+    "displayName": "basline-jump-card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "default": "check",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_box4s",
+  "info": {
+    "singularName": "home-box4",
+    "pluralName": "home-box4s",
+    "displayName": "homeBox4",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

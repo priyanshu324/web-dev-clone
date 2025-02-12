@@ -1,25 +1,25 @@
 import React from 'react';
+
 // Contact Component
 const Contact = () => {
-
     return (
         <>
             {/* Main container for the contact form */}
-            <div className='dark:bg-[#202124] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1340px] 2xl:w-[1536px]  dark:text-white dark:mt-[-50px] dark:border-t-2 dark:border-2 dark:border-[#5f6368] '>
+            <div className='bg-[#F0F4F8] dark:bg-[#121212] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1340px] 2xl:w-[1536px] dark:text-white dark:mt-[-50px] dark:border-t-2 dark:border-2 dark:border-[#78909C] '>
                 {/* Content container */}
                 <div className='pb-10'>
                     {/* Heading for the Newsletter */}
-                    <h1 className='text-7xl font-bold flex items-center sm:text-6xl justify-center pl-5 mt-10 sm:pl-0 2xl:text-7xl'>Developer Newsletter</h1>
+                    <h1 className='text-[#212121] dark:text-[#EEEEEE] text-7xl font-bold flex items-center sm:text-6xl justify-center pl-5 mt-10 sm:pl-0 2xl:text-7xl'>Developer Newsletter</h1>
                     {/* Subheading for the newsletter */}
-                    <p className='text-xl font-semibold flex items-center justify-center mt-10 pl-2 2xl:text-xl'>Get the latest news, techniques and updates straight to your inbox.</p>
+                    <p className='text-[#757575] dark:text-[#BDBDBD] text-xl font-semibold flex items-center justify-center mt-10 pl-2 2xl:text-xl'>Get the latest news, techniques and updates straight to your inbox.</p>
                     {/* Container for the form fields */}
-                    <div className='dark:bg-[#353536] pl-4  pb-5 '>
+                    <div className='bg-[#EEEEEE] dark:bg-[#353536] pl-4  pb-5 '>
                         {/* Grid container for form layout */}
                         <div className="mt-10 grid grid-cols-1 lg:grid lg:grid-cols-6 lg:gap-6 mb-10">
                             {/* First Name input */}
                             <div className="sm:col-span-3">
                                 {/* Label for first name */}
-                                <label htmlFor="first-name" className="block text-sm/6 font-medium lg:ml-64 text-gray-900  dark:text-white 2xl:text-sm">
+                                <label htmlFor="first-name" className="block text-sm/6 font-medium lg:ml-64 text-[#212121] dark:text-[#EEEEEE] 2xl:text-sm">
                                     First name
                                 </label>
                                 {/* Input field for the first name */}
@@ -29,7 +29,7 @@ const Contact = () => {
                                         name="first-name"
                                         type="text"
                                         autoComplete="given-name"
-                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-64 lg:w-[300px]  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536] 2xl:text-sm 2xl:w-[300px]"
+                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-64 lg:w-[300px]  rounded-md border-0 py-1.5 text-[#212121] shadow-sm ring-1 ring-inset ring-[#78909C] placeholder-[#757575] focus:ring-2 focus:ring-inset focus:ring-[#7C4DFF] sm:text-sm/6 bg-white dark:bg-[#353536] dark:placeholder-[#BDBDBD] 2xl:text-sm 2xl:w-[300px]"
                                         placeholder='First Name'
                                     />
                                 </div>
@@ -37,7 +37,7 @@ const Contact = () => {
                             {/* Last Name input */}
                             <div className="sm:col-span-3 ">
                                 {/* Label for the last name */}
-                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-28  text-gray-900  dark:text-white 2xl:text-sm">
+                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-28 text-[#212121] dark:text-[#EEEEEE] 2xl:text-sm">
                                     Last name
                                 </label>
                                 {/* Input field for the last name */}
@@ -47,7 +47,7 @@ const Contact = () => {
                                         name="last-name"
                                         type="text"
                                         autoComplete="family-name"
-                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-28 lg:w-[300px]  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm/6 dark:bg-[#353536] 2xl:text-sm 2xl:w-[300px]"
+                                        className="block p-2 w-80 sm:w-[500px] md:w-[700px] lg:ml-28 lg:w-[300px]  rounded-md border-0 py-1.5 text-[#212121] shadow-sm ring-1 ring-inset ring-[#78909C] placeholder-[#757575] focus:ring-2 focus:ring-inset focus:ring-[#7C4DFF] sm:text-sm/6 bg-white dark:bg-[#353536] dark:placeholder-[#BDBDBD] 2xl:text-sm 2xl:w-[300px]"
                                         placeholder='Last Name'
                                     />
                                 </div>
@@ -55,7 +55,7 @@ const Contact = () => {
                             {/* Email input */}
                             <div className="sm:col-span-3">
                                 {/* Label for the email */}
-                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-64  text-gray-900  dark:text-white 2xl:text-sm">
+                                <label htmlFor="last-name" className="block text-sm/6 font-medium lg:ml-64  text-[#212121] dark:text-[#EEEEEE] 2xl:text-sm">
                                     Your Email
                                 </label>
                                 {/* Input field for the email */}
@@ -66,7 +66,7 @@ const Contact = () => {
                                         type="email"
                                         autoComplete="email"
                                         placeholder='Your Email'
-                                        className="block w-80 sm:w-[500px] md:w-[700px] lg:w-full lg:ml-64 p-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6 dark:bg-[#353536] 2xl:text-sm"
+                                        className="block w-80 sm:w-[500px] md:w-[700px] lg:w-full lg:ml-64 p-2 rounded-md border-0 py-1.5 text-[#212121] shadow-sm ring-1 ring-inset ring-[#78909C] placeholder-[#757575] focus:ring-2 focus:ring-inset focus:ring-[#7C4DFF] sm:text-sm/6 bg-white dark:bg-[#353536] dark:placeholder-[#BDBDBD] 2xl:text-sm"
                                     />
                                 </div>
                             </div >
@@ -75,17 +75,17 @@ const Contact = () => {
                         <div >
                             <div className="sm:col-span-3 ">
                                 {/* Label for the country dropdown */}
-                                <label htmlFor="country" className="block text-sm/6 font-medium lg:ml-64  text-gray-900  dark:text-white lg:mt-[-30px] 2xl:text-sm">
+                                <label htmlFor="country" className="block text-sm/6 font-medium lg:ml-64  text-[#212121] dark:text-[#EEEEEE] lg:mt-[-30px] 2xl:text-sm">
                                     Country
                                 </label>
                                 {/* Dropdown select for country */}
-                                <div>
+                                <div className='mt-2'>
                                     <select
                                         id="country"
                                         name="country"
                                         autoComplete="country-name"
                                         defaultValue='India'
-                                        className="block p-2 w-80 md:w-[700px] lg:ml-64 lg:w-[650px]  rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-black sm:w-[500px] sm:text-sm/6 dark:bg-[#353536] dark:text-white dark:font-bold 2xl:text-sm 2xl:w-[700px]"
+                                        className="block p-2 w-80 md:w-[700px] lg:ml-64 lg:w-[650px]  rounded-md border-0 py-1.5 text-[#212121] shadow-sm ring-1 ring-inset ring-[#78909C] focus:ring-2 focus:ring-inset focus:ring-[#7C4DFF] sm:w-[500px] sm:text-sm/6 bg-white dark:bg-[#353536] dark:text-[#EEEEEE] dark:font-bold 2xl:text-sm 2xl:w-[700px]"
                                     >
                                         {/* Country option */}
                                         <option value="IN: India">India (भारत)</option>
@@ -352,7 +352,7 @@ const Contact = () => {
                         </div >
                         {/* Disclaimer */}
                         <div>
-                            <p className='text-lg dark:text-white lg:w-[500px] lg:ml-64 lg:mt-5 2xl:text-lg 2xl:w-[700px]'>
+                            <p className='text-[#757575] dark:text-[#BDBDBD] text-lg  lg:w-[500px] lg:ml-64 lg:mt-5 2xl:text-lg 2xl:w-[700px]'>
                                 Don't worry, no spam here! Your information will only be used for web.dev and Chrome related updates and our emails are typically no more than 1-2 times a month. You can unsubscribe anytime.
                             </p>
                         </div>
@@ -371,7 +371,7 @@ const Contact = () => {
                                             />
                                         </div>
                                         <div className="text-sm/6 2xl:text-sm">
-                                            <label htmlFor="comments" className="font-medium text-gray-900 dark:text-white ">
+                                            <label htmlFor="comments" className="font-medium text-[#212121] dark:text-[#EEEEEE] ">
                                                 Add me to the web.dev mailing list.
                                             </label>
                                         </div>
@@ -387,8 +387,8 @@ const Contact = () => {
                                             />
                                         </div>
                                         <div className="text-sm/6 sm:w-[500px] 2xl:text-sm 2xl:w-[700px]">
-                                            <label htmlFor="comments" className="font-medium text-gray-900 dark:text-white ">
-                                                I accept Google's <span className='text-[#1a73e8] hover:underline hover:underline-offset-2 '> Terms and Conditions</span> and acknowledge that my information will be used in accordance with Google's <span className='text-[#1a73e8] hover:underline hover:underline-offset-2'>Privacy Policy</span>.
+                                            <label htmlFor="comments" className="font-medium text-[#212121] dark:text-[#EEEEEE] ">
+                                                I accept Google's <span className='text-[#00796B] dark:text-[#00BCD4] hover:underline hover:underline-offset-2 '> Terms and Conditions</span> and acknowledge that my information will be used in accordance with Google's <span className='text-[#00796B] dark:text-[#00BCD4] hover:underline hover:underline-offset-2'>Privacy Policy</span>.
                                             </label>
                                         </div>
                                     </div>
@@ -398,17 +398,15 @@ const Contact = () => {
                         {/* Button for subcribe */}
                         <div className='flex items-center justify-center mt-10'>
                             {/* Subscribe Button */}
-                            <div className='border-[#8ab4f8] dark:border-[#3c4043] hover:bg-sky-200 border-2 dark:border-2 border-solid dark:border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 dark:bg-[#3c4043] dark:hover:bg-[#394457] 2xl:w-[200px]'>
-                                <button className='text-[#1a73e8] dark:text-[#8ab4f8]'>Subscribe</button>
+                            <div className='border-[#42A5F5] hover:border-[#8BC34A] border-2 dark:border-[#78909C] border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 hover:bg-[#8BC34A] dark:bg-[#353536] dark:hover:bg-[#121212] transition-colors duration-200 2xl:w-[200px]'>
+                                <button className='text-[#42A5F5]  dark:text-[#EEEEEE] font-bold'>Subscribe</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </>
     );
 };
-
 
 export default Contact;

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "html_courses",
+  "info": {
+    "singularName": "html-course",
+    "pluralName": "html-courses",
+    "displayName": "htmlCourse",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": false
+    }
+  }
+}

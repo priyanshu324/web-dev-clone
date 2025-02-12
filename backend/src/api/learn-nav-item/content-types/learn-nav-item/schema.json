@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_nav_items",
+  "info": {
+    "singularName": "learn-nav-item",
+    "pluralName": "learn-nav-items",
+    "displayName": "learn-nav-item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "data": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

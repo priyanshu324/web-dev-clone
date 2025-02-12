@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "html_performances",
+  "info": {
+    "singularName": "html-performance",
+    "pluralName": "html-performances",
+    "displayName": "htmlPerformance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn More"
+    },
+    "icons": {
+      "type": "text",
+      "default": "article",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

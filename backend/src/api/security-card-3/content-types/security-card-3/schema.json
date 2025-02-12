@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_card_3s",
+  "info": {
+    "singularName": "security-card-3",
+    "pluralName": "security-card-3s",
+    "displayName": "security-card-3",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Read case study",
+      "required": true
+    }
+  }
+}

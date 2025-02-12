@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_cards",
+  "info": {
+    "singularName": "home-card",
+    "pluralName": "home-cards",
+    "displayName": "homeCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn More"
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

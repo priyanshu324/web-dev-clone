@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_new_to_html_forms",
+  "info": {
+    "singularName": "identity-new-to-html-form",
+    "pluralName": "identity-new-to-html-forms",
+    "displayName": "identity-new-to-htmlForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn Forms",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "build_excellents",
+  "info": {
+    "singularName": "build-excellent",
+    "pluralName": "build-excellents",
+    "displayName": "buildExcellent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progressive_overviews",
+  "info": {
+    "singularName": "progressive-overview",
+    "pluralName": "progressive-overviews",
+    "displayName": "progressive-overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

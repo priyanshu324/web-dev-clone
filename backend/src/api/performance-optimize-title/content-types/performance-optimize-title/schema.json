@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_optimize_titles",
+  "info": {
+    "singularName": "performance-optimize-title",
+    "pluralName": "performance-optimize-titles",
+    "displayName": "performance-optimize-title"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

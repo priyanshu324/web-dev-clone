@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "css_jupms",
+  "info": {
+    "singularName": "css-jupm",
+    "pluralName": "css-jupms",
+    "displayName": "cssJupm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

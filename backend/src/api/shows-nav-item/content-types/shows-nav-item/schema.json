@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shows_nav_items",
+  "info": {
+    "singularName": "shows-nav-item",
+    "pluralName": "shows-nav-items",
+    "displayName": "shows-nav-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "data": {
+      "type": "text"
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

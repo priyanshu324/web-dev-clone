@@ -38,7 +38,6 @@ import Shows from './components/Shows.jsx';
 import Newsletter from './components/Newsletter.jsx';
 import Css from './components/learn/Css.jsx';
 import Javascript from './components/learn/Javascript.jsx';
-import Pwa from './components/learn/Pwa.jsx';
 import Testing from './components/learn/Testing.jsx';
 import Forms from './components/learn/Forms.jsx';
 import Design from './components/learn/Design.jsx';
@@ -48,6 +47,10 @@ import Privacy from './components/learn/Privacy.jsx';
 import Performance_1 from './components/learn/Performance.jsx';
 import Accessibility_1 from './components/learn/Accessibility.jsx';
 import Raw_html from './components/learn/Raw_html.jsx';
+import PWA from './components/learn/Pwa.jsx';
+import Article_1 from './components/learn_article/html/Article_1.jsx';
+import SinglePost from './components/learn_article/html/SinglePosts.jsx';
+
 
 // Defining the application's routing configuration
 const router = createBrowserRouter([
@@ -57,147 +60,196 @@ const router = createBrowserRouter([
     children: [
       // Nested routes for different pages within the app
       {
+        id: 1,
         path: '/',
         element: <Home />, // Home page
       },
       {
+        id: 2,
         path: '/about',
         element: <About />, // About page
       },
       {
+        id: 3,
         path: '/blogs',
         element: <Blog />, // Blog page
       },
       {
+        id: 4,
         path: '/learn',
         element: <Learn />, // Learn page
       },
       {
+        id: 5,
         path: '/explore',
         element: <Explore />, // Explore page
       },
       {
+        id: 6,
         path: '/patterns',
         element: <Patterns />, // Patterns page
       },
       {
+        id: 7,
         path: '/case',
         element: <Case />, // Case page
       },
       {
+        id: 8,
         path: '/courses/html',
         element: <FirstCourses />, // HTML course page
       },
       {
+        id: 9,
         path: '/courses/css',
         element: <SecondCourses />, // CSS course page
       },
       {
+        id: 10,
         path: '/courses/javascript',
         element: <ThirdCourses />, // JavaScript course page
       },
       {
+        id: 11,
         path: '/Signup',
         element: <Sign />, // Signup page
       },
       {
+        id: 12,
         path: '/courses',
         element: <Courses />, // Courses page
       },
       {
+        id: 13,
         path: '/ai',
         element: <Ai1 />, // Ai1 page
       },
       {
+        id: 14,
         path: '/security',
         element: <Security_1 />,  // securtiy page
       },
       {
+        id: 15,
         path: '/inp',
         element: <Inp />,  // inp page
       },
       {
+        id: 16,
         path: '/performance',
         element: <Performance />,  //performance page
       },
       {
+        id: 17,
         path: '/progressive-web-apps',
         element: <Progressive />,  //Progressive page
       },
 
       {
+        id: 18,
         path: '/accessibility',
         element: <Accessibility />,  //Accessibility page
       },
 
       {
+        id: 19,
         path: '/identity',
         element: <Identity />,  //Identity page
       },
       {
+        id: 20,
         path: '/basline',
         element: <Basline />,  //basline page
       },
       {
+        id: 21,
         path: '/shows',
         element: <Shows />,  //shows page
       },
       {
+        id: 22,
         path: '/develpoer-newsletter',
         element: <Newsletter />,  //newsletter page
       },
       {
-        path: '/learn/html',
+        id: 23,
+        path: '/learn/html-1',
         element: <Raw_html />,  //learn html  page
       },
       {
+        id: 24,
         path: '/learn/css',
         element: <Css />,  //learn css page
       },
       {
+        id: 25,
         path: '/learn/javascript',
         element: <Javascript />,  //learn javascript page
       },
       {
+        id: 26,
         path: '/learn/performance',
         element: <Performance_1 />,  //learn performance page
       },
       {
+        id: 27,
         path: '/learn/accessibility',
         element: <Accessibility_1 />,  //learn accessibility page
       },
       {
+        id: 28,
         path: '/learn/privacy',
         element: <Privacy />,  //learn privacy page
       },
       {
+        id: 29,
         path: '/learn/images',
         element: <Images />,  //learn Images page
       },
       {
+        id: 30,
         path: '/learn/forms',
         element: <Forms />,  //learn Forms page
       },
 
       {
+        id: 31,
         path: '/learn/pwa',
-        element: <Pwa />,  //learn pwa page
+        element: <PWA />,  //learn pwa page
       },
 
       {
+        id: 32,
         path: '/learn/design',
         element: <Design />,  //learn Design page
       },
 
       {
+        id: 33,
         path: '/learn/Testing',
         element: <Testing />,  //learn Testing page
       },
 
       {
+        id: 34,
         path: '/learn/deployment',
         element: <Deployment />,  //learn Deployment page
       },
+      {
+        id: 35,
+        path: '/learn/more-courses',
+        element: <Learn />,  //learn page
+      },
+      {
+        id: 36,
+        path: "/blog/article-1",
+        element: <Article_1 />
+      },
+      {
+        id: 37,
+        path: "/post/:id",
+        element: <SinglePost />
+      }
 
 
     ],

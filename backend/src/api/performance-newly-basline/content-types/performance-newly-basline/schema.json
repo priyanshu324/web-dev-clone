@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_newly_baslines",
+  "info": {
+    "singularName": "performance-newly-basline",
+    "pluralName": "performance-newly-baslines",
+    "displayName": "performance-newly-basline",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    },
+    "icons": {
+      "type": "text",
+      "default": "check"
+    }
+  }
+}

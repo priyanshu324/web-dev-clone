@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_title_1s",
+  "info": {
+    "singularName": "security-title-1",
+    "pluralName": "security-title-1s",
+    "displayName": "security-title-1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

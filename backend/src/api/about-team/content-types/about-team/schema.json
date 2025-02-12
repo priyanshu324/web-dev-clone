@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_teams",
+  "info": {
+    "singularName": "about-team",
+    "pluralName": "about-teams",
+    "displayName": "aboutTeam"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_card_4s",
+  "info": {
+    "singularName": "accessibility-card-4",
+    "pluralName": "accessibility-card-4s",
+    "displayName": "accessibility-card-4"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Watch on YouTube"
+    },
+    "videoLink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

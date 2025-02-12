@@ -9,28 +9,29 @@ import Box_4 from '../components/box/Box_4';
 import Box_5 from '../components/box/Box_5';
 import Contact from '../components/Contact';
 
+
 // Define the Home component
 const Home = () => {
     return (
         <>
             {/* Container for the Guidance Text */}
-            <div className='bg-[#1a73e8] mt-24 w-[420px] h-[72px] flex items-center justify-center pl-1 
-                             sm:w-[640px] 
-                             md:w-[768px] 
-                             lg:w-[1045px] lg:mt-36 
-                             xl:w-[1340px] 
-                             2xl:w-[1536px] 2xl:mt-40 2xl:justify-items-end '>
+            <div className='bg-[#001F3F] dark:bg-[#1a73e8] mt-36 dark:mt-32 w-[420px] h-[72px] flex items-center justify-center pl-1
+                             sm:w-[640px]
+                             md:w-[768px]
+                             lg:w-[1045px] 
+                             xl:w-[1340px]
+                             2xl:w-[1536px]  2xl:justify-items-end '>
                 {/* Guidance Text */}
-                <p className='text-white sm:text-lg md:text-xl 
-                                lg:ml-[-270px] lg:text-2xl 
-                                xl:ml-[-400px] xl:text-3xl 
+                <p className='text-[#EEEEEE] dark:text-[#FFFFFF] sm:text-lg md:text-xl
+                                lg:ml-[-270px] lg:text-2xl
+                                xl:ml-[-400px] xl:text-3xl
                                 2xl:text-2xl 2xl:justify-items-end'>
                     Guidance to build modern web experiences that work on any browser.
                 </p>
             </div>
 
             {/* Container for All Main Content */}
-            <div className='w-[420px] sm:w-[640px] xl:w-[1340px] 2xl:w-[1536px] 2xl:justify-items-start '>
+            <div className='w-[420px] sm:w-[640px] xl:w-[1340px] 2xl:w-[1536px] 2xl:justify-items-start'>
                 {/* Render the Banner Component */}
                 <Banner />
                 {/* Render the Card Component */}

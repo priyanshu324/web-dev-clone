@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_core_webs",
+  "info": {
+    "singularName": "performance-core-web",
+    "pluralName": "performance-core-webs",
+    "displayName": "performance-core-web",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn More"
+    },
+    "icons": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

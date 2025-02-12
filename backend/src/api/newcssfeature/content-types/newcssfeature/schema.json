@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newcssfeatures",
+  "info": {
+    "singularName": "newcssfeature",
+    "pluralName": "newcssfeatures",
+    "displayName": "newcssfeature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "check"
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_css_items",
+  "info": {
+    "singularName": "learn-css-item",
+    "pluralName": "learn-css-items",
+    "displayName": "learn-css-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "iframeSrc": {
+      "type": "text",
+      "default": "https://suniltechie.com/blog/alpha-web-development-standards-2025/",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Read Article",
+      "required": true
+    },
+    "articleLink": {
+      "type": "text"
+    }
+  }
+}

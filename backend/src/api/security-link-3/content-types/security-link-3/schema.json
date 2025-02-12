@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_link_3s",
+  "info": {
+    "singularName": "security-link-3",
+    "pluralName": "security-link-3s",
+    "displayName": "security-link-3"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text"
+    },
+    "link_1": {
+      "type": "text"
+    },
+    "link_2": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,323 @@
+
+---Downloaded files---
+The import files for: Demo Import were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/blog
+Data file = E:\xampp\htdocs\blog/wp-content/uploads/2025/02/demo-content-import-file_2025-02-04__16-15-32.xml
+Widget file = E:\xampp\htdocs\blog/wp-content/uploads/2025/02/demo-widgets-import-file_2025-02-04__16-15-32.json
+Customizer file = not defined!
+Redux files:
+edumel -> E:\xampp\htdocs\blog/wp-content/uploads/2025/02/demo-redux-import-file_0-2025-02-04__16-15-32.json 
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "woocommerce-placeholder" (Media)
+[ERROR] Failed to import "1_0001_19" (Media)
+[ERROR] Failed to import "1_0002_18" (Media)
+[ERROR] Failed to import "1_0019_1" (Media)
+[ERROR] Failed to import "1_0014_6" (Media)
+[ERROR] Failed to import "edumax-home-1" (Media)
+[ERROR] Failed to import "avatar1" (Media)
+[ERROR] Failed to import "avatar2" (Media)
+[ERROR] Failed to import "avatar3" (Media)
+[ERROR] Failed to import "avatar4" (Media)
+[ERROR] Failed to import "brand2" (Media)
+[ERROR] Failed to import "brand3" (Media)
+[ERROR] Failed to import "brand4" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "brand5" (Media)
+[ERROR] Failed to import "cta" (Media)
+[ERROR] Failed to import "icon1" (Media)
+[ERROR] Failed to import "icon2" (Media)
+[ERROR] Failed to import "header-image" (Media)
+[ERROR] Failed to import "1_0000_i0864" (Media)
+[ERROR] Failed to import "1_0001_i1049" (Media)
+[ERROR] Failed to import "gallery2" (Media)
+[ERROR] Failed to import "1_0002_i0863" (Media)
+[ERROR] Failed to import "cta2" (Media)
+[ERROR] Failed to import "teaching-bg" (Media)
+[ERROR] Failed to import "about" (Media)
+[ERROR] Failed to import "gallery1" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "gallery3" (Media)
+[ERROR] Failed to import "gallery4" (Media)
+[ERROR] Failed to import "gallery5" (Media)
+[ERROR] Failed to import "gallery6" (Media)
+[ERROR] Failed to import "team1" (Media)
+[ERROR] Failed to import "team2" (Media)
+[ERROR] Failed to import "team3" (Media)
+[ERROR] Failed to import "team4" (Media)
+[ERROR] Failed to import "team5" (Media)
+[ERROR] Failed to import "team6" (Media)
+[ERROR] Failed to import "team7" (Media)
+[ERROR] Failed to import "team8" (Media)
+[ERROR] Failed to import "1_0000_20" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "1_0001_19" (Media)
+[ERROR] Failed to import "1_0002_18" (Media)
+[ERROR] Failed to import "1_0003_17" (Media)
+[ERROR] Failed to import "1_0004_16" (Media)
+[ERROR] Failed to import "1_0005_15" (Media)
+[ERROR] Failed to import "1_0006_14" (Media)
+[ERROR] Failed to import "1_0007_13" (Media)
+[ERROR] Failed to import "1_0008_12" (Media)
+[ERROR] Failed to import "1_0009_11" (Media)
+[ERROR] Failed to import "1_0010_10" (Media)
+[ERROR] Failed to import "1_0011_9" (Media)
+[ERROR] Failed to import "1_0012_8" (Media)
+[ERROR] Failed to import "1_0013_7" (Media)
+[ERROR] Failed to import "1_0014_6" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "1_0015_5" (Media)
+[ERROR] Failed to import "1_0016_4" (Media)
+[ERROR] Failed to import "1_0017_3" (Media)
+[ERROR] Failed to import "1_0018_2" (Media)
+[ERROR] Failed to import "1_0019_1" (Media)
+[ERROR] Failed to import "logo-white" (Media)
+[ERROR] Failed to import "business" (Media)
+[ERROR] Failed to import "design" (Media)
+[ERROR] Failed to import "development" (Media)
+[ERROR] Failed to import "health" (Media)
+[ERROR] Failed to import "photo" (Media)
+[ERROR] Failed to import "math" (Media)
+[ERROR] Failed to import "edumax-logo" (Media)
+[ERROR] Failed to import "edumax-logo-white" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "finance" (Media)
+[ERROR] Failed to import "cat3" (Media)
+[ERROR] Failed to import "sales" (Media)
+[ERROR] Failed to import "animation" (Media)
+[ERROR] Failed to import "graphics" (Media)
+[ERROR] Failed to import "uiux" (Media)
+[ERROR] Failed to import "js" (Media)
+[ERROR] Failed to import "edumax-home-1" (Media)
+[ERROR] Failed to import "course1" (Media)
+[ERROR] Failed to import "course3" (Media)
+[ERROR] Failed to import "course1" (Media)
+[ERROR] Failed to import "course4" (Media)
+[ERROR] Failed to import "course5" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "woocommerce-placeholder" (Media)
+[ERROR] Failed to import "course6" (Media)
+[ERROR] Failed to import "course7" (Media)
+[ERROR] Failed to import "course8" (Media)
+[ERROR] Failed to import "course9" (Media)
+[ERROR] Failed to import "course10" (Media)
+[ERROR] Failed to import "course11" (Media)
+[ERROR] Failed to import "cta" (Media)
+[ERROR] Failed to import "health" (Media)
+[ERROR] Failed to import "photo" (Media)
+[ERROR] Failed to import "business" (Media)
+[ERROR] Failed to import "design" (Media)
+[ERROR] Failed to import "development" (Media)
+[ERROR] Failed to import "brand2" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "brand5" (Media)
+[ERROR] Failed to import "brand3" (Media)
+[ERROR] Failed to import "brand4" (Media)
+[ERROR] Failed to import "math" (Media)
+[ERROR] Failed to import "client1" (Media)
+[ERROR] Failed to import "client2" (Media)
+[ERROR] Failed to import "woocommerce-placeholder" (Media)
+[ERROR] Failed to import "banner_img" (Media)
+[ERROR] Failed to import "cta-bg" (Media)
+[ERROR] Failed to import "img_9" (Media)
+[ERROR] Failed to import "banner-image-03" (Media)
+[ERROR] Failed to import "banner-3" (Media)
+[ERROR] Failed to import "hero_area_image" (Media)
+[ERROR] Failed to import "illustration" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[ERROR] Failed to import "testimonial-avata-01" (Media)
+[ERROR] Failed to import "testimonial-avata-02" (Media)
+[ERROR] Failed to import "testimonial-avata-03" (Media)
+[ERROR] Failed to import "testimonial-avata-04" (Media)
+[ERROR] Failed to import "img_01" (Media)
+[ERROR] Failed to import "img_02" (Media)
+[ERROR] Failed to import "img_03" (Media)
+[ERROR] Failed to import "img_04" (Media)
+[ERROR] Failed to import "img_05" (Media)
+[ERROR] Failed to import "img_06" (Media)
+[ERROR] Failed to import "icon1" (Media)
+[ERROR] Failed to import "icon2" (Media)
+[ERROR] Failed to import "icon3" (Media)
+[ERROR] Failed to import "icon4" (Media)
+
+
+---Importing widgets---
+Sidebar : 
+
+Search - No Title - Widget already exists
+Categories - No Title - Widget already exists
+Recent Posts - No Title - Widget already exists
+Tag Cloud - No Title - Widget already exists
+
+Footer About : 
+
+Edumel: Footer About - No Title - Widget already exists
+
+Footer Widget : 
+
+Navigation Menu - Explore - Widget already exists
+Navigation Menu - Programs - Widget already exists
+Navigation Menu - Links - Widget already exists
+Edumel: Footer Contact Info - Address - Widget already exists
+
+
+
+---Importing Redux settings---
+Redux settings import for: edumel finished successfully!
+
+---ocdi/after_import---
+

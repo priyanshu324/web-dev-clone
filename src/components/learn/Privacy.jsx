@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Learn_navbar from './Learn_navbar'
 import useFetch from '../../hooks/useFetch';
-import Learn_navbar from './Learn_navbar';
+import AccordionList from './AccordionList';
+import Progress from './Progress';
+
 
 // List_1 Component
 export const List_1 = ({ items }) => {
@@ -36,28 +39,38 @@ export const List_1 = ({ items }) => {
   );
 };
 
-const Privacy = () => {
 
+
+const Privacy = () => {
   // Fetch data using custom hook
-  const api1 = 'http://localhost:1337/api/learn-row-banners';
+  const api1 = 'http://localhost:1337/api/learn-row-banner-2s';
+  const api2 = 'http://localhost:1337/api/learn-privacy-items';
 
   // Fetch data using custom hook
   const { data: data1, loading: loading1, error: error1 } = useFetch(api1);
-
+  const { data: data2, loading: loading2, error: error2 } = useFetch(api2);
 
   return (
-    <>
-
-      <div className='mt-20'>
-        <Learn_navbar />
-
-        {/* Data loading and error handling */}
-        {loading1 && <p>Loading...</p>}
-        {error1 && <p className="text-red-500">{error1}</p>}
-        {/* List component to display the courses */}
-        {!loading1 && !error1 && <List_1 items={data1.data || []} />}
+    <div className="mt-20 bg-[#1a73e8] dark:bg-[#1a73e8] text-white">
+      <Learn_navbar />
+      <div className=" px-4 py-10">
+        <div className='flex flex-col md:flex-row items-center  justify-between'>
+          <div className="md:w-1/2">
+            {/* Data loading and error handling */}
+            {loading1 && <p>Loading...</p>}
+            {error1 && <p className="text-red-500">{error1}</p>}
+            {/* List component to display the courses */}
+            {!loading1 && !error1 && <List_1 items={data1?.data || []} />}
+          </div>
+          <Progress />
+        </div>
       </div>
-    </>
+      {/* Data loading and error handling */}
+      {loading2 && <p>Loading...</p>}
+      {error2 && <p className="text-red-500">{error2}</p>}
+      {/* List component to display the courses */}
+      {!loading2 && !error2 && <AccordionList items={data2?.data || []} />}
+    </div>
   )
 }
 

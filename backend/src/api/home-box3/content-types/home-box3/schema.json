@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_box3s",
+  "info": {
+    "singularName": "home-box3",
+    "pluralName": "home-box3s",
+    "displayName": "homeBox3",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_title_2s",
+  "info": {
+    "singularName": "security-title-2",
+    "pluralName": "security-title-2s",
+    "displayName": "security-title-2",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

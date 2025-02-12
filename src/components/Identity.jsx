@@ -317,6 +317,7 @@ export const List_8 = ({ items }) => {
         </div>
     );
 };
+
 export const List_9 = ({ items }) => {
     return (
         <>
@@ -351,7 +352,6 @@ export const List_9 = ({ items }) => {
         </>
     );
 };
-
 
 // list 2
 export const List_10 = ({ items }) => {
@@ -425,7 +425,6 @@ export const List_11 = ({ items }) => {
 };
 
 // list 12
-
 export const List_12 = ({ items }) => {
     return (
         <>

@@ -1,10 +1,149 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
-import List_3 from '../components/list/List_3';
-import List_4 from '../components/list/List_4';
-import List_5 from '../components/list/List_5';
 
+
+// List_1 Component
+export const List_1 = ({ items }) => {
+    return (
+        // Main container for the list
+        <div>
+            {/* Container for padding at top */}
+            <div className='bg-white dark:bg-[#202124] dark:text-white'>
+                {/* Heading for the section */}
+                <h3 className='text-2xl font-bold pt-10 2xl:text-2xl'>Performance</h3>
+                {/* Container for all the cards */}
+                <div className='mt-10'>
+                    {/* Grid container for the items */}
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-white  dark:text-white'>
+                        {/* mapping through the item from the `items` array */}
+                        {items.map(({ key, title, content, imglink }) => (
+                            // Container for each item
+                            <div className='pl-5 sm:pl-2' key={key}>
+                                {/* Container for the individual card */}
+                                <div className='bg-[#f5f6f7] border-[#858686] border-2 border-solid w-[375px] h-[550px] sm:w-[300px] md:w-[375px] lg:w-[300px] xl:w-[380px] rounded-2xl dark:bg-[#202124] dark:text-white mb-7 2xl:w-[420px] 2xl:h-[600px]'>
+                                    {/* Image Container */}
+                                    <div className='rounded-full m-10'>
+                                        {/* Link to the image */}
+                                        <a href="#">
+                                            {/* Image of the card */}
+                                            <img src={imglink} alt={title} />
+                                        </a>
+                                    </div>
+                                    {/* Link for the title */}
+                                    <a href="#">
+                                        {/* Title of the card */}
+                                        <h3 className='text-2xl font-extrabold text-black  dark:text-white pl-2 2xl:text-2xl'>
+                                            {title}
+                                        </h3>
+                                    </a>
+                                    {/* Content of the card */}
+                                    <p className='text-lg  mt-3 pl-2 2xl:text-lg'>
+                                        {content}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// List_2 Component
+export const List_2 = ({ items }) => {
+    return (
+        // Main container for the list
+        <div>
+            {/* Container for padding at top */}
+            <div className='bg-[#f5f6f7] mt-10 w-[420px] pb-10 dark:bg-[#202124] dark:text-white sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px]'>
+                {/* Heading for the section */}
+                <h3 className='text-3xl font-bold flex items-center justify-center mt-10  sm:flex-none sm:items-start sm:justify-start md:pl-5 2xl:text-3xl'>Build excellent websites</h3>
+                {/* Container for all the cards */}
+                <div className='bg-[#f5f6f7] mt-10 pb-10 dark:bg-[#202124] dark:text-white'>
+                    {/* Grid container for the items */}
+                    <div className='bg-[#f5f6f7] grid grid-cols-1 sm:grid sm:grid-cols-2 xl:grid-cols-3 mt-16 dark:bg-[#202124] dark:text-white'>
+                        {/* Mapping through the items array */}
+                        {items.map(({ key, title, content, imglink }) => (
+                            // Container for each item
+                            <div className='m-5 sm:m-2' key={key}>
+                                {/* Container for the individual card */}
+                                <div className='bg-white border-[#858686] border-2 border-solid w-[380px] h-[540px]  sm:w-[310px] md:w-[350px] lg:w-[300px] xl:w-[380px] lg:h-[650px] mt-10 mb-10  rounded-2xl dark:bg-[#202124] dark:text-white 2xl:w-[420px] 2xl:h-[600px]'>
+                                    {/* Image container  */}
+                                    <div className='flex items-center justify-center rounded-full text-7xl pt-10 m-10'>
+                                        {/* Link to the image */}
+                                        <a href="#">
+                                            {/* Image of the card */}
+                                            <img src={imglink} alt={key} />
+                                        </a>
+                                    </div>
+                                    {/* Container for the title */}
+                                    <a href="#">
+                                        {/* Title of the card */}
+                                        <h3 className='mt-10 text-2xl font-extrabold text-[#1a73e8] hover:underline hover:underline-offset-2 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start lg:flex lg:items-center lg:justify-center 2xl:text-2xl'>
+                                            {title}
+                                        </h3>
+                                    </a>
+                                    {/* Content of the card */}
+                                    <p className='text-lg mt-3 2xl:text-lg'>
+                                        {content}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// List_3 Component
+export const List_3 = ({ items }) => {
+    return (
+        // Main container for the list
+        <div>
+            {/* Container for the background color and padding at top */}
+            <div className='bg-[#f5f6f7] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px]  dark:bg-[#202124] dark:text-white'>
+                {/* Heading for the section */}
+                <h3 className='text-7xl mt-20 pl-5 2xl:text-7xl'>Frameworks</h3>
+                {/* Container for all the cards */}
+                <div className='bg-[#f5f6f7] mt-10 pb-10 dark:bg-[#202124] dark:text-white'>
+                    {/* Grid container for the items */}
+                    <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white  sm:grid sm:grid-cols-2 pb-10 xl:grid-cols-3'>
+                        {/* Mapping through the item from the `items` array */}
+                        {items.map(({ key, title, content, imglink }) => (
+                            // Container for each item
+                            <div className='m-5 sm:m-2 xl:ml-32' key={key}>
+                                {/* Container for the individual card */}
+                                <div className='bg-white border-white border-2 border-solid w-[380px] h-[540px]  sm:w-[310px] md:w-[350px] lg:w-[300px] xl:w-[420px] lg:h-[650px] mt-10 mb-10 rounded-2xl dark:bg-[#202124] dark:text-white 2xl:w-[420px] 2xl:h-[600px]'>
+                                    {/* Image Container */}
+                                    <div className='rounded-full m-10'>
+                                        {/* Link to the image */}
+                                        <a href="#">
+                                            {/* Image of the card */}
+                                            <img src={imglink} alt={key} />
+                                        </a>
+                                    </div>
+                                    {/* Title Container  */}
+                                    <a href="#">
+                                        {/* title of the card */}
+                                        <h3 className='mt-10 text-2xl font-extrabold text-[#1a73e8] hover:underline hover:underline-offset-2 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start lg:flex lg:items-center lg:justify-center 2xl:text-2xl'>
+                                            {title}
+                                        </h3>
+                                    </a>
+                                    {/* Content of the card */}
+                                    <p className='text-lg mt-3 2xl:text-lg'>{content}</p>
+
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 // Explore Component
 const Explore = () => {
     // API endpoints
@@ -50,18 +189,18 @@ const Explore = () => {
                 {loading1 && <p>Loading...</p>}
                 {error1 && <p className="text-red-500">{error1}</p>}
                 {/* List_3 component to display explored items */}
-                {!loading1 && !error1 && <List_3 items={list1.data || []} />}
+                {!loading1 && !error1 && <List_1 items={list1.data || []} />}
 
                 {/* Section for "Build excellent websites" */}
                 <div>
                     {/* Data loading and error handling for List_4 component */}
                     {loading2 && <p>Loading...</p>}
                     {error2 && <p className="text-red-500">{error2}</p>}
-                    {!loading2 && !error2 && <List_4 items={list2.data || []} />}
+                    {!loading2 && !error2 && <List_2 items={list2.data || []} />}
                 </div>
 
                 {/* Section for "Baseline" information */}
-                <div className='bg-white mt-10 w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px] pb-10 dark:bg-[#202124] dark:text-white'>
+                <div className='bg-white mt-10 w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px]  dark:bg-[#202124] dark:text-white'>
                     {/* Grid container for "Baseline" heading and description */}
                     <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white sm:grid sm:grid-cols-2 pb-10'>
                         {/* Left section of the grid */}
@@ -86,7 +225,7 @@ const Explore = () => {
                         </div>
                     </div>
                     {/* Container for "Explore" link */}
-                    <div className='flex items-center justify-center mt-[-90px] 2xl:mt-[-70px]'>
+                    <div className='flex items-center justify-center mt-[-90px] 2xl:mt-[-120px] ml-[-350px]'>
                         {/* Explore link */}
                         <div className='border-[#1a73e8] cursor-pointer text-[#1a73e8] font-bold hover:text-black border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 hover:border-black  hover:border-2 hover:border-soild dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white 2xl:w-[200px]'>
                             <a href='#'>Explore</a>
@@ -98,7 +237,7 @@ const Explore = () => {
                 {loading3 && <p>Loading...</p>}
                 {error3 && <p className="text-red-500">{error3}</p>}
                 {/* List_5 component to display build excellent items */}
-                {!loading3 && !error3 && <List_5 items={list3.data || []} />}
+                {!loading3 && !error3 && <List_3 items={list3.data || []} />}
 
                 {/* Section for "Explorations" and "Mini apps" */}
                 <div className='bg-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px] pb-10 dark:bg-[#202124] dark:text-white'>

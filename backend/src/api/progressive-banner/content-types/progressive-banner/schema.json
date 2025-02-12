@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progressive_banners",
+  "info": {
+    "singularName": "progressive-banner",
+    "pluralName": "progressive-banners",
+    "displayName": "Progressive-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

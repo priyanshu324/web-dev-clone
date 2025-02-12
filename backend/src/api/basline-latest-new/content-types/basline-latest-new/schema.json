@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basline_latest_news",
+  "info": {
+    "singularName": "basline-latest-new",
+    "pluralName": "basline-latest-news",
+    "displayName": "basline-latest-new"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text"
+    }
+  }
+}

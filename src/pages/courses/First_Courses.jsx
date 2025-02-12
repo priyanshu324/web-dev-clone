@@ -459,6 +459,7 @@ const First_Courses = () => {
                         {error2 && <p className="text-red-500">{error2}</p>}
                         {!loading2 && !error2 && <List_2 items={data2.data || []} />}
                     </div>
+
                     <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
                         {/* Data loading and error handling */}
                         {loading3 && <p>Loading...</p>}

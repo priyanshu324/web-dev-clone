@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_google_videos",
+  "info": {
+    "singularName": "ai-google-video",
+    "pluralName": "ai-google-videos",
+    "displayName": "ai-google-video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Watch on YouTube",
+      "required": true
+    },
+    "videoLink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
