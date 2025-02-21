@@ -1,0 +1,14 @@
+{
+    "css.lint.unknownAtRules": "ignore",
+    "terminal.integrated.cursorWidth": 2,
+    "terminal.integrated.customGlyphs": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.fontFamily": "",
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "blink",
+    "editor.cursorWidth": 2,
+    "editor.fontLigatures": true,
+    "liveServer.settings.port": 5501
+}

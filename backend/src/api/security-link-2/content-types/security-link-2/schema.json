@@ -4,12 +4,12 @@
   "info": {
     "singularName": "security-link-2",
     "pluralName": "security-link-2s",
-    "displayName": "security-link-2"
+    "displayName": "security-link-2",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",

@@ -36,7 +36,7 @@ export const List_2 = ({ items }) => {
                         <>
 
                             {/* Main container for the ai page */}
-                            <div className=' bg-[#F5F6F7] dark:bg-[#202124] dark:text-white pb-20 dark:mt-[-20px] '>
+                            <div className=' bg-[#F5F6F7] dark:bg-[#202124] dark:text-white pb-20 dark:mt-[-20px] ' key={item.key}>
                                 {/* Left section of the banner */}
                                 <div>
                                     {/* Heading of the section */}

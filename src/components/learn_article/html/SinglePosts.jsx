@@ -13,7 +13,7 @@ const SinglePost = () => {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/wordpress/wp-json/wp/v2/posts/${id}`);
+                const response = await axios.get(`http://localhost/wordpress/wp-json/wp/v2/posts/${id}`);
                 setPost(response.data);
             } catch (err) {
                 setError("Error fetching the post.");

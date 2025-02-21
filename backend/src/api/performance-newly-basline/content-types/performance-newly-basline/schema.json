@@ -10,7 +10,6 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -21,10 +20,12 @@
       "required": true
     },
     "content": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "icons": {
       "type": "text",
+      "required": true,
       "default": "check"
     }
   }

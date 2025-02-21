@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-05 05:51+0000\n"
+"POT-Creation-Date: 2025-02-12 10:33+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -3470,151 +3470,151 @@ msgstr ""
 msgid "%s payment method is not configured properly. Please contact with site administrator!"
 msgstr ""
 
-#: ecommerce/EmailController.php:504, ecommerce/EmailController.php:568, ecommerce/EmailController.php:628
+#: ecommerce/EmailController.php:508, ecommerce/EmailController.php:572, ecommerce/EmailController.php:632
 msgid "New order placed"
 msgstr ""
 
-#: ecommerce/EmailController.php:507, ecommerce/EmailController.php:571, ecommerce/EmailController.php:631
+#: ecommerce/EmailController.php:511, ecommerce/EmailController.php:575, ecommerce/EmailController.php:635
 msgid "New order emails are sent to chosen recipient(s) when a new order is received."
 msgstr ""
 
-#: ecommerce/EmailController.php:508
+#: ecommerce/EmailController.php:512
 msgid "Your order has been received! 🎉"
 msgstr ""
 
-#: ecommerce/EmailController.php:509
+#: ecommerce/EmailController.php:513
 msgid "Your order has been received!"
 msgstr ""
 
-#: ecommerce/EmailController.php:523, ecommerce/EmailController.php:585
+#: ecommerce/EmailController.php:527, ecommerce/EmailController.php:589
 msgid "Hi"
 msgstr ""
 
-#: ecommerce/EmailController.php:524
+#: ecommerce/EmailController.php:528
 msgid "Thank you for your order. We've received your order successfully, and it is now being processed."
 msgstr ""
 
-#: ecommerce/EmailController.php:525
+#: ecommerce/EmailController.php:529
 msgid "Below are the details of your order:"
 msgstr ""
 
-#: ecommerce/EmailController.php:526, ecommerce/EmailController.php:555, ecommerce/EmailController.php:588, ecommerce/EmailController.php:616, ecommerce/EmailController.php:644
+#: ecommerce/EmailController.php:530, ecommerce/EmailController.php:559, ecommerce/EmailController.php:592, ecommerce/EmailController.php:620, ecommerce/EmailController.php:648
 msgid "Order ID:"
 msgstr ""
 
-#: ecommerce/EmailController.php:527, ecommerce/EmailController.php:558, ecommerce/EmailController.php:589, ecommerce/EmailController.php:645
+#: ecommerce/EmailController.php:531, ecommerce/EmailController.php:562, ecommerce/EmailController.php:593, ecommerce/EmailController.php:649
 msgid "Order Date:"
 msgstr ""
 
-#: ecommerce/EmailController.php:528, ecommerce/EmailController.php:559, ecommerce/EmailController.php:619, ecommerce/EmailController.php:646
+#: ecommerce/EmailController.php:532, ecommerce/EmailController.php:563, ecommerce/EmailController.php:623, ecommerce/EmailController.php:650
 msgid "Total Amount:"
 msgstr ""
 
-#: ecommerce/EmailController.php:531, ecommerce/EmailController.php:562
+#: ecommerce/EmailController.php:535, ecommerce/EmailController.php:566
 msgid "We will let you know once your order has been completed and is ready for access."
 msgstr ""
 
-#: ecommerce/EmailController.php:535, ecommerce/EmailController.php:597, ecommerce/EmailController.php:653
+#: ecommerce/EmailController.php:539, ecommerce/EmailController.php:601, ecommerce/EmailController.php:657
 msgid "Order status updated"
 msgstr ""
 
-#: ecommerce/EmailController.php:538, ecommerce/EmailController.php:600, ecommerce/EmailController.php:656
+#: ecommerce/EmailController.php:542, ecommerce/EmailController.php:604, ecommerce/EmailController.php:660
 msgid "Order status update emails are sent to chosen recipient(s) whenever a order status updated."
 msgstr ""
 
-#: ecommerce/EmailController.php:539
+#: ecommerce/EmailController.php:543
 msgid "Your Order Status Has Been Updated to {order_status} "
 msgstr ""
 
-#: ecommerce/EmailController.php:540
+#: ecommerce/EmailController.php:544
 msgid "Your Order Status Has Been Updated to {order_status}"
 msgstr ""
 
-#: ecommerce/EmailController.php:553, ecommerce/EmailController.php:614, ecommerce/EmailController.php:671
+#: ecommerce/EmailController.php:557, ecommerce/EmailController.php:618, ecommerce/EmailController.php:675
 msgid "Hi {user_name},"
 msgstr ""
 
-#: ecommerce/EmailController.php:554
+#: ecommerce/EmailController.php:558
 msgid "We're reaching out to let you know that your order status has been updated to {order_status}. We understand the importance of keeping you informed at every step of the way. Below is a summary of your order:"
 msgstr ""
 
-#: ecommerce/EmailController.php:556, ecommerce/EmailController.php:617
+#: ecommerce/EmailController.php:560, ecommerce/EmailController.php:621
 msgid "Order Status:"
 msgstr ""
 
-#: ecommerce/EmailController.php:557, templates/dashboard/reviews.php:93
+#: ecommerce/EmailController.php:561, templates/dashboard/reviews.php:93
 msgid "Course:"
 msgstr ""
 
-#: ecommerce/EmailController.php:572
+#: ecommerce/EmailController.php:576
 msgid "A New Student Has Enrolled in Your Course! 🎉"
 msgstr ""
 
-#: ecommerce/EmailController.php:573
+#: ecommerce/EmailController.php:577
 msgid "A New Student Has Enrolled in Your Course!"
 msgstr ""
 
-#: ecommerce/EmailController.php:586
+#: ecommerce/EmailController.php:590
 msgid "We're excited to let you know that a new student has just enrolled in one of your courses! Here are the course details:"
 msgstr ""
 
-#: ecommerce/EmailController.php:587
+#: ecommerce/EmailController.php:591
 msgid "Student Name:"
 msgstr ""
 
-#: ecommerce/EmailController.php:590
+#: ecommerce/EmailController.php:594
 msgid "Payment Status:"
 msgstr ""
 
-#: ecommerce/EmailController.php:593, ecommerce/EmailController.php:622, ecommerce/EmailController.php:649, ecommerce/EmailController.php:680
+#: ecommerce/EmailController.php:597, ecommerce/EmailController.php:626, ecommerce/EmailController.php:653, ecommerce/EmailController.php:684
 msgid "Please review the order and ensure everything is in place for the student's access to the course. Thank you."
 msgstr ""
 
-#: ecommerce/EmailController.php:601, ecommerce/EmailController.php:602
+#: ecommerce/EmailController.php:605, ecommerce/EmailController.php:606
 msgid "Instructor Notice: Your Student's Order Status is Now {order_status}"
 msgstr ""
 
-#: ecommerce/EmailController.php:615
+#: ecommerce/EmailController.php:619
 msgid "We'd like to update you on your course enrollment status. One of your students has an order that has been updated to {order_status}. Here are the details:"
 msgstr ""
 
-#: ecommerce/EmailController.php:618
+#: ecommerce/EmailController.php:622
 msgid "Course Name:"
 msgstr ""
 
-#: ecommerce/EmailController.php:632, ecommerce/EmailController.php:633
+#: ecommerce/EmailController.php:636, ecommerce/EmailController.php:637
 msgid "A New Order Has Been Placed on Your Platform!"
 msgstr ""
 
-#: ecommerce/EmailController.php:643
+#: ecommerce/EmailController.php:647
 msgid "Below are the order details:"
 msgstr ""
 
-#: ecommerce/EmailController.php:657, ecommerce/EmailController.php:658
+#: ecommerce/EmailController.php:661, ecommerce/EmailController.php:662
 msgid "An Order's Status Has Been Updated to {order_status}"
 msgstr ""
 
-#: ecommerce/EmailController.php:672
+#: ecommerce/EmailController.php:676
 msgid "We're reaching out to let you know that the order status of {student_name} has been updated to {order_status}. Here is the summary of the order:"
 msgstr ""
 
-#: ecommerce/EmailController.php:673, templates/dashboard/purchase_history.php:103
+#: ecommerce/EmailController.php:677, templates/dashboard/purchase_history.php:103
 msgid "Order ID"
 msgstr ""
 
-#: ecommerce/EmailController.php:674
+#: ecommerce/EmailController.php:678
 msgid "Order Date"
 msgstr ""
 
-#: ecommerce/EmailController.php:675
+#: ecommerce/EmailController.php:679
 msgid "Order Status"
 msgstr ""
 
-#: ecommerce/EmailController.php:676, templates/dashboard/dashboard.php:350
+#: ecommerce/EmailController.php:680, templates/dashboard/dashboard.php:350
 msgid "Course Name"
 msgstr ""
 
-#: ecommerce/EmailController.php:677
+#: ecommerce/EmailController.php:681
 msgid "Total Amount"
 msgstr ""
 

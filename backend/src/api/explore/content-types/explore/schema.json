@@ -4,19 +4,19 @@
   "info": {
     "singularName": "explore",
     "pluralName": "explores",
-    "displayName": "explore"
+    "displayName": "explore",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "text",
-      "required": true
-    },
     "key": {
       "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
       "required": true
     },
     "content": {
@@ -26,6 +26,9 @@
     "imglink": {
       "type": "text",
       "required": true
+    },
+    "main_title": {
+      "type": "text"
     }
   }
 }

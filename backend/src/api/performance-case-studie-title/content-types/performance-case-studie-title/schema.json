@@ -4,12 +4,12 @@
   "info": {
     "singularName": "performance-case-studie-title",
     "pluralName": "performance-case-studie-titles",
-    "displayName": "performance-case-studie-title"
+    "displayName": "performance-case-studie-title",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -24,8 +24,7 @@
       "required": true
     },
     "path": {
-      "type": "text",
-      "required": true
+      "type": "text"
     }
   }
 }

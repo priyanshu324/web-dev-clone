@@ -4,12 +4,12 @@
   "info": {
     "singularName": "about-banner",
     "pluralName": "about-banners",
-    "displayName": "about-banner"
+    "displayName": "about-banner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -26,6 +26,11 @@
     "imglink": {
       "type": "text",
       "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Get Started"
     }
   }
 }

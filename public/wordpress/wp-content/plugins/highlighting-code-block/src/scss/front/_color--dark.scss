@@ -1,0 +1,135 @@
+/*
+  Dark coloring
+*/
+:root {
+	--hcb--c: #f9f9f6;
+	// --hcb--tsh: none;
+	--hcb--bgc: #2d2e29;
+	--hcb--data-label--c: #fff;
+	--hcb--data-label--bgc: #20211f;
+	--hcb--line-numbers--c: #a3a3a3;
+	--hcb--highlight-color: rgba(255, 250, 245, 0.1);
+	--hcb--file-icon: url(../../assets/img/file-icon-dark.svg);
+	--hcb--scbar-track--bgc: rgba(255, 255, 255, 0.1);
+	--hcb--scbar-thumb--bgc: rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* ---------------------
+  Syntax Highlight
+ --------------------- */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #a8a897;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.namespace {
+	opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.important {
+	color: #ff2c78;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.char,
+.token.builtin,
+.token.inserted,
+.token.class-name {
+	color: #b4ec43;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.string {
+	color: #f3e880;
+}
+
+.token.function,
+.token.keyword.def {
+	color: #5fe6ff;
+}
+
+.token.keyword,
+.token.operator {
+	color: #f92672;
+
+	/* font-weight: bold; */
+}
+
+.token.regex,
+.token.keyword.this {
+	color: #fd971f;
+}
+
+.token.delimiter:not(.symbol) {
+	color: #5294ff;
+}
+
+/* .token.important, */
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic,
+.token.builtin,
+.token.keyword.def {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+
+/* CSS / SCSS */
+.language-css .token.property,
+.language-scss .token.property,
+.language-json .token.property {
+	color: #5fe6ff;
+}
+
+/* PHP */
+.language-php .token.important.delimiter {
+	font-weight: normal;
+}
+
+
+/* Ruby */
+.language-ruby .token.interpolation {
+	color: #f8f8f2;
+}
+
+/* JSON */
+.language-json .token.operator {
+	color: #f3e880;
+}
+

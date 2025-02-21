@@ -4,12 +4,12 @@
   "info": {
     "singularName": "accessibility-card-3",
     "pluralName": "accessibility-card-3s",
-    "displayName": "accessibility-card-3"
+    "displayName": "accessibility-card-3",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -23,9 +23,6 @@
       "type": "text",
       "required": true
     },
-    "path": {
-      "type": "text"
-    },
     "imglink": {
       "type": "text",
       "required": true
@@ -34,6 +31,12 @@
       "type": "text",
       "default": "Learn More",
       "required": true
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "path": {
+      "type": "text"
     }
   }
 }

@@ -4,13 +4,11 @@
   "info": {
     "singularName": "ai-chrome",
     "pluralName": "ai-chromes",
-    "displayName": "ai-chrome",
-    "description": ""
+    "displayName": "ai-chrome"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -26,11 +24,11 @@
     },
     "button": {
       "type": "text",
+      "default": "Read the doc",
       "required": true
     },
-    "icons": {
-      "type": "text",
-      "default": "chrome"
+    "path": {
+      "type": "text"
     }
   }
 }

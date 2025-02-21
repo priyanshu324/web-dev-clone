@@ -5,30 +5,49 @@ import useFetch from '../hooks/useFetch';
 // List_1 Component
 export const List_1 = ({ items }) => {
     return (
-        // Main container for the list with grid layout
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-5'>
-            {/* Map through the items array */}
-            {items.map((item) => (
-                // Main container for each list item
-                <div key={item.key} className="pb-2">
-                    {/* Link to each team member */}
-                    <Link className='p-5 cursor-pointer 2xl:p-2 block'>
-                        {/* Profile image of the team member */}
-                        <img src={item.imglink} alt={item.title} className='w-[150px] h-[150px] rounded-full mx-auto  2xl:w-[120px] 2xl:h-[120px] block' />
-                        {/* Title of the list item */}
-                        <h3 className='text-[#212121] dark:text-[#EEEEEE] text-center font-bold mt-5 2xl:text-lg hover:underline hover:underline-offset-2'>
-                            {item.title}
-                        </h3>
-                        {/* Job description of the team member */}
-                        <p className='text-center text-[#757575] dark:text-[#BDBDBD] text-sm 2xl:text-center 2xl:text-sm'>
-                            {item.content}
-                        </p>
-                    </Link>
+        <div className="p-5">
+            {/* Display Main Title and Main Content only once */}
+            {items.length > 0 && (
+                <div className="mb-8 text-center">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">
+                        {items[0].main_title}
+                    </h1>
+                    <p className="text-[#757575] dark:text-[#BDBDBD] text-sm font-bold">
+                        {items[0].main_content}
+                    </p>
                 </div>
-            ))}
+            )}
+
+            {/* Grid container for items */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {items.map((item) => (
+                    <div key={item.key} className="pb-2">
+                        {/* Link to each team member */}
+                        <Link className="p-5 cursor-pointer 2xl:p-2 block">
+                            {/* Profile image */}
+                            <img
+                                src={item.imglink}
+                                alt={item.title}
+                                className="w-[150px] h-[150px] rounded-full mx-auto 2xl:w-[120px] 2xl:h-[120px] block"
+                            />
+
+                            {/* Title */}
+                            <h3 className="text-[#212121] dark:text-[#EEEEEE] text-center font-bold mt-5 2xl:text-lg hover:underline hover:underline-offset-2">
+                                {item.title}
+                            </h3>
+
+                            {/* Description */}
+                            <p className="text-center text-[#757575] dark:text-[#BDBDBD] text-sm 2xl:text-center 2xl:text-sm">
+                                {item.content}
+                            </p>
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
+
 
 // List_2 Component
 export const List_2 = ({ items }) => {
@@ -177,12 +196,7 @@ const Banner_1 = () => {
             <div className='mb-8'>
                 {/* Container for team information and Chrome for Developers section */}
                 <div className='mt-10 bg-[#F0F4F8] pb-10 dark:bg-[#121212] dark:text-white dark:mt-0 dark:border-[#78909C] dark:border-solid dark:border-2 w-[400px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px]'>
-                    {/* Heading for the team section */}
-                    <h3 className='text-[#212121] dark:text-[#EEEEEE] text-3xl font-bold flex items-center justify-center pt-10 2xl:text-3xl'>The team</h3>
-                    {/* Description for the team section */}
-                    <p className='text-[#757575] dark:text-[#BDBDBD] text-lg flex items-center justify-center mt-5  w-[400px] pl-20 sm:w-[600px] md:w-[768px] lg:w-[1024px] xl:w-auto 2xl:w-[1536px]'>
-                        This site is brought to you by the Chrome DevRel team led by:
-                    </p>
+
                     {/* Render List_26 component to display team members */}
                     {loading1 && <p>Loading...</p>}
                     {error1 && <p className="text-red-500">{error1}</p>}

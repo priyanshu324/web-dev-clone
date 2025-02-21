@@ -59,9 +59,12 @@ export const List_2 = ({ items }) => {
 
     return (
         <div className="max-w-full px-4 py-8">
-            <h3 className="text-2xl font-bold mb-8 pl-4 dark:text-white">
-                Jump ahead on this page:
-            </h3>
+            {/* Title and Main Content at the Top */}
+            {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                </div>
+            )}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {items.map((item) => (
                     <div key={item.key} className="flex items-start gap-4">
@@ -85,8 +88,6 @@ export const List_2 = ({ items }) => {
         </div>
     );
 };
-
-
 
 // List_3 component
 export const List_3 = ({ items }) => {
@@ -139,7 +140,7 @@ export const List_4 = ({ items }) => {
                 >
                     <div className='grid grid-cols-1 sm:grid sm:grid-cols-2'>
                         <div className=''>
-                            <h3 className='text-3xl font-bold flex items-center justify-center mt-10  sm:flex-none sm:items-start sm:justify-start md:pl-5 2xl:text-3xl'>{item.main_title}</h3>
+                            {/* <h3 className='text-3xl font-bold flex items-center justify-center mt-10  sm:flex-none sm:items-start sm:justify-start md:pl-5 2xl:text-3xl'>{item.main_title}</h3> */}
                             <h3 className='text-2xl font-bold hover:underline hover:underline-offset-2 mt-5 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start md:pl-5 2xl:text-2xl'>{item.title}</h3>
                             <p className='mt-10  text-lg md:pl-5 lg:w-[630px] 2xl:text-lg 2xl:w-[800px]'>
                                 {item.content}
@@ -190,7 +191,7 @@ export const List_6 = ({ items }) => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8'>
             {items.map((item) => (
                 <div key={item.key} className='bg-white border-[#c0c2c4] border-2 border-solid rounded-lg shadow-md p-6 flex flex-col dark:bg-[#202124] dark:text-white'>
-                    <div className="material-icons text-4xl sm:text-5xl dark:text-white ml-36">{item.icons}</div>
+                    <div className="material-icons text-4xl sm:text-5xl dark:text-white ">{item.icons}</div>
                     <h1 className='text-2xl font-bold mb-2 text-blue-500 hover:underline hover:underline-offset-2 dark:text-white flex items-center justify-center'>
                         <a href="#">
 
@@ -340,7 +341,7 @@ export const List_11 = ({ items }) => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8'>
             {items.map((item) => (
                 <div key={item.key} className='bg-[#F5F6F7] border-[#c0c2c4] border-2 border-solid rounded-lg shadow-md p-6 flex flex-col dark:bg-[#202124] dark:text-white'>
-                    <div className="material-icons text-4xl sm:text-5xl dark:text-white ml-36">{item.icons}</div>
+                    <div className="material-icons text-4xl sm:text-5xl dark:text-white ">{item.icons}</div>
 
                     <h1 className='text-2xl font-bold mb-2 text-blue-500 hover:underline hover:underline-offset-2 dark:text-white flex items-center justify-center'>
                         <a href="#">
@@ -447,7 +448,7 @@ export const List_15 = ({ items }) => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8'>
             {items.map((item) => (
                 <div key={item.key} className='bg-white border-[#c0c2c4] border-2 border-solid rounded-lg shadow-md p-6 flex flex-col dark:bg-[#202124] dark:text-white'>
-                    <div className="material-icons text-4xl sm:text-5xl dark:text-white ml-36">{item.icons}</div>
+                    <div className="material-icons ">{item.icons}</div>
                     <h1 className='text-2xl font-bold mb-2 text-blue-500 hover:underline hover:underline-offset-2 dark:text-white flex items-center justify-center'>
                         <a href="#">
 
@@ -482,7 +483,7 @@ const Performance = () => {
     // API endpoint
     const api1 = 'http://localhost:1337/api/performance-banners';
     const api2 = 'http://localhost:1337/api/performance-jumps';
-    const api3 = 'http://localhost:1337/api/performance-new-to-oerformances';
+    const api3 = 'http://localhost:1337/api/performance-new-to-performances';
     const api4 = 'http://localhost:1337/api/performance-page-speeds';
     const api5 = 'http://localhost:1337/api/performance-core-web-titles';
     const api6 = 'http://localhost:1337/api/performance-core-webs';
@@ -491,7 +492,7 @@ const Performance = () => {
     const api9 = 'http://localhost:1337/api/performance-dives';
     const api10 = 'http://localhost:1337/api/performance-case-studie-titles';
     const api11 = 'http://localhost:1337/api/performance-case-studies';
-    const api12 = 'http://localhost:1337/api/performance-nwely-basline-titles';
+    const api12 = 'http://localhost:1337/api/performance-newly-basline-titles';
     const api13 = 'http://localhost:1337/api/performance-newly-baslines';
     const api14 = 'http://localhost:1337/api/performance-debug-titles';
     const api15 = 'http://localhost:1337/api/performance-debugs';

@@ -4,15 +4,16 @@
   "info": {
     "singularName": "accessibility-jump",
     "pluralName": "accessibility-jumps",
-    "displayName": "accessibility-jump"
+    "displayName": "accessibility-jump",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "title": {
       "type": "text",
@@ -29,6 +30,9 @@
     "path": {
       "type": "text",
       "required": true
+    },
+    "main_title": {
+      "type": "text"
     }
   }
 }

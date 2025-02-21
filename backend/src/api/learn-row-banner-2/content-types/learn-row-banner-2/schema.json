@@ -4,13 +4,11 @@
   "info": {
     "singularName": "learn-row-banner-2",
     "pluralName": "learn-row-banner-2s",
-    "displayName": "learn-row-banner-2",
-    "description": ""
+    "displayName": "learn-row-banner-2"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -24,17 +22,14 @@
       "type": "text",
       "required": true
     },
-    "activities": {
-      "type": "text",
-      "required": true
-    },
-    "path": {
-      "type": "text"
-    },
     "icons": {
       "type": "text",
       "required": true,
       "default": "bookmark"
+    },
+    "activities": {
+      "type": "text",
+      "required": true
     }
   }
 }

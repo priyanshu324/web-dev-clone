@@ -9,23 +9,25 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
       "required": true
     },
-    "icons": {
-      "type": "text",
-      "default": "movie"
-    },
     "title": {
       "type": "text",
+      "required": true,
       "default": "Web AI Summit 2024"
+    },
+    "icons": {
+      "type": "text",
+      "default": "movie",
+      "required": true
     },
     "button": {
       "type": "text",
-      "default": " Watch the recordings"
+      "default": " Watch the recordings",
+      "required": true
     }
   }
 }

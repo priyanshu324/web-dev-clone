@@ -9,7 +9,6 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -22,11 +21,6 @@
     "content": {
       "type": "text",
       "required": true
-    },
-    "iframeSrc": {
-      "type": "text",
-      "required": true,
-      "default": "https://suniltechie.com/blog/alpha-web-development-standards-2025/"
     },
     "button": {
       "type": "text",

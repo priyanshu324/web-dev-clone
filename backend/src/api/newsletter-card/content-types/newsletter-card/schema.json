@@ -9,7 +9,6 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -26,10 +25,6 @@
     "imglink": {
       "type": "text",
       "required": true
-    },
-    "path": {
-      "type": "text",
-      "required": false
     }
   }
 }

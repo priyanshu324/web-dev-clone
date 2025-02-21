@@ -4,12 +4,12 @@
   "info": {
     "singularName": "accessibility-new-to-accessibility",
     "pluralName": "accessibility-new-to-accessibilities",
-    "displayName": "accessibility-new-to-accessibility"
+    "displayName": "accessibility-new-to-accessibility",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -37,8 +37,7 @@
       "required": true
     },
     "path": {
-      "type": "text",
-      "required": true
+      "type": "text"
     }
   }
 }

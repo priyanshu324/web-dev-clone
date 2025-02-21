@@ -9,7 +9,6 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -25,8 +24,8 @@
     },
     "icons": {
       "type": "text",
-      "default": "check",
-      "required": true
+      "required": true,
+      "default": "check"
     }
   }
 }

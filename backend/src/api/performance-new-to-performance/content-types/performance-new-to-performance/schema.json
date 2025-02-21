@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_new_to_performances",
+  "info": {
+    "singularName": "performance-new-to-performance",
+    "pluralName": "performance-new-to-performances",
+    "displayName": "performance-new-to-performance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": true,
+      "default": "Course"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn Preformance"
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

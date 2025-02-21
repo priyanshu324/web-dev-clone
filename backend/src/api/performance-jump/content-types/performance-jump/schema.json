@@ -10,14 +10,9 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
-      "required": true
-    },
-    "icons": {
-      "type": "text",
       "required": true
     },
     "title": {
@@ -28,7 +23,15 @@
       "type": "text",
       "required": true
     },
+    "icons": {
+      "type": "text",
+      "required": true
+    },
     "path": {
+      "type": "text",
+      "required": true
+    },
+    "main_title": {
       "type": "text"
     }
   }

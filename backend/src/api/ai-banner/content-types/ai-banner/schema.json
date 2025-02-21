@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_banners",
+  "info": {
+    "singularName": "ai-banner",
+    "pluralName": "ai-banners",
+    "displayName": "ai-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

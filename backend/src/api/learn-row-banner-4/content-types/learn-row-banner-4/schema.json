@@ -9,7 +9,6 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -25,15 +24,11 @@
     },
     "icons": {
       "type": "text",
-      "default": "bookmark",
-      "required": true
-    },
-    "path": {
-      "type": "text"
+      "required": true,
+      "default": "bookmark"
     },
     "activities": {
-      "type": "text",
-      "required": true
+      "type": "text"
     }
   }
 }

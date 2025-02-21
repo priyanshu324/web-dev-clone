@@ -4,40 +4,43 @@
   "info": {
     "singularName": "accessibility-card-1",
     "pluralName": "accessibility-card-1s",
-    "displayName": "accessibility-card-1"
+    "displayName": "accessibility-card-1",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
       "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": true,
+      "default": "COURSE"
     },
     "title": {
       "type": "text",
       "required": true
     },
     "content": {
-      "type": "text"
-    },
-    "course_name": {
       "type": "text",
-      "default": "Course",
       "required": true
-    },
-    "button": {
-      "type": "text",
-      "default": "Learn More",
-      "required": true
-    },
-    "path": {
-      "type": "text"
     },
     "imglink": {
       "type": "text",
       "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    },
+    "main_title_1": {
+      "type": "text"
+    },
+    "path": {
+      "type": "text"
     }
   }
 }

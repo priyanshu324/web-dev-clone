@@ -47,8 +47,8 @@ export const List_1 = ({ items }) => {
     )
 }
 
-// List_2 component: Handles the content structure for "Who defines Baseline?" and "How do things become Baseline?" sections
 
+// List_2 component: Handles the content structure for "Who defines Baseline?" and "How do things become Baseline?" sections
 export const List_2 = ({ items }) => {
     return (
         <div className=" mx-auto px-4 py-8">
@@ -86,6 +86,8 @@ export const List_2 = ({ items }) => {
                                 </li>
                                 <li>
                                     {item.title_3}
+                                </li><li>
+                                    {item.title_3}
                                 </li>
                             </ul>
                         </div>
@@ -100,8 +102,8 @@ export const List_2 = ({ items }) => {
 export const List_3 = ({ items }) => {
     return (
         <div className="ml-[-390px]">
-            {items.map((item, index) => (
-                <div key={index} className="">
+            {items.map((item) => (
+                <div key={item.key} className="">
                     {/* Main title and content section */}
                     <div className="mb-8">
                         <h2 className="text-2xl font-bold mb-4 sm:text-3xl md:text-3xl lg:text-4xl">
@@ -156,9 +158,7 @@ export const List_4 = ({ items }) => {
                                 <img src={item.imglink} alt={item.title} className='p-10 rounded-[50px] sm:p-2 2xl:p-10' />
                             </a>
                         </div>
-                        <p className='text-2xl leading-relaxed mb-4 dark:text-gray-300 flex items-center justify-center font-bold'>
-                            {item.course_name}
-                        </p>
+                       
                         <h1 className='text-2xl font-bold mb-2 text-black hover:underline hover:underline-offset-2 dark:text-white flex items-center justify-center'>
                             <a href="#">
                                 {item.title}
@@ -264,11 +264,12 @@ export const List_7 = ({ items }) => {
     return (
 
         <>
-            <div>
-                <h1 className='text-5xl font-bold mb-4 pl-8 dark:text-black'>
-                    Where to find Baseline
-                </h1>
-            </div>
+           {/* Title and Main Content at the Top */}
+           {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                </div>
+            )}
             <div className='bg-[#f5f6f7] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8'>
                 {items.map((item) => (
                     <div

@@ -10,7 +10,7 @@ const BlogPosts = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/wordpress/wp-json/wp/v2/posts");
+                const response = await axios.get("http://localhost/wordpress/wp-json/wp/v2/posts");
                 setPosts(response.data);
             } catch (err) {
                 setError("Error fetching blog posts.");

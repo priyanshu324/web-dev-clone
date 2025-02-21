@@ -226,7 +226,7 @@ const router = createBrowserRouter([
 
       {
         id: 33,
-        path: '/learn/Testing',
+        path: '/learn/testing',
         element: <Testing />,  //learn Testing page
       },
 

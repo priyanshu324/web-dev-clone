@@ -4,15 +4,15 @@
   "info": {
     "singularName": "home-link2",
     "pluralName": "home-link2s",
-    "displayName": "homeLink2"
+    "displayName": "home-link2"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "title": {
       "type": "text",

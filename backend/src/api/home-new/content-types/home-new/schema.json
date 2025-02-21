@@ -4,14 +4,16 @@
   "info": {
     "singularName": "home-new",
     "pluralName": "home-news",
-    "displayName": "homeNew",
+    "displayName": "home-new",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
+    "key": {
+      "type": "integer"
+    },
     "title": {
       "type": "text",
       "required": true
@@ -29,13 +31,13 @@
       "required": true,
       "default": "Learn More"
     },
-    "key": {
-      "type": "integer",
-      "required": true
-    },
-    "path": {
+    "main_title": {
       "type": "text",
-      "required": true
+      "required": false
+    },
+    "main_content": {
+      "type": "text",
+      "required": false
     }
   }
 }

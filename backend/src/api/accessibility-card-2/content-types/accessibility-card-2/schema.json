@@ -10,7 +10,6 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -29,14 +28,16 @@
       "required": true,
       "default": "article"
     },
-    "path": {
-      "type": "text",
-      "required": false
-    },
     "button": {
       "type": "text",
-      "default": "Learn More",
-      "required": true
+      "required": true,
+      "default": "Learn More"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "path": {
+      "type": "text"
     }
   }
 }

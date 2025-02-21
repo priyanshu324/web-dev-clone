@@ -4,13 +4,11 @@
   "info": {
     "singularName": "home-box3",
     "pluralName": "home-box3s",
-    "displayName": "homeBox3",
-    "description": ""
+    "displayName": "home-box3"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -25,10 +23,6 @@
       "required": true
     },
     "button": {
-      "type": "text",
-      "required": true
-    },
-    "path": {
       "type": "text",
       "required": true
     }

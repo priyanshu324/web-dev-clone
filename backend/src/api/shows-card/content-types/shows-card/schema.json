@@ -4,14 +4,16 @@
   "info": {
     "singularName": "shows-card",
     "pluralName": "shows-cards",
-    "displayName": "shows-card",
-    "description": ""
+    "displayName": "shows-card"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
     "title": {
       "type": "text",
       "required": true
@@ -22,10 +24,6 @@
     },
     "imglink": {
       "type": "text",
-      "required": true
-    },
-    "key": {
-      "type": "integer",
       "required": true
     }
   }

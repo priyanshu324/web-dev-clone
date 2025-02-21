@@ -4,13 +4,11 @@
   "info": {
     "singularName": "performance-core-web",
     "pluralName": "performance-core-webs",
-    "displayName": "performance-core-web",
-    "description": ""
+    "displayName": "performance-core-web"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -24,14 +22,14 @@
       "type": "text",
       "required": true
     },
+    "icons": {
+      "type": "text",
+      "required": true
+    },
     "button": {
       "type": "text",
       "required": true,
       "default": "Learn More"
-    },
-    "icons": {
-      "type": "text",
-      "required": true
     }
   }
 }

@@ -4,13 +4,11 @@
   "info": {
     "singularName": "learn-html-item",
     "pluralName": "learn-html-items",
-    "displayName": "learn-html-item",
-    "description": ""
+    "displayName": "learn-html-item"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -26,12 +24,11 @@
     },
     "button": {
       "type": "text",
-      "default": "Read Article",
-      "required": true
+      "required": true,
+      "default": "Read Article"
     },
     "articleLink": {
-      "type": "text",
-      "required": false
+      "type": "text"
     }
   }
 }

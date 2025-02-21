@@ -1,16 +1,84 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
 
-
 // List_1 Component
 export const List_1 = ({ items }) => {
+    return (
+        <>
+            {
+                items.map((item) => (
+                    <div key={item.key}>
+                        <div className='block bg-[#F0F4F8] dark:bg-[#121212] dark:text-white pb-20 dark:mt-[-20px]
+                             sm:grid sm:grid-cols-2
+                             xl:grid xl:grid-cols-2
+                             2xl:grid-cols-2'>
+
+                            {/* Left side of the banner */}
+                            <div>
+                                {/* Banner Heading */}
+                                <a href="#" className='hover:underline underline-offset-2'>
+                                    <h3 className='text-[#212121] dark:text-[#EEEEEE] text-6xl pl-4 mt-5 w-[420px]
+                                        xl:text-5xl xl:font-bold
+                                        2xl:text-6xl'>
+                                        {item.title}
+                                    </h3>
+                                </a>
+                                {/* Banner Description */}
+                                <p className='text-[#757575] dark:text-[#BDBDBD] text-[25px] w-[350px] leading-relaxed pl-4 mt-10
+                                    lg:w-[600px]
+                                    xl:w-[750px]
+                                    2xl:w-[900px]'>
+                                    {item.content}
+                                </p>
+                                {/* "About Web.dev" Button (Mobile Only) */}
+                                <div className='mt-14 pl-20 lg:hidden'>
+                                    <div className='border-[#42A5F5] hover:border-[#8BC34A] border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 text-[#42A5F5] hover:text-[#8BC34A] font-bold transition-colors duration-200 dark:text-[#42A5F5] dark:hover:text-[#8BC34A]'>
+                                        <a href='#' className="dark:text-[#42A5F5] dark:hover:text-[#8BC34A]">{item.button}</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right side of the banner (Image) */}
+                            <div className='mt-5'>
+                                {/* Container for the banner image */}
+                                <figure className='bg-none'>
+                                    <a href="#">
+                                        <picture>
+                                            {/* Banner Image */}
+                                            <img
+                                                src={item.imglink}
+                                                alt={item.title}
+                                                className='w-[375px] h-[300px] pl-4
+                                               sm:w-[300px] sm:h-[200px] sm:mt-52 sm:ml-5 sm:mr-20
+                                               md:ml-28
+                                               lg:ml-80
+                                               xl:mt-10 xl:ml-[300px] xl:w-[50%] xl:h-[50%] xl:max-w-auto
+                                               2xl:ml-[200px] 2xl:mt-10 2xl:w-[60%] 2xl:h-[60%]'
+                                            />
+                                        </picture>
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </>
+    )
+}
+// List_2 Component
+export const List_2 = ({ items }) => {
     return (
         // Main container for the list
         <div>
             {/* Container for padding at top */}
             <div className='bg-white dark:bg-[#202124] dark:text-white'>
-                {/* Heading for the section */}
-                <h3 className='text-2xl font-bold pt-10 2xl:text-2xl'>Performance</h3>
+                {/* Title and Main Content at the Top */}
+                {items.length > 0 && (
+                    <div className="mb-8">
+                        <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                    </div>
+                )}
                 {/* Container for all the cards */}
                 <div className='mt-10'>
                     {/* Grid container for the items */}
@@ -50,15 +118,19 @@ export const List_1 = ({ items }) => {
     );
 };
 
-// List_2 Component
-export const List_2 = ({ items }) => {
+// List_3 Component
+export const List_3 = ({ items }) => {
     return (
         // Main container for the list
         <div>
             {/* Container for padding at top */}
             <div className='bg-[#f5f6f7] mt-10 w-[420px] pb-10 dark:bg-[#202124] dark:text-white sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px]'>
-                {/* Heading for the section */}
-                <h3 className='text-3xl font-bold flex items-center justify-center mt-10  sm:flex-none sm:items-start sm:justify-start md:pl-5 2xl:text-3xl'>Build excellent websites</h3>
+                {/* Title and Main Content at the Top */}
+                {items.length > 0 && (
+                    <div className="mb-8">
+                        <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                    </div>
+                )}
                 {/* Container for all the cards */}
                 <div className='bg-[#f5f6f7] mt-10 pb-10 dark:bg-[#202124] dark:text-white'>
                     {/* Grid container for the items */}
@@ -98,15 +170,19 @@ export const List_2 = ({ items }) => {
     );
 };
 
-// List_3 Component
-export const List_3 = ({ items }) => {
+// List_4 Component
+export const List_4 = ({ items }) => {
     return (
         // Main container for the list
         <div>
             {/* Container for the background color and padding at top */}
             <div className='bg-[#f5f6f7] w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px]  dark:bg-[#202124] dark:text-white'>
-                {/* Heading for the section */}
-                <h3 className='text-7xl mt-20 pl-5 2xl:text-7xl'>Frameworks</h3>
+                {/* Title and Main Content at the Top */}
+                {items.length > 0 && (
+                    <div className="mb-8">
+                        <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                    </div>
+                )}
                 {/* Container for all the cards */}
                 <div className='bg-[#f5f6f7] mt-10 pb-10 dark:bg-[#202124] dark:text-white'>
                     {/* Grid container for the items */}
@@ -144,47 +220,56 @@ export const List_3 = ({ items }) => {
         </div>
     );
 };
+
+// list -4
+export const List_5 = ({ items }) => {
+    return (
+        <div className='bg-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px] pb-10 dark:bg-[#202124] dark:text-white'>
+            {/* Grid container for explorations and mini-apps info */}
+            {
+                items.map((item) => (
+                    <div key={item.key}>
+                        <div className='grid grid-cols-1'>
+                            <div className=''>
+                                <h3 className='text-2xl font-bold mt-5 2xl:text-2xl'>{item.main_title}</h3>
+                                <h3 className='text-2xl font-bold mt-5 2xl:text-2xl'>{item.main_tite_1}</h3>
+                                <p className='pt-7 text-2xl sm:pl-5 2xl:text-lg'>
+                                    {item.content}
+                                </p>
+                            </div>
+                        </div>
+                        <div className=' mt-10 mb-10 2xl:mt-5'>
+                            <div className='border-[#185abc] text-[#185abc] font-bold border-2 border-solid rounded-3xl flex items-center justify-center w-[250px] h-11 hover:border-black hover:text-black dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white 2xl:w-[300px]'>
+                                <a href='#'>{item.button}</a>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
 // Explore Component
 const Explore = () => {
     // API endpoints
-    const api1 = 'http://localhost:1337/api/explores?populate=*';
-    const api2 = 'http://localhost:1337/api/excellent-websites?populate=*';
-    const api3 = 'http://localhost:1337/api/build-excellents';
+    const api1 = 'http://localhost:1337/api/explore-banners';
+    const api2 = 'http://localhost:1337/api/explores?populate=*';
+    const api3 = 'http://localhost:1337/api/explore-excellent-websites?populate=*';
+    const api4 = 'http://localhost:1337/api/explore-build-excellents';
+    const api5 = 'http://localhost:1337/api/explore-explorations';
 
     // Fetch data using custom hook
     const { data: list1, loading: loading1, error: error1 } = useFetch(api1);
     const { data: list2, loading: loading2, error: error2 } = useFetch(api2);
     const { data: list3, loading: loading3, error: error3 } = useFetch(api3);
+    const { data: list4, loading: loading4, error: error4 } = useFetch(api4);
+    const { data: list5, loading: loading5, error: error5 } = useFetch(api5);
 
     return (
         <>
             {/* Main container for the explore page */}
-            <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
-                {/* Banner section */}
-                <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px] sm:grid sm:grid-cols-2 pb-10'>
-                    {/* Left section of the banner */}
-                    <div>
-                        {/* Heading of the banner */}
-                        <a href="#" className='hover:underline underline-offset-2'>
-                            <h3 className='text-7xl mt-20 pl-5 2xl:text-7xl'>Explore</h3>
-                        </a>
-                        {/* Description of the banner */}
-                        <p className='text-2xl leading-relaxed mt-10 pl-5 lg:w-[650px] 2xl:text-2xl 2xl:w-[800px]'>
-                            Explore our structured learning paths to discover everything you need to know about building for the web.
-                        </p>
-                    </div>
-                    {/* Right section of the banner */}
-                    <div className='mb-12'>
-                        {/* Image of the banner */}
-                        <figure className='bg-none'>
-                            <a href="#">
-                                <picture>
-                                    <img src="../src/assets/explore/explore-header.png" alt="peroid" className='max-w-[600px] max-h-[200px] mt-20 pl-0 sm:pl-3 sm:mt-56 md:pl-14 lg:mt-36 lg:pl-36 2xl:max-w-[800px] 2xl:max-h-[300px]' />
-                                </picture>
-                            </a>
-                        </figure>
-                    </div>
-                </div>
+            <div className='mt-10 lg:mt-40 dark:bg-[#202124] dark:text-white'>
+
                 {/* Data loading and error handling for the List_3 component */}
                 {loading1 && <p>Loading...</p>}
                 {error1 && <p className="text-red-500">{error1}</p>}
@@ -199,39 +284,16 @@ const Explore = () => {
                     {!loading2 && !error2 && <List_2 items={list2.data || []} />}
                 </div>
 
-                {/* Section for "Baseline" information */}
-                <div className='bg-white mt-10 w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px]  dark:bg-[#202124] dark:text-white'>
-                    {/* Grid container for "Baseline" heading and description */}
-                    <div className='grid grid-cols-1 bg-[#f5f6f7] mb-10 dark:bg-[#202124] dark:text-white sm:grid sm:grid-cols-2 pb-10'>
-                        {/* Left section of the grid */}
-                        <div className=''>
-                            {/* Baseline heading */}
-                            <h3 className='text-7xl mt-20 pl-5 2xl:text-7xl'>Baseline</h3>
-                            {/* Baseline description */}
-                            <p className='text-2xl leading-relaxed mt-10 pl-5 lg:w-[650px] 2xl:text-2xl 2xl:w-[800px]'>
-                                Baseline brings clarity to information about browser support for web platform features.
-                            </p>
-                        </div>
-                        {/* Right section of the grid */}
-                        <div className='mb-12'>
-                            {/* Baseline Image */}
-                            <figure className='bg-none'>
-                                <a href="#">
-                                    <picture>
-                                        <img src="../src/assets/explore/baseline-wordmark.png" alt="peroid" className='max-w-[600px] sm:max-w-[300px] max-h-[200px] mt-20 pl-0 sm:pl-3 sm:mt-32 md:pl-14 lg:mt-36 lg:pl-36 xl:pl-0 xl:mt-20 xl:max-w-[600px] 2xl:max-w-[600px] 2xl:max-h-[300px]' />
-                                    </picture>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    {/* Container for "Explore" link */}
-                    <div className='flex items-center justify-center mt-[-90px] 2xl:mt-[-120px] ml-[-350px]'>
-                        {/* Explore link */}
-                        <div className='border-[#1a73e8] cursor-pointer text-[#1a73e8] font-bold hover:text-black border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 hover:border-black  hover:border-2 hover:border-soild dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white 2xl:w-[200px]'>
-                            <a href='#'>Explore</a>
-                        </div>
-                    </div>
-                </div>
+
+
+
+                {/* Section for "bulid excellent" */}
+                {/* Data loading and error handling for the List_5 component */}
+                {loading4 && <p>Loading...</p>}
+                {error4 && <p className="text-red-500">{error4}</p>}
+                {/* List_5 component to display build excellent items */}
+                {!loading4 && !error4 && <List_4 items={list4.data || []} />}
+
                 {/* Section for "bulid excellent" */}
                 {/* Data loading and error handling for the List_5 component */}
                 {loading3 && <p>Loading...</p>}
@@ -239,29 +301,14 @@ const Explore = () => {
                 {/* List_5 component to display build excellent items */}
                 {!loading3 && !error3 && <List_3 items={list3.data || []} />}
 
-                {/* Section for "Explorations" and "Mini apps" */}
-                <div className='bg-white w-[420px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px] pb-10 dark:bg-[#202124] dark:text-white'>
-                    {/* Grid container for explorations and mini-apps info */}
-                    <div className='grid grid-cols-1'>
-                        {/* Title for explorations */}
-                        <div className=''>
-                            <h3 className='text-2xl font-bold mt-5 2xl:text-2xl'>Explorations</h3>
-                            {/* Title for mini-apps */}
-                            <h3 className='text-2xl font-bold mt-5 2xl:text-2xl'>Mini apps</h3>
-                            {/* Description of mini-apps */}
-                            <p className='pt-7 text-2xl sm:pl-5 2xl:text-lg'>
-                                A web developer's exploration into mini apps—apps that are built with web technologies, but that don't run in browsers.
-                            </p>
-                        </div>
-                    </div>
-                    {/* Container for the "Explore" link */}
-                    <div className=' mt-10 mb-10 2xl:mt-5'>
-                        {/* "Explore" link */}
-                        <div className='border-[#185abc] text-[#185abc] font-bold border-2 border-solid rounded-3xl flex items-center justify-center w-[250px] h-11 hover:border-black hover:text-black dark:hover:border-soild dark:hover:border-2 dark:hover:border-white dark:hover:text-white 2xl:w-[300px]'>
-                            <a href='#'>Explore</a>
-                        </div>
-                    </div>
-                </div>
+                {/* Section for "bulid excellent" */}
+                {/* Data loading and error handling for the List_5 component */}
+                {loading5 && <p>Loading...</p>}
+                {error5 && <p className="text-red-500">{error5}</p>}
+                {/* List_5 component to display build excellent items */}
+                {!loading5 && !error5 && <List_5 items={list5.data || []} />}
+
+
             </div>
         </>
     );

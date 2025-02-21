@@ -1,7 +1,7 @@
 import React from 'react'
 import useFetch from '../hooks/useFetch';
 
-
+// lsit 1
 export const List_1 = ({ items }) => {
     return (
         <>
@@ -46,7 +46,6 @@ export const List_1 = ({ items }) => {
         </>
     )
 }
-
 
 // list 2
 export const List_2 = ({ items }) => {
@@ -116,44 +115,6 @@ export const List_3 = ({ items }) => {
                 </div>
             ))}
         </div>
-    );
-};
-
-// List_4 component
-export const List_4 = ({ items }) => {
-    return (
-        <>
-            {items.map((item) => (
-                <div
-                    id={`${item.path}`}
-                    className='bg-[#f5f6f7] mt-10 w-[420px] pb-10 dark:bg-[#202124] dark:text-white sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1380px] 2xl:w-[1536px] '
-                    key={item.key}
-                >
-                    <div className='grid grid-cols-1 sm:grid sm:grid-cols-2'>
-                        <div className=''>
-                            <h3 className='text-2xl font-bold hover:underline hover:underline-offset-2 mt-5 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start md:pl-5 2xl:text-2xl'>{item.title}</h3>
-                            <p className='mt-10  text-lg md:pl-5 lg:w-[630px] 2xl:text-lg 2xl:w-[800px]'>
-                                {item.content}
-                            </p>
-                        </div>
-                        <div className='mb-12'>
-                            <figure className='bg-none'>
-                                <a href="#">
-                                    <picture>
-                                        <img src={item.imglink} alt={item.title} className=' max-w-[600px] max-h-[200px]  mt-16 pl-16 sm:pl-3 md:pl-14 lg:pl-40 2xl:max-w-[600px] 2xl:max-h-[300px]' />
-                                    </picture>
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div className='pl-20 mt-[-30px] sm:mt-10 lg:pl-60 2xl:pl-[100px]'>
-                        <div className='border-[#185abc] text-[#1a73e8] hover:text-white hover:bg-[#185abc] border-2 border-solid rounded-3xl flex items-center justify-center w-[250px] h-11 hover:font-bold 2xl:w-[300px]'>
-                            <a href='#' className=''>{item.button}</a>
-                        </div>
-                    </div>
-                </div>
-            ))}
-        </>
     );
 };
 
@@ -321,11 +282,12 @@ export const List_8 = ({ items }) => {
 export const List_9 = ({ items }) => {
     return (
         <>
-            <div>
-                <h1 className='text-2xl font-bold pt-10 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start sm:pl-5 2xl:text-3xl'>
-                    Streamline SMS based two-factor authentication user experience
-                </h1>
-            </div>
+            {/* Title and Main Content at the Top */}
+            {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                </div>
+            )}
             <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  dark:bg-[#202124] dark:text-white px-4'>
                 {items.map((item, index) => (
                     <div key={index} className='m-2'>
@@ -428,9 +390,12 @@ export const List_11 = ({ items }) => {
 export const List_12 = ({ items }) => {
     return (
         <>
-            <h3 className='text-2xl font-bold pt-10 flex items-center justify-center  sm:flex-none sm:items-start sm:justify-start sm:pl-5 2xl:text-3xl'>
-                Case studies
-            </h3>
+            {/* Title and Main Content at the Top */}
+            {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                </div>
+            )}
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-8'>
                 {items.map((item) => (
                     <div key={item.key} className='bg-white border-[#c0c2c4] border-2 border-solid rounded-lg shadow-md p-6 flex flex-col dark:bg-[#202124] dark:text-white'>
@@ -464,7 +429,6 @@ const Identity = () => {
     const api1 = 'http://localhost:1337/api/identity-banners';
     const api2 = 'http://localhost:1337/api/identity-overviews';
     const api3 = 'http://localhost:1337/api/identity-links';
-    const api4 = 'http://localhost:1337/api/identity-new-to-html-forms';
     const api5 = 'http://localhost:1337/api/identity-overview-1s';
     const api6 = 'http://localhost:1337/api/identity-link-1s';
     const api7 = 'http://localhost:1337/api/identity-pmc-titles';
@@ -480,7 +444,6 @@ const Identity = () => {
     const { data: data1, loading: loading1, error: error1 } = useFetch(api1);
     const { data: data2, loading: loading2, error: error2 } = useFetch(api2);
     const { data: data3, loading: loading3, error: error3 } = useFetch(api3);
-    const { data: data4, loading: loading4, error: error4 } = useFetch(api4);
     const { data: data5, loading: loading5, error: error5 } = useFetch(api5);
     const { data: data6, loading: loading6, error: error6 } = useFetch(api6);
     const { data: data7, loading: loading7, error: error7 } = useFetch(api7);
@@ -497,7 +460,6 @@ const Identity = () => {
                 {/* Data loading and error handling */}
                 {loading1 && <p>Loading...</p>}
                 {error1 && <p className="text-red-500">{error1}</p>}
-                {/* List_1 Component to render the data */}
                 {!loading1 && !error1 && <List_1 items={data1.data || []} />}
             </div>
 
@@ -507,7 +469,6 @@ const Identity = () => {
                     {/* Data loading and error handling */}
                     {loading2 && <p>Loading...</p>}
                     {error2 && <p className="text-red-500">{error2}</p>}
-                    {/* List_1 Component to render the data */}
                     {!loading2 && !error2 && <List_2 items={data2.data || []} />}
                 </div>
 
@@ -516,27 +477,20 @@ const Identity = () => {
                     {/* Data loading and error handling */}
                     {loading3 && <p>Loading...</p>}
                     {error3 && <p className="text-red-500">{error3}</p>}
-                    {/* List_1 Component to render the data */}
                     {!loading3 && !error3 && <List_3 items={data3.data || []} />}
                 </div>
 
             </div>
 
-            <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
-                {/* Data loading and error handling */}
-                {loading4 && <p>Loading...</p>}
-                {error4 && <p className="text-red-500">{error4}</p>}
-                {/* List_1 Component to render the data */}
-                {!loading4 && !error4 && <List_4 items={data4.data || []} />}
-            </div>
 
+
+            <div className='border-[1px] mt-10 border-[#646465] border-solid'></div>
             <div className='flex items-center justify-center'>
                 {/* Main container for the cards */}
                 <div className='mt-[-340px] dark:bg-[#202124] dark:text-white'>
                     {/* Data loading and error handling */}
                     {loading5 && <p>Loading...</p>}
                     {error5 && <p className="text-red-500">{error5}</p>}
-                    {/* List_1 Component to render the data */}
                     {!loading5 && !error5 && <List_5 items={data5.data || []} />}
                 </div>
 
@@ -545,7 +499,6 @@ const Identity = () => {
                     {/* Data loading and error handling */}
                     {loading6 && <p>Loading...</p>}
                     {error6 && <p className="text-red-500">{error6}</p>}
-                    {/* List_1 Component to render the data */}
                     {!loading6 && !error3 && <List_6 items={data6.data || []} />}
                 </div>
 
@@ -555,7 +508,6 @@ const Identity = () => {
                 {/* Data loading and error handling */}
                 {loading7 && <p>Loading...</p>}
                 {error7 && <p className="text-red-500">{error7}</p>}
-                {/* List_1 Component to render the data */}
                 {!loading7 && !error7 && <List_7 items={data7.data || []} />}
             </div>
 
@@ -563,7 +515,6 @@ const Identity = () => {
                 {/* Data loading and error handling */}
                 {loading8 && <p>Loading...</p>}
                 {error8 && <p className="text-red-500">{error8}</p>}
-                {/* List_1 Component to render the data */}
                 {!loading8 && !error8 && <List_8 items={data8.data || []} />}
             </div>
 
@@ -571,7 +522,6 @@ const Identity = () => {
                 {/* Data loading and error handling */}
                 {loading9 && <p>Loading...</p>}
                 {error9 && <p className="text-red-500">{error9}</p>}
-                {/* List_1 Component to render the data */}
                 {!loading9 && !error9 && <List_9 items={data9.data || []} />}
             </div>
 
@@ -580,7 +530,6 @@ const Identity = () => {
                     {/* Data loading and error handling */}
                     {loading10 && <p>Loading...</p>}
                     {error10 && <p className="text-red-500">{error10}</p>}
-                    {/* List_1 Component to render the data */}
                     {!loading10 && !error10 && <List_10 items={data10.data || []} />}
                 </div>
 
@@ -588,7 +537,6 @@ const Identity = () => {
                     {/* Data loading and error handling */}
                     {loading11 && <p>Loading...</p>}
                     {error11 && <p className="text-red-500">{error11}</p>}
-                    {/* List_1 Component to render the data */}
                     {!loading11 && !error11 && <List_11 items={data11.data || []} />}
                 </div>
             </div>
@@ -597,7 +545,6 @@ const Identity = () => {
                 {/* Data loading and error handling */}
                 {loading12 && <p>Loading...</p>}
                 {error12 && <p className="text-red-500">{error12}</p>}
-                {/* List_1 Component to render the data */}
                 {!loading12 && !error12 && <List_12 items={data12.data || []} />}
             </div>
         </>

@@ -58,9 +58,12 @@ export const List_2 = ({ items }) => {
 
     return (
         <div className="max-w-full px-4 py-8">
-            <h3 className="text-2xl font-bold mb-8 pl-4 dark:text-white">
-                Jump ahead
-            </h3>
+            {/* Title and Main Content at the Top */}
+            {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                </div>
+            )}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {items.map((item) => (
                     <div key={item.key} className="flex items-start gap-4">
@@ -131,11 +134,12 @@ export const List_4 = ({ items }) => {
     return (
 
         <>
-            <div>
-                <h1 className='text-3xl font-bold mb-4 pl-8 dark:text-black'>
-                    Keep learning
-                </h1>
-            </div>
+            {/* Title and Main Content at the Top */}
+            {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title_1}</h1>
+                </div>
+            )}
             <div className='bg-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8'>
                 {items.map((item) => (
                     <div
@@ -184,11 +188,12 @@ export const List_4 = ({ items }) => {
 export const List_5 = ({ items }) => {
     return (
         <>
-            <div>
-                <h1 className='text-3xl font-bold mb-4 pl-8 dark:text-black'>
-                    Read up on accessibility features and patterns
-                </h1>
-            </div>
+            {/* Title and Main Content at the Top */}
+            {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                </div>
+            )}
             <div className='bg-[#f5f6f7] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8'>
                 {items.map((item) => (
                     <div
@@ -197,7 +202,7 @@ export const List_5 = ({ items }) => {
                         className='bg-white border-[#c0c2c4] border-2 border-solid rounded-lg shadow-md p-6 flex flex-col dark:bg-[#202124] dark:text-white '
                     >
 
-                        <div className="material-icons text-4xl sm:text-5xl dark:text-white ml-36">{item.icons}</div>
+                        <div className="material-icons text-4xl sm:text-5xl dark:text-white ">{item.icons}</div>
 
                         <h1 className='text-2xl font-bold mb-2 text-blue-500 hover:underline hover:underline-offset-2 dark:text-white flex items-center justify-center'>
                             <a href="#">
@@ -230,11 +235,12 @@ export const List_5 = ({ items }) => {
 export const List_6 = ({ items }) => {
     return (
         <>
-            <div>
-                <h1 className='text-3xl font-bold mb-4 pl-8 dark:text-black'>
-                    Hear from community experts
-                </h1>
-            </div>
+            {/* Title and Main Content at the Top */}
+            {items.length > 0 && (
+                <div className="mb-8">
+                    <h1 className="text-[#212121] dark:text-[#EEEEEE] text-5xl font-bold">{items[0].main_title}</h1>
+                </div>
+            )}
             <div className='bg-[#f5f6f7] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-6 px-4 py-8'>
                 {items.map((item) => (
                     <div

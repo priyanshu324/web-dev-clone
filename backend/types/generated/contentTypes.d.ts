@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAboutBannerAboutBanner extends Struct.CollectionTypeSchema {
   collectionName: 'about_banners';
   info: {
+    description: '';
     displayName: 'about-banner';
     pluralName: 'about-banners';
     singularName: 'about-banner';
@@ -380,6 +381,9 @@ export interface ApiAboutBannerAboutBanner extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    button: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Get Started'>;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -437,7 +441,8 @@ export interface ApiAboutSiteAboutSite extends Struct.CollectionTypeSchema {
 export interface ApiAboutTeamAboutTeam extends Struct.CollectionTypeSchema {
   collectionName: 'about_teams';
   info: {
-    displayName: 'aboutTeam';
+    description: '';
+    displayName: 'about-team';
     pluralName: 'about-teams';
     singularName: 'about-team';
   };
@@ -457,6 +462,8 @@ export interface ApiAboutTeamAboutTeam extends Struct.CollectionTypeSchema {
       'api::about-team.about-team'
     > &
       Schema.Attribute.Private;
+    main_content: Schema.Attribute.Text;
+    main_title: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -468,7 +475,8 @@ export interface ApiAboutTeamAboutTeam extends Struct.CollectionTypeSchema {
 export interface ApiAboutToolAboutTool extends Struct.CollectionTypeSchema {
   collectionName: 'about_tools';
   info: {
-    displayName: 'aboutTool';
+    description: '';
+    displayName: 'about-tool';
     pluralName: 'about-tools';
     singularName: 'about-tool';
   };
@@ -481,7 +489,7 @@ export interface ApiAboutToolAboutTool extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     icons: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -532,6 +540,7 @@ export interface ApiAccessibilityCard1AccessibilityCard1
   extends Struct.CollectionTypeSchema {
   collectionName: 'accessibility_card_1s';
   info: {
+    description: '';
     displayName: 'accessibility-card-1';
     pluralName: 'accessibility-card-1s';
     singularName: 'accessibility-card-1';
@@ -540,13 +549,8 @@ export interface ApiAccessibilityCard1AccessibilityCard1
     draftAndPublish: true;
   };
   attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text;
-    course_name: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Course'>;
+    button: Schema.Attribute.Text & Schema.Attribute.Required;
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -558,6 +562,10 @@ export interface ApiAccessibilityCard1AccessibilityCard1
       'api::accessibility-card-1.accessibility-card-1'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'COURSE'>;
+    main_title_1: Schema.Attribute.Text;
     path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -597,6 +605,7 @@ export interface ApiAccessibilityCard2AccessibilityCard2
       'api::accessibility-card-2.accessibility-card-2'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
     path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -610,6 +619,7 @@ export interface ApiAccessibilityCard3AccessibilityCard3
   extends Struct.CollectionTypeSchema {
   collectionName: 'accessibility_card_3s';
   info: {
+    description: '';
     displayName: 'accessibility-card-3';
     pluralName: 'accessibility-card-3s';
     singularName: 'accessibility-card-3';
@@ -633,6 +643,7 @@ export interface ApiAccessibilityCard3AccessibilityCard3
       'api::accessibility-card-3.accessibility-card-3'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
     path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -646,6 +657,7 @@ export interface ApiAccessibilityCard4AccessibilityCard4
   extends Struct.CollectionTypeSchema {
   collectionName: 'accessibility_card_4s';
   info: {
+    description: '';
     displayName: 'accessibility-card-4';
     pluralName: 'accessibility-card-4s';
     singularName: 'accessibility-card-4';
@@ -668,6 +680,7 @@ export interface ApiAccessibilityCard4AccessibilityCard4
       'api::accessibility-card-4.accessibility-card-4'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
     path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -682,6 +695,7 @@ export interface ApiAccessibilityJumpAccessibilityJump
   extends Struct.CollectionTypeSchema {
   collectionName: 'accessibility_jumps';
   info: {
+    description: '';
     displayName: 'accessibility-jump';
     pluralName: 'accessibility-jumps';
     singularName: 'accessibility-jump';
@@ -695,13 +709,14 @@ export interface ApiAccessibilityJumpAccessibilityJump
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     icons: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::accessibility-jump.accessibility-jump'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
     path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -715,6 +730,7 @@ export interface ApiAccessibilityNewToAccessibilityAccessibilityNewToAccessibili
   extends Struct.CollectionTypeSchema {
   collectionName: 'accessibility_new_to_accessibilities';
   info: {
+    description: '';
     displayName: 'accessibility-new-to-accessibility';
     pluralName: 'accessibility-new-to-accessibilities';
     singularName: 'accessibility-new-to-accessibility';
@@ -739,7 +755,38 @@ export interface ApiAccessibilityNewToAccessibilityAccessibilityNewToAccessibili
     > &
       Schema.Attribute.Private;
     main_title: Schema.Attribute.Text & Schema.Attribute.Required;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
+    path: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAiBannerAiBanner extends Struct.CollectionTypeSchema {
+  collectionName: 'ai_banners';
+  info: {
+    displayName: 'ai-banner';
+    pluralName: 'ai-banners';
+    singularName: 'ai-banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ai-banner.ai-banner'
+    > &
+      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -793,6 +840,12 @@ export interface ApiAiChrome1AiChrome1 extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    button: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Read the doc'>;
+    button_1: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Read the doc'>;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     content_1: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
@@ -827,11 +880,14 @@ export interface ApiAiChromeVideoTitleAiChromeVideoTitle
   };
   attributes: {
     button: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<' Watch the recordings'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    icons: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'movie'>;
+    icons: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'movie'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -841,6 +897,7 @@ export interface ApiAiChromeVideoTitleAiChromeVideoTitle
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Web AI Summit 2024'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -852,7 +909,6 @@ export interface ApiAiChromeVideoAiChromeVideo
   extends Struct.CollectionTypeSchema {
   collectionName: 'ai_chrome_videos';
   info: {
-    description: '';
     displayName: 'ai-chrome-video';
     pluralName: 'ai-chrome-videos';
     singularName: 'ai-chrome-video';
@@ -861,7 +917,7 @@ export interface ApiAiChromeVideoAiChromeVideo
     draftAndPublish: true;
   };
   attributes: {
-    button: Schema.Attribute.String &
+    button: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Watch on YouTube'>;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -887,7 +943,6 @@ export interface ApiAiChromeVideoAiChromeVideo
 export interface ApiAiChromeAiChrome extends Struct.CollectionTypeSchema {
   collectionName: 'ai_chromes';
   info: {
-    description: '';
     displayName: 'ai-chrome';
     pluralName: 'ai-chromes';
     singularName: 'ai-chrome';
@@ -896,12 +951,13 @@ export interface ApiAiChromeAiChrome extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    button: Schema.Attribute.Text & Schema.Attribute.Required;
+    button: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Read the doc'>;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    icons: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'chrome'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -909,6 +965,7 @@ export interface ApiAiChromeAiChrome extends Struct.CollectionTypeSchema {
       'api::ai-chrome.ai-chrome'
     > &
       Schema.Attribute.Private;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -955,7 +1012,6 @@ export interface ApiAiGoogleVideoTitleAiGoogleVideoTitle
   extends Struct.CollectionTypeSchema {
   collectionName: 'ai_google_video_titles';
   info: {
-    description: '';
     displayName: 'ai-google-video-title';
     pluralName: 'ai-google-video-titles';
     singularName: 'ai-google-video-title';
@@ -968,7 +1024,9 @@ export interface ApiAiGoogleVideoTitleAiGoogleVideoTitle
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    icons: Schema.Attribute.Text & Schema.Attribute.Required;
+    icons: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'movie'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -977,7 +1035,9 @@ export interface ApiAiGoogleVideoTitleAiGoogleVideoTitle
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Watch to Learn'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1019,42 +1079,6 @@ export interface ApiAiGoogleVideoAiGoogleVideo
   };
 }
 
-export interface ApiAiRow1AiRow1 extends Struct.CollectionTypeSchema {
-  collectionName: 'ai_row_1s';
-  info: {
-    description: '';
-    displayName: 'ai-row-1';
-    pluralName: 'ai-row-1s';
-    singularName: 'ai-row-1';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text & Schema.Attribute.Required;
-    button_1: Schema.Attribute.Text;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    content_1: Schema.Attribute.Text;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::ai-row-1.ai-row-1'
-    > &
-      Schema.Attribute.Private;
-    main_title: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    title_1: Schema.Attribute.Text;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiAiRowAiRow extends Struct.CollectionTypeSchema {
   collectionName: 'ai_rows';
   info: {
@@ -1070,14 +1094,13 @@ export interface ApiAiRowAiRow extends Struct.CollectionTypeSchema {
     button: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Read the doc'>;
-    button_1: Schema.Attribute.Text &
-      Schema.Attribute.DefaultTo<'Read the doc'>;
+    button_1: Schema.Attribute.Text & Schema.Attribute.Required;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     content_1: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    key: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1085,6 +1108,8 @@ export interface ApiAiRowAiRow extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     main_title: Schema.Attribute.Text;
+    path: Schema.Attribute.Text;
+    path_1: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     title_1: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -1098,7 +1123,6 @@ export interface ApiBaselineBannerBaselineBanner
   extends Struct.CollectionTypeSchema {
   collectionName: 'baseline_banners';
   info: {
-    description: '';
     displayName: 'baseline-banner';
     pluralName: 'baseline-banners';
     singularName: 'baseline-banner';
@@ -1108,7 +1132,6 @@ export interface ApiBaselineBannerBaselineBanner
   };
   attributes: {
     content: Schema.Attribute.Text & Schema.Attribute.Required;
-    content_1: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1155,6 +1178,7 @@ export interface ApiBaselineWorkBaselineWork
       'api::baseline-work.baseline-work'
     > &
       Schema.Attribute.Private;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1188,7 +1212,7 @@ export interface ApiBaslineFindBaslineFind extends Struct.CollectionTypeSchema {
       'api::basline-find.basline-find'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
+    main_title: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1243,8 +1267,8 @@ export interface ApiBaslineLatestNewBaslineLatestNew
     draftAndPublish: true;
   };
   attributes: {
-    button: Schema.Attribute.Text;
-    content: Schema.Attribute.Text;
+    button: Schema.Attribute.Text & Schema.Attribute.Required;
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1256,6 +1280,7 @@ export interface ApiBaslineLatestNewBaslineLatestNew
       'api::basline-latest-new.basline-latest-new'
     > &
       Schema.Attribute.Private;
+    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1281,7 +1306,7 @@ export interface ApiBaslineLinkBaslineLink extends Struct.CollectionTypeSchema {
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     link_1: Schema.Attribute.Text;
     link_2: Schema.Attribute.Text;
-    link_3: Schema.Attribute.Text;
+    link_3: Schema.Attribute.String;
     link_4: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -1321,8 +1346,8 @@ export interface ApiBaslineOverviewBaslineOverview
       'api::basline-overview.basline-overview'
     > &
       Schema.Attribute.Private;
-    main_content: Schema.Attribute.Text & Schema.Attribute.Required;
-    main_title: Schema.Attribute.Text & Schema.Attribute.Required;
+    main_content: Schema.Attribute.Text;
+    main_title: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     title_1: Schema.Attribute.Text;
@@ -1365,50 +1390,12 @@ export interface ApiBlogBannerBlogBanner extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
-  collectionName: 'blogs';
+export interface ApiCaseBannerCaseBanner extends Struct.CollectionTypeSchema {
+  collectionName: 'case_banners';
   info: {
-    description: '';
-    displayName: 'blog';
-    pluralName: 'blogs';
-    singularName: 'blog';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    author: Schema.Attribute.Text & Schema.Attribute.Required;
-    category: Schema.Attribute.Text & Schema.Attribute.Required;
-    category_1: Schema.Attribute.Text;
-    category_2: Schema.Attribute.Text;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imgurl: Schema.Attribute.Text & Schema.Attribute.Required;
-    item: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    timestamp: Schema.Attribute.DateTime &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'2025-01-21T18:30:00.000Z'>;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiBuildExcellentBuildExcellent
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'build_excellents';
-  info: {
-    displayName: 'buildExcellent';
-    pluralName: 'build-excellents';
-    singularName: 'build-excellent';
+    displayName: 'case-banner';
+    pluralName: 'case-banners';
+    singularName: 'case-banner';
   };
   options: {
     draftAndPublish: true;
@@ -1419,11 +1406,11 @@ export interface ApiBuildExcellentBuildExcellent
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::build-excellent.build-excellent'
+      'api::case-banner.case-banner'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1434,14 +1421,113 @@ export interface ApiBuildExcellentBuildExcellent
   };
 }
 
-export interface ApiCssAccessibiltyCssAccessibilty
+export interface ApiExploreBannerExploreBanner
   extends Struct.CollectionTypeSchema {
-  collectionName: 'css_accessibilties';
+  collectionName: 'explore_banners';
+  info: {
+    displayName: 'explore-banner';
+    pluralName: 'explore-banners';
+    singularName: 'explore-banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::explore-banner.explore-banner'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiExploreBuildExcellentExploreBuildExcellent
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'explore_build_excellents';
   info: {
     description: '';
-    displayName: 'cssAccessibilty';
-    pluralName: 'css-accessibilties';
-    singularName: 'css-accessibilty';
+    displayName: 'explore-build-excellent';
+    pluralName: 'explore-build-excellents';
+    singularName: 'explore-build-excellent';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::explore-build-excellent.explore-build-excellent'
+    > &
+      Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiExploreExcellentWebsiteExploreExcellentWebsite
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'explore_excellent_websites';
+  info: {
+    description: '';
+    displayName: 'explore-excellent-website';
+    pluralName: 'explore-excellent-websites';
+    singularName: 'explore-excellent-website';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::explore-excellent-website.explore-excellent-website'
+    > &
+      Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiExploreExplorationExploreExploration
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'explore_explorations';
+  info: {
+    displayName: 'explore-exploration';
+    pluralName: 'explore-explorations';
+    singularName: 'explore-exploration';
   };
   options: {
     draftAndPublish: true;
@@ -1449,343 +1535,21 @@ export interface ApiCssAccessibiltyCssAccessibilty
   attributes: {
     button: Schema.Attribute.Text &
       Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
+      Schema.Attribute.DefaultTo<'Explore'>;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::css-accessibilty.css-accessibilty'
+      'api::explore-exploration.explore-exploration'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
+    main_title: Schema.Attribute.Text & Schema.Attribute.Required;
+    main_title_1: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiCssBannerCssBanner extends Struct.CollectionTypeSchema {
-  collectionName: 'css_banners';
-  info: {
-    displayName: 'css-banner';
-    pluralName: 'css-banners';
-    singularName: 'css-banner';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::css-banner.css-banner'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiCssJupmCssJupm extends Struct.CollectionTypeSchema {
-  collectionName: 'css_jupms';
-  info: {
-    description: '';
-    displayName: 'cssJupm';
-    pluralName: 'css-jupms';
-    singularName: 'css-jupm';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::css-jupm.css-jupm'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiCssNewToCssCssNewToCss extends Struct.CollectionTypeSchema {
-  collectionName: 'css_new_to_csses';
-  info: {
-    displayName: 'css-new-to-css';
-    pluralName: 'css-new-to-csses';
-    singularName: 'css-new-to-css';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn CSS!'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::css-new-to-css.css-new-to-css'
-    > &
-      Schema.Attribute.Private;
-    main_title: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Course'>;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiCssPerformanceCssPerformance
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'css_performances';
-  info: {
-    description: '';
-    displayName: 'cssPerformance';
-    pluralName: 'css-performances';
-    singularName: 'css-performance';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::css-performance.css-performance'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiCssPodcastCssPodcast extends Struct.CollectionTypeSchema {
-  collectionName: 'css_podcasts';
-  info: {
-    description: '';
-    displayName: ' css-podcast';
-    pluralName: 'css-podcasts';
-    singularName: 'css-podcast';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'Listen Now!'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::css-podcast.css-podcast'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiCssUiDesignCssUiDesign extends Struct.CollectionTypeSchema {
-  collectionName: 'css_ui_designs';
-  info: {
-    description: '';
-    displayName: 'cssUiDesign';
-    pluralName: 'css-ui-designs';
-    singularName: 'css-ui-design';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::css-ui-design.css-ui-design'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiDiveIntoCssPatternDiveIntoCssPattern
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'dive_into_css_patterns';
-  info: {
-    description: '';
-    displayName: 'DiveIntoCssPattern';
-    pluralName: 'dive-into-css-patterns';
-    singularName: 'dive-into-css-pattern';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'See Patterns'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::dive-into-css-pattern.dive-into-css-pattern'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiDiveIntoJsPatternDiveIntoJsPattern
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'dive_into_js_patterns';
-  info: {
-    description: '';
-    displayName: 'DiveIntoJsPattern';
-    pluralName: 'dive-into-js-patterns';
-    singularName: 'dive-into-js-pattern';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'See Patterns'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::dive-into-js-pattern.dive-into-js-pattern'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiExcellentWebsiteExcellentWebsite
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'excellent_websites';
-  info: {
-    displayName: 'excellentWebsite';
-    pluralName: 'excellent-websites';
-    singularName: 'excellent-website';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::excellent-website.excellent-website'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1795,6 +1559,7 @@ export interface ApiExcellentWebsiteExcellentWebsite
 export interface ApiExploreExplore extends Struct.CollectionTypeSchema {
   collectionName: 'explores';
   info: {
+    description: '';
     displayName: 'explore';
     pluralName: 'explores';
     singularName: 'explore';
@@ -1815,6 +1580,7 @@ export interface ApiExploreExplore extends Struct.CollectionTypeSchema {
       'api::explore.explore'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1834,7 +1600,7 @@ export interface ApiHomeBannerHomeBanner extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    button: Schema.Attribute.Text & Schema.Attribute.Required;
+    button: Schema.Attribute.Text;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1858,8 +1624,7 @@ export interface ApiHomeBannerHomeBanner extends Struct.CollectionTypeSchema {
 export interface ApiHomeBox1HomeBox1 extends Struct.CollectionTypeSchema {
   collectionName: 'home_box1s';
   info: {
-    description: '';
-    displayName: 'homeBox1';
+    displayName: 'home-box1';
     pluralName: 'home-box1s';
     singularName: 'home-box1';
   };
@@ -1867,7 +1632,9 @@ export interface ApiHomeBox1HomeBox1 extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    button: Schema.Attribute.Text & Schema.Attribute.Required;
+    button: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Explore CSS'>;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1879,7 +1646,6 @@ export interface ApiHomeBox1HomeBox1 extends Struct.CollectionTypeSchema {
       'api::home-box1.home-box1'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1891,8 +1657,7 @@ export interface ApiHomeBox1HomeBox1 extends Struct.CollectionTypeSchema {
 export interface ApiHomeBox2HomeBox2 extends Struct.CollectionTypeSchema {
   collectionName: 'home_box2s';
   info: {
-    description: '';
-    displayName: 'homeBox2';
+    displayName: 'home-box2';
     pluralName: 'home-box2s';
     singularName: 'home-box2';
   };
@@ -1912,7 +1677,6 @@ export interface ApiHomeBox2HomeBox2 extends Struct.CollectionTypeSchema {
       'api::home-box2.home-box2'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1924,8 +1688,7 @@ export interface ApiHomeBox2HomeBox2 extends Struct.CollectionTypeSchema {
 export interface ApiHomeBox3HomeBox3 extends Struct.CollectionTypeSchema {
   collectionName: 'home_box3s';
   info: {
-    description: '';
-    displayName: 'homeBox3';
+    displayName: 'home-box3';
     pluralName: 'home-box3s';
     singularName: 'home-box3';
   };
@@ -1945,7 +1708,6 @@ export interface ApiHomeBox3HomeBox3 extends Struct.CollectionTypeSchema {
       'api::home-box3.home-box3'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1957,8 +1719,7 @@ export interface ApiHomeBox3HomeBox3 extends Struct.CollectionTypeSchema {
 export interface ApiHomeBox4HomeBox4 extends Struct.CollectionTypeSchema {
   collectionName: 'home_box4s';
   info: {
-    description: '';
-    displayName: 'homeBox4';
+    displayName: 'home-box4';
     pluralName: 'home-box4s';
     singularName: 'home-box4';
   };
@@ -1978,7 +1739,6 @@ export interface ApiHomeBox4HomeBox4 extends Struct.CollectionTypeSchema {
       'api::home-box4.home-box4'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1991,7 +1751,7 @@ export interface ApiHomeBox5HomeBox5 extends Struct.CollectionTypeSchema {
   collectionName: 'home_box5s';
   info: {
     description: '';
-    displayName: 'homeBox5';
+    displayName: 'home-box5';
     pluralName: 'home-box5s';
     singularName: 'home-box5';
   };
@@ -2011,7 +1771,6 @@ export interface ApiHomeBox5HomeBox5 extends Struct.CollectionTypeSchema {
       'api::home-box5.home-box5'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -2024,7 +1783,7 @@ export interface ApiHomeCardHomeCard extends Struct.CollectionTypeSchema {
   collectionName: 'home_cards';
   info: {
     description: '';
-    displayName: 'homeCard';
+    displayName: 'home-card';
     pluralName: 'home-cards';
     singularName: 'home-card';
   };
@@ -2032,9 +1791,7 @@ export interface ApiHomeCardHomeCard extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
+    button: Schema.Attribute.Text & Schema.Attribute.Required;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -2047,7 +1804,7 @@ export interface ApiHomeCardHomeCard extends Struct.CollectionTypeSchema {
       'api::home-card.home-card'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -2059,7 +1816,7 @@ export interface ApiHomeCardHomeCard extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink1HomeLink1 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link1s';
   info: {
-    displayName: 'homeLink1';
+    displayName: 'home-link1';
     pluralName: 'home-link1s';
     singularName: 'home-link1';
   };
@@ -2091,7 +1848,7 @@ export interface ApiHomeLink1HomeLink1 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink10HomeLink10 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link10s';
   info: {
-    displayName: 'homeLink10';
+    displayName: 'home-link10';
     pluralName: 'home-link10s';
     singularName: 'home-link10';
   };
@@ -2123,7 +1880,7 @@ export interface ApiHomeLink10HomeLink10 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink2HomeLink2 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link2s';
   info: {
-    displayName: 'homeLink2';
+    displayName: 'home-link2';
     pluralName: 'home-link2s';
     singularName: 'home-link2';
   };
@@ -2136,7 +1893,7 @@ export interface ApiHomeLink2HomeLink2 extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    key: Schema.Attribute.Integer;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2155,7 +1912,7 @@ export interface ApiHomeLink2HomeLink2 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink3HomeLink3 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link3s';
   info: {
-    displayName: 'homeLink3';
+    displayName: 'home-link3';
     pluralName: 'home-link3s';
     singularName: 'home-link3';
   };
@@ -2187,7 +1944,7 @@ export interface ApiHomeLink3HomeLink3 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink4HomeLink4 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link4s';
   info: {
-    displayName: 'homeLink4';
+    displayName: 'home-link4';
     pluralName: 'home-link4s';
     singularName: 'home-link4';
   };
@@ -2219,7 +1976,7 @@ export interface ApiHomeLink4HomeLink4 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink5HomeLink5 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link5s';
   info: {
-    displayName: 'homeLink5';
+    displayName: 'home-link5';
     pluralName: 'home-link5s';
     singularName: 'home-link5';
   };
@@ -2251,7 +2008,7 @@ export interface ApiHomeLink5HomeLink5 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink6HomeLink6 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link6s';
   info: {
-    displayName: 'homeLink6';
+    displayName: 'home-link6';
     pluralName: 'home-link6s';
     singularName: 'home-link6';
   };
@@ -2283,7 +2040,8 @@ export interface ApiHomeLink6HomeLink6 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink7HomeLink7 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link7s';
   info: {
-    displayName: 'homeLink7';
+    description: '';
+    displayName: 'home-link7';
     pluralName: 'home-link7s';
     singularName: 'home-link7';
   };
@@ -2315,7 +2073,7 @@ export interface ApiHomeLink7HomeLink7 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink8HomeLink8 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link8s';
   info: {
-    displayName: 'homeLink8';
+    displayName: 'home-link8';
     pluralName: 'home-link8s';
     singularName: 'home-link8';
   };
@@ -2347,7 +2105,7 @@ export interface ApiHomeLink8HomeLink8 extends Struct.CollectionTypeSchema {
 export interface ApiHomeLink9HomeLink9 extends Struct.CollectionTypeSchema {
   collectionName: 'home_link9s';
   info: {
-    displayName: 'homeLink9';
+    displayName: 'home-link9';
     pluralName: 'home-link9s';
     singularName: 'home-link9';
   };
@@ -2380,7 +2138,7 @@ export interface ApiHomeNewHomeNew extends Struct.CollectionTypeSchema {
   collectionName: 'home_news';
   info: {
     description: '';
-    displayName: 'homeNew';
+    displayName: 'home-new';
     pluralName: 'home-news';
     singularName: 'home-new';
   };
@@ -2396,266 +2154,15 @@ export interface ApiHomeNewHomeNew extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     icons: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    key: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-new.home-new'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHtmlAccessibilityHtmlAccessibility
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'html_accessibilities';
-  info: {
-    description: '';
-    displayName: 'htmlAccessibility';
-    pluralName: 'html-accessibilities';
-    singularName: 'html-accessibility';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::html-accessibility.html-accessibility'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHtmlBannerHtmlBanner extends Struct.CollectionTypeSchema {
-  collectionName: 'html_banners';
-  info: {
-    displayName: 'html-banner';
-    pluralName: 'html-banners';
-    singularName: 'html-banner';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::html-banner.html-banner'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHtmlCourseHtmlCourse extends Struct.CollectionTypeSchema {
-  collectionName: 'html_courses';
-  info: {
-    description: '';
-    displayName: 'htmlCourse';
-    pluralName: 'html-courses';
-    singularName: 'html-course';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text & Schema.Attribute.Required;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::html-course.html-course'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHtmlDevtoolHtmlDevtool extends Struct.CollectionTypeSchema {
-  collectionName: 'html_devtools';
-  info: {
-    description: '';
-    displayName: 'htmlDevtool';
-    pluralName: 'html-devtools';
-    singularName: 'html-devtool';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::html-devtool.html-devtool'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHtmlJumpHtmlJump extends Struct.CollectionTypeSchema {
-  collectionName: 'html_jumps';
-  info: {
-    description: '';
-    displayName: 'htmlJump';
-    pluralName: 'html-jumps';
-    singularName: 'html-jump';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::html-jump.html-jump'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHtmlNewToHtmlHtmlNewToHtml
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'html_new_to_htmls';
-  info: {
-    description: '';
-    displayName: 'html-new-to-html';
-    pluralName: 'html-new-to-htmls';
-    singularName: 'html-new-to-html';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn HTML!'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::html-new-to-html.html-new-to-html'
-    > &
-      Schema.Attribute.Private;
-    main_title: Schema.Attribute.Text & Schema.Attribute.Required;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiHtmlPerformanceHtmlPerformance
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'html_performances';
-  info: {
-    description: '';
-    displayName: 'htmlPerformance';
-    pluralName: 'html-performances';
-    singularName: 'html-performance';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::html-performance.html-performance'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
+    main_content: Schema.Attribute.Text;
+    main_title: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -2700,6 +2207,7 @@ export interface ApiIdentityCard1IdentityCard1
   extends Struct.CollectionTypeSchema {
   collectionName: 'identity_card_1s';
   info: {
+    description: '';
     displayName: 'identity-card-1';
     pluralName: 'identity-card-1s';
     singularName: 'identity-card-1';
@@ -2722,6 +2230,7 @@ export interface ApiIdentityCard1IdentityCard1
       'api::identity-card-1.identity-card-1'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -2832,41 +2341,6 @@ export interface ApiIdentityLinkIdentityLink
   };
 }
 
-export interface ApiIdentityNewToHtmlFormIdentityNewToHtmlForm
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'identity_new_to_html_forms';
-  info: {
-    displayName: 'identity-new-to-htmlForm';
-    pluralName: 'identity-new-to-html-forms';
-    singularName: 'identity-new-to-html-form';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn Forms'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::identity-new-to-html-form.identity-new-to-html-form'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiIdentityOverview1IdentityOverview1
   extends Struct.CollectionTypeSchema {
   collectionName: 'identity_overview_1s';
@@ -2964,6 +2438,7 @@ export interface ApiIdentityPmc1IdentityPmc1
   extends Struct.CollectionTypeSchema {
   collectionName: 'identity_pmc_1s';
   info: {
+    description: '';
     displayName: 'identity-pmc-1';
     pluralName: 'identity-pmc-1s';
     singularName: 'identity-pmc-1';
@@ -2986,6 +2461,7 @@ export interface ApiIdentityPmc1IdentityPmc1
       'api::identity-pmc-1.identity-pmc-1'
     > &
       Schema.Attribute.Private;
+    main_title: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -3069,12 +2545,12 @@ export interface ApiInpBannerInpBanner extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    content: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    key: Schema.Attribute.Integer;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -3111,6 +2587,7 @@ export interface ApiInpLinkInpLink extends Struct.CollectionTypeSchema {
     link_4: Schema.Attribute.Text;
     link_5: Schema.Attribute.Text;
     link_6: Schema.Attribute.Text;
+    link_7: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -3118,7 +2595,7 @@ export interface ApiInpLinkInpLink extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3155,187 +2632,10 @@ export interface ApiInpOverviewInpOverview extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiJavascriptThirdPartyJavascriptThirdParty
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'javascript_third_parties';
-  info: {
-    description: '';
-    displayName: 'javascriptThirdParty';
-    pluralName: 'javascript-third-parties';
-    singularName: 'javascript-third-party';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::javascript-third-party.javascript-third-party'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiJsBannerJsBanner extends Struct.CollectionTypeSchema {
-  collectionName: 'js_banners';
-  info: {
-    displayName: 'js-banner';
-    pluralName: 'js-banners';
-    singularName: 'js-banner';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::js-banner.js-banner'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiJsNewToJsJsNewToJs extends Struct.CollectionTypeSchema {
-  collectionName: 'js_new_to_jses';
-  info: {
-    displayName: 'js-new-to-js';
-    pluralName: 'js-new-to-jses';
-    singularName: 'js-new-to-js';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn Javascript!'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::js-new-to-js.js-new-to-js'
-    > &
-      Schema.Attribute.Private;
-    main_title: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'COURSE'>;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiJsJs extends Struct.CollectionTypeSchema {
-  collectionName: 'jses';
-  info: {
-    description: '';
-    displayName: 'jsJump';
-    pluralName: 'jses';
-    singularName: 'js';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::js.js'> &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiJscommonuseJscommonuse extends Struct.CollectionTypeSchema {
-  collectionName: 'jscommonuses';
-  info: {
-    description: '';
-    displayName: 'jscommonuse';
-    pluralName: 'jscommonuses';
-    singularName: 'jscommonuse';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::jscommonuse.jscommonuse'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiLearnAccessibilityItemLearnAccessibilityItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'learn_accessibility_items';
   info: {
-    description: '';
     displayName: 'learn-accessibility-item';
     pluralName: 'learn-accessibility-items';
     singularName: 'learn-accessibility-item';
@@ -3352,47 +2652,11 @@ export interface ApiLearnAccessibilityItemLearnAccessibilityItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::learn-accessibility-item.learn-accessibility-item'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiLearnArticleHtmlItemLearnArticleHtmlItem
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'learn_article_html_items';
-  info: {
-    description: '';
-    displayName: 'learn-article-html-item';
-    pluralName: 'learn-article-html-items';
-    singularName: 'learn-article-html-item';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::learn-article-html-item.learn-article-html-item'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -3454,9 +2718,6 @@ export interface ApiLearnCssItemLearnCssItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3484,7 +2745,7 @@ export interface ApiLearnDesignItemLearnDesignItem
     draftAndPublish: true;
   };
   attributes: {
-    articleLink: Schema.Attribute.Text;
+    articleLink: Schema.Attribute.Text & Schema.Attribute.Required;
     button: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Read Article'>;
@@ -3492,9 +2753,6 @@ export interface ApiLearnDesignItemLearnDesignItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3530,9 +2788,6 @@ export interface ApiLearnFormItemLearnFormItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3552,7 +2807,6 @@ export interface ApiLearnHtmlItemLearnHtmlItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'learn_html_items';
   info: {
-    description: '';
     displayName: 'learn-html-item';
     pluralName: 'learn-html-items';
     singularName: 'learn-html-item';
@@ -3596,7 +2850,7 @@ export interface ApiLearnImageItemLearnImageItem
     draftAndPublish: true;
   };
   attributes: {
-    articleLink: Schema.Attribute.Text;
+    articleLink: Schema.Attribute.Text & Schema.Attribute.Required;
     button: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Read Article'>;
@@ -3604,9 +2858,6 @@ export interface ApiLearnImageItemLearnImageItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3634,7 +2885,7 @@ export interface ApiLearnJavascriptItemLearnJavascriptItem
     draftAndPublish: true;
   };
   attributes: {
-    articleLink: Schema.Attribute.Text;
+    articleLink: Schema.Attribute.Text & Schema.Attribute.Required;
     button: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Read Article'>;
@@ -3642,9 +2893,6 @@ export interface ApiLearnJavascriptItemLearnJavascriptItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3664,7 +2912,6 @@ export interface ApiLearnNavItemLearnNavItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'learn_nav_items';
   info: {
-    description: '';
     displayName: 'learn-nav-item';
     pluralName: 'learn-nav-items';
     singularName: 'learn-nav-item';
@@ -3684,7 +2931,7 @@ export interface ApiLearnNavItemLearnNavItem
       'api::learn-nav-item.learn-nav-item'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
+    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -3707,14 +2954,11 @@ export interface ApiLearnPerformanceItemLearnPerformanceItem
     articleLink: Schema.Attribute.Text;
     button: Schema.Attribute.Text &
       Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Read Article'>;
+      Schema.Attribute.DefaultTo<'bookmark'>;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3734,7 +2978,6 @@ export interface ApiLearnPrivacyItemLearnPrivacyItem
   extends Struct.CollectionTypeSchema {
   collectionName: 'learn_privacy_items';
   info: {
-    description: '';
     displayName: 'learn-privacy-item';
     pluralName: 'learn-privacy-items';
     singularName: 'learn-privacy-item';
@@ -3747,13 +2990,10 @@ export interface ApiLearnPrivacyItemLearnPrivacyItem
     button: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Read Article'>;
-    content: Schema.Attribute.Text;
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3789,9 +3029,6 @@ export interface ApiLearnPwaItemLearnPwaItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -3834,7 +3071,6 @@ export interface ApiLearnRowBanner1LearnRowBanner1
       'api::learn-row-banner-1.learn-row-banner-1'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -3870,7 +3106,6 @@ export interface ApiLearnRowBanner10LearnRowBanner10
       'api::learn-row-banner-10.learn-row-banner-10'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -3906,7 +3141,6 @@ export interface ApiLearnRowBanner11LearnRowBanner11
       'api::learn-row-banner-11.learn-row-banner-11'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -3942,7 +3176,6 @@ export interface ApiLearnRowBanner12LearnRowBanner12
       'api::learn-row-banner-12.learn-row-banner-12'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -3955,7 +3188,6 @@ export interface ApiLearnRowBanner2LearnRowBanner2
   extends Struct.CollectionTypeSchema {
   collectionName: 'learn_row_banner_2s';
   info: {
-    description: '';
     displayName: 'learn-row-banner-2';
     pluralName: 'learn-row-banner-2s';
     singularName: 'learn-row-banner-2';
@@ -3979,7 +3211,6 @@ export interface ApiLearnRowBanner2LearnRowBanner2
       'api::learn-row-banner-2.learn-row-banner-2'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4015,7 +3246,6 @@ export interface ApiLearnRowBanner3LearnRowBanner3
       'api::learn-row-banner-3.learn-row-banner-3'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4036,7 +3266,7 @@ export interface ApiLearnRowBanner4LearnRowBanner4
     draftAndPublish: true;
   };
   attributes: {
-    activities: Schema.Attribute.Text & Schema.Attribute.Required;
+    activities: Schema.Attribute.Text;
     content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -4051,7 +3281,6 @@ export interface ApiLearnRowBanner4LearnRowBanner4
       'api::learn-row-banner-4.learn-row-banner-4'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4087,79 +3316,6 @@ export interface ApiLearnRowBanner5LearnRowBanner5
       'api::learn-row-banner-5.learn-row-banner-5'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiLearnRowBanner6LearnRowBanner6
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'learn_row_banner_6s';
-  info: {
-    displayName: 'learn-row-banner-6';
-    pluralName: 'learn-row-banner-6s';
-    singularName: 'learn-row-banner-6';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    activities: Schema.Attribute.Text & Schema.Attribute.Required;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'bookmark'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::learn-row-banner-6.learn-row-banner-6'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiLearnRowBanner7LearnRowBanner7
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'learn_row_banner_7s';
-  info: {
-    displayName: 'learn-row-banner-7';
-    pluralName: 'learn-row-banner-7s';
-    singularName: 'learn-row-banner-7';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    activities: Schema.Attribute.Text & Schema.Attribute.Required;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'bookmark'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::learn-row-banner-7.learn-row-banner-7'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4195,7 +3351,6 @@ export interface ApiLearnRowBanner8LearnRowBanner8
       'api::learn-row-banner-8.learn-row-banner-8'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4231,7 +3386,6 @@ export interface ApiLearnRowBanner9LearnRowBanner9
       'api::learn-row-banner-9.learn-row-banner-9'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4244,7 +3398,6 @@ export interface ApiLearnRowBannerLearnRowBanner
   extends Struct.CollectionTypeSchema {
   collectionName: 'learn_row_banners';
   info: {
-    description: '';
     displayName: 'learn-row-banner';
     pluralName: 'learn-row-banners';
     singularName: 'learn-row-banner';
@@ -4268,7 +3421,6 @@ export interface ApiLearnRowBannerLearnRowBanner
       'api::learn-row-banner.learn-row-banner'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4297,9 +3449,6 @@ export interface ApiLearnTestingItemLearnTestingItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    iframeSrc: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'https://suniltechie.com/blog/alpha-web-development-standards-2025/'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -4318,7 +3467,6 @@ export interface ApiLearnTestingItemLearnTestingItem
 export interface ApiLearnLearn extends Struct.CollectionTypeSchema {
   collectionName: 'learns';
   info: {
-    description: '';
     displayName: 'learn';
     pluralName: 'learns';
     singularName: 'learn';
@@ -4335,122 +3483,13 @@ export interface ApiLearnLearn extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    item: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Course'>;
-    key: Schema.Attribute.Integer;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::learn.learn'> &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiNewcssfeatureNewcssfeature
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'newcssfeatures';
-  info: {
-    description: '';
-    displayName: 'newcssfeature';
-    pluralName: 'newcssfeatures';
-    singularName: 'newcssfeature';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
+    main_title: Schema.Attribute.Text &
       Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'check'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::newcssfeature.newcssfeature'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiNewhtmlfeatureNewhtmlfeature
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'newhtmlfeatures';
-  info: {
-    description: '';
-    displayName: 'newhtmlfeature';
-    pluralName: 'newhtmlfeatures';
-    singularName: 'newhtmlfeature';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'check'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::newhtmlfeature.newhtmlfeature'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiNewjsfeatureNewjsfeature
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'newjsfeatures';
-  info: {
-    description: '';
-    displayName: 'newjsfeature';
-    pluralName: 'newjsfeatures';
-    singularName: 'newjsfeature';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'check'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::newjsfeature.newjsfeature'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
+      Schema.Attribute.DefaultTo<'Course'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4514,46 +3553,6 @@ export interface ApiNewsletterCardNewsletterCard
       'api::newsletter-card.newsletter-card'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiOptimizejspoorOptimizejspoor
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'optimizejspoors';
-  info: {
-    description: '';
-    displayName: 'optimizejspoor';
-    pluralName: 'optimizejspoors';
-    singularName: 'optimizejspoor';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icons: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'article'>;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::optimizejspoor.optimizejspoor'
-    > &
-      Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4565,7 +3564,6 @@ export interface ApiOptimizejspoorOptimizejspoor
 export interface ApiPatternPattern extends Struct.CollectionTypeSchema {
   collectionName: 'patterns';
   info: {
-    description: '';
     displayName: 'pattern';
     pluralName: 'patterns';
     singularName: 'pattern';
@@ -4633,6 +3631,7 @@ export interface ApiPerformanceCaseStudieTitlePerformanceCaseStudieTitle
   extends Struct.CollectionTypeSchema {
   collectionName: 'performance_case_studie_titles';
   info: {
+    description: '';
     displayName: 'performance-case-studie-title';
     pluralName: 'performance-case-studie-titles';
     singularName: 'performance-case-studie-title';
@@ -4652,7 +3651,7 @@ export interface ApiPerformanceCaseStudieTitlePerformanceCaseStudieTitle
       'api::performance-case-studie-title.performance-case-studie-title'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4665,7 +3664,6 @@ export interface ApiPerformanceCaseStudiePerformanceCaseStudie
   extends Struct.CollectionTypeSchema {
   collectionName: 'performance_case_studies';
   info: {
-    description: '';
     displayName: 'performance-case-studie';
     pluralName: 'performance-case-studies';
     singularName: 'performance-case-studie';
@@ -4721,7 +3719,7 @@ export interface ApiPerformanceCoreWebTitlePerformanceCoreWebTitle
       'api::performance-core-web-title.performance-core-web-title'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4734,7 +3732,6 @@ export interface ApiPerformanceCoreWebPerformanceCoreWeb
   extends Struct.CollectionTypeSchema {
   collectionName: 'performance_core_webs';
   info: {
-    description: '';
     displayName: 'performance-core-web';
     pluralName: 'performance-core-webs';
     singularName: 'performance-core-web';
@@ -4770,6 +3767,7 @@ export interface ApiPerformanceDebugTitlePerformanceDebugTitle
   extends Struct.CollectionTypeSchema {
   collectionName: 'performance_debug_titles';
   info: {
+    description: '';
     displayName: 'performance-debug-title';
     pluralName: 'performance-debug-titles';
     singularName: 'performance-debug-title';
@@ -4789,7 +3787,7 @@ export interface ApiPerformanceDebugTitlePerformanceDebugTitle
       'api::performance-debug-title.performance-debug-title'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4837,6 +3835,7 @@ export interface ApiPerformanceDivePerformanceDive
   extends Struct.CollectionTypeSchema {
   collectionName: 'performance_dives';
   info: {
+    description: '';
     displayName: 'performance-dive';
     pluralName: 'performance-dives';
     singularName: 'performance-dive';
@@ -4860,7 +3859,7 @@ export interface ApiPerformanceDivePerformanceDive
       'api::performance-dive.performance-dive'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4894,7 +3893,8 @@ export interface ApiPerformanceJumpPerformanceJump
       'api::performance-jump.performance-jump'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
+    main_title: Schema.Attribute.Text;
+    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -4903,14 +3903,13 @@ export interface ApiPerformanceJumpPerformanceJump
   };
 }
 
-export interface ApiPerformanceNewToOerformancePerformanceNewToOerformance
+export interface ApiPerformanceNewToPerformancePerformanceNewToPerformance
   extends Struct.CollectionTypeSchema {
-  collectionName: 'performance_new_to_oerformances';
+  collectionName: 'performance_new_to_performances';
   info: {
-    description: '';
     displayName: 'performance-new-to-performance';
-    pluralName: 'performance-new-to-oerformances';
-    singularName: 'performance-new-to-oerformance';
+    pluralName: 'performance-new-to-performances';
+    singularName: 'performance-new-to-performance';
   };
   options: {
     draftAndPublish: true;
@@ -4923,18 +3922,53 @@ export interface ApiPerformanceNewToOerformancePerformanceNewToOerformance
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    imglink: Schema.Attribute.Text;
+    imglink: Schema.Attribute.Text & Schema.Attribute.Required;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::performance-new-to-oerformance.performance-new-to-oerformance'
+      'api::performance-new-to-performance.performance-new-to-performance'
     > &
       Schema.Attribute.Private;
-    main_title: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'Course'>;
+    main_title: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Course'>;
     path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPerformanceNewlyBaslineTitlePerformanceNewlyBaslineTitle
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'performance_newly_basline_titles';
+  info: {
+    description: '';
+    displayName: 'performance-newly-basline-title';
+    pluralName: 'performance-newly-basline-titles';
+    singularName: 'performance-newly-basline-title';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::performance-newly-basline-title.performance-newly-basline-title'
+    > &
+      Schema.Attribute.Private;
+    path: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -4954,11 +3988,13 @@ export interface ApiPerformanceNewlyBaslinePerformanceNewlyBasline
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.Text;
+    content: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    icons: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'check'>;
+    icons: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'check'>;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -4974,43 +4010,11 @@ export interface ApiPerformanceNewlyBaslinePerformanceNewlyBasline
   };
 }
 
-export interface ApiPerformanceNwelyBaslineTitlePerformanceNwelyBaslineTitle
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'performance_nwely_basline_titles';
-  info: {
-    description: '';
-    displayName: 'performance-nwely-basline-title';
-    pluralName: 'performance-nwely-basline-titles';
-    singularName: 'performance-nwely-basline-title';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::performance-nwely-basline-title.performance-nwely-basline-title'
-    > &
-      Schema.Attribute.Private;
-    main_content: Schema.Attribute.Text;
-    main_title: Schema.Attribute.Text;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiPerformanceOptimizeTitlePerformanceOptimizeTitle
   extends Struct.CollectionTypeSchema {
   collectionName: 'performance_optimize_titles';
   info: {
+    description: '';
     displayName: 'performance-optimize-title';
     pluralName: 'performance-optimize-titles';
     singularName: 'performance-optimize-title';
@@ -5030,7 +4034,7 @@ export interface ApiPerformanceOptimizeTitlePerformanceOptimizeTitle
       'api::performance-optimize-title.performance-optimize-title'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text & Schema.Attribute.Required;
+    path: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -5094,7 +4098,7 @@ export interface ApiPerformancePageSpeedPerformancePageSpeed
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     imglink: Schema.Attribute.Text & Schema.Attribute.Required;
-    key: Schema.Attribute.Integer;
+    key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -5103,7 +4107,7 @@ export interface ApiPerformancePageSpeedPerformancePageSpeed
       Schema.Attribute.Private;
     path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -5114,7 +4118,7 @@ export interface ApiProgressiveBannerProgressiveBanner
   extends Struct.CollectionTypeSchema {
   collectionName: 'progressive_banners';
   info: {
-    displayName: 'Progressive-banner';
+    displayName: 'progressive-banner';
     pluralName: 'progressive-banners';
     singularName: 'progressive-banner';
   };
@@ -5146,7 +4150,7 @@ export interface ApiProgressiveLinkProgressiveLink
   extends Struct.CollectionTypeSchema {
   collectionName: 'progressive_links';
   info: {
-    displayName: 'Progressive-link';
+    displayName: 'progressive-link';
     pluralName: 'progressive-links';
     singularName: 'progressive-link';
   };
@@ -5158,10 +4162,10 @@ export interface ApiProgressiveLinkProgressiveLink
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    link_1: Schema.Attribute.Text & Schema.Attribute.Required;
+    link_1: Schema.Attribute.Text;
     link_2: Schema.Attribute.Text;
     link_3: Schema.Attribute.Text;
-    link_4: Schema.Attribute.Text;
+    link_4: Schema.Attribute.String;
     link_5: Schema.Attribute.Text;
     link_6: Schema.Attribute.Text;
     link_7: Schema.Attribute.Text;
@@ -5244,111 +4248,11 @@ export interface ApiSecurityBannerSecurityBanner
   };
 }
 
-export interface ApiSecurityCard1SecurityCard1
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'security_card_1s';
-  info: {
-    displayName: 'security-card-1';
-    pluralName: 'security-card-1s';
-    singularName: 'security-card-1';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Learn More'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::security-card-1.security-card-1'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiSecurityCard2SecurityCard2
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'security_card_2s';
-  info: {
-    displayName: 'security-card-2';
-    pluralName: 'security-card-2s';
-    singularName: 'security-card-2';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text & Schema.Attribute.Required;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::security-card-2.security-card-2'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiSecurityCard3SecurityCard3
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'security_card_3s';
-  info: {
-    description: '';
-    displayName: 'security-card-3';
-    pluralName: 'security-card-3s';
-    singularName: 'security-card-3';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    button: Schema.Attribute.Text &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Read case study'>;
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::security-card-3.security-card-3'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiSecurityLink2SecurityLink2
   extends Struct.CollectionTypeSchema {
   collectionName: 'security_link_2s';
   info: {
+    description: '';
     displayName: 'security-link-2';
     pluralName: 'security-link-2s';
     singularName: 'security-link-2';
@@ -5400,6 +4304,10 @@ export interface ApiSecurityLink3SecurityLink3
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     link_1: Schema.Attribute.Text;
     link_2: Schema.Attribute.Text;
+    link_3: Schema.Attribute.Text;
+    link_4: Schema.Attribute.Text;
+    link_5: Schema.Attribute.Text;
+    link_6: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -5407,7 +4315,7 @@ export interface ApiSecurityLink3SecurityLink3
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -5433,6 +4341,9 @@ export interface ApiSecurityLinkSecurityLink
     link_1: Schema.Attribute.Text;
     link_2: Schema.Attribute.Text;
     link_3: Schema.Attribute.Text;
+    link_4: Schema.Attribute.Text;
+    link_5: Schema.Attribute.Text;
+    link_6: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -5440,7 +4351,7 @@ export interface ApiSecurityLinkSecurityLink
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -5540,69 +4451,6 @@ export interface ApiSecurityOverviewSecurityOverview
   };
 }
 
-export interface ApiSecurityTitle1SecurityTitle1
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'security_title_1s';
-  info: {
-    description: '';
-    displayName: 'security-title-1';
-    pluralName: 'security-title-1s';
-    singularName: 'security-title-1';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::security-title-1.security-title-1'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiSecurityTitle2SecurityTitle2
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'security_title_2s';
-  info: {
-    description: '';
-    displayName: 'security-title-2';
-    pluralName: 'security-title-2s';
-    singularName: 'security-title-2';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    key: Schema.Attribute.Integer & Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::security-title-2.security-title-2'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.Text & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiShowsBannerShowsBanner extends Struct.CollectionTypeSchema {
   collectionName: 'shows_banners';
   info: {
@@ -5636,7 +4484,6 @@ export interface ApiShowsBannerShowsBanner extends Struct.CollectionTypeSchema {
 export interface ApiShowsCardShowsCard extends Struct.CollectionTypeSchema {
   collectionName: 'shows_cards';
   info: {
-    description: '';
     displayName: 'shows-card';
     pluralName: 'shows-cards';
     singularName: 'shows-card';
@@ -5680,7 +4527,7 @@ export interface ApiShowsNavItemShowsNavItem
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    data: Schema.Attribute.Text;
+    data: Schema.Attribute.Text & Schema.Attribute.Required;
     key: Schema.Attribute.Integer & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -5688,7 +4535,7 @@ export interface ApiShowsNavItemShowsNavItem
       'api::shows-nav-item.shows-nav-item'
     > &
       Schema.Attribute.Private;
-    path: Schema.Attribute.Text;
+    path: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -6151,6 +4998,7 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
+    timestamps: true;
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -6215,6 +5063,7 @@ declare module '@strapi/strapi' {
       'api::accessibility-card-4.accessibility-card-4': ApiAccessibilityCard4AccessibilityCard4;
       'api::accessibility-jump.accessibility-jump': ApiAccessibilityJumpAccessibilityJump;
       'api::accessibility-new-to-accessibility.accessibility-new-to-accessibility': ApiAccessibilityNewToAccessibilityAccessibilityNewToAccessibility;
+      'api::ai-banner.ai-banner': ApiAiBannerAiBanner;
       'api::ai-card.ai-card': ApiAiCardAiCard;
       'api::ai-chrome-1.ai-chrome-1': ApiAiChrome1AiChrome1;
       'api::ai-chrome-video-title.ai-chrome-video-title': ApiAiChromeVideoTitleAiChromeVideoTitle;
@@ -6223,7 +5072,6 @@ declare module '@strapi/strapi' {
       'api::ai-gemini.ai-gemini': ApiAiGeminiAiGemini;
       'api::ai-google-video-title.ai-google-video-title': ApiAiGoogleVideoTitleAiGoogleVideoTitle;
       'api::ai-google-video.ai-google-video': ApiAiGoogleVideoAiGoogleVideo;
-      'api::ai-row-1.ai-row-1': ApiAiRow1AiRow1;
       'api::ai-row.ai-row': ApiAiRowAiRow;
       'api::baseline-banner.baseline-banner': ApiBaselineBannerBaselineBanner;
       'api::baseline-work.baseline-work': ApiBaselineWorkBaselineWork;
@@ -6233,18 +5081,11 @@ declare module '@strapi/strapi' {
       'api::basline-link.basline-link': ApiBaslineLinkBaslineLink;
       'api::basline-overview.basline-overview': ApiBaslineOverviewBaslineOverview;
       'api::blog-banner.blog-banner': ApiBlogBannerBlogBanner;
-      'api::blog.blog': ApiBlogBlog;
-      'api::build-excellent.build-excellent': ApiBuildExcellentBuildExcellent;
-      'api::css-accessibilty.css-accessibilty': ApiCssAccessibiltyCssAccessibilty;
-      'api::css-banner.css-banner': ApiCssBannerCssBanner;
-      'api::css-jupm.css-jupm': ApiCssJupmCssJupm;
-      'api::css-new-to-css.css-new-to-css': ApiCssNewToCssCssNewToCss;
-      'api::css-performance.css-performance': ApiCssPerformanceCssPerformance;
-      'api::css-podcast.css-podcast': ApiCssPodcastCssPodcast;
-      'api::css-ui-design.css-ui-design': ApiCssUiDesignCssUiDesign;
-      'api::dive-into-css-pattern.dive-into-css-pattern': ApiDiveIntoCssPatternDiveIntoCssPattern;
-      'api::dive-into-js-pattern.dive-into-js-pattern': ApiDiveIntoJsPatternDiveIntoJsPattern;
-      'api::excellent-website.excellent-website': ApiExcellentWebsiteExcellentWebsite;
+      'api::case-banner.case-banner': ApiCaseBannerCaseBanner;
+      'api::explore-banner.explore-banner': ApiExploreBannerExploreBanner;
+      'api::explore-build-excellent.explore-build-excellent': ApiExploreBuildExcellentExploreBuildExcellent;
+      'api::explore-excellent-website.explore-excellent-website': ApiExploreExcellentWebsiteExploreExcellentWebsite;
+      'api::explore-exploration.explore-exploration': ApiExploreExplorationExploreExploration;
       'api::explore.explore': ApiExploreExplore;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
       'api::home-box1.home-box1': ApiHomeBox1HomeBox1;
@@ -6264,19 +5105,11 @@ declare module '@strapi/strapi' {
       'api::home-link8.home-link8': ApiHomeLink8HomeLink8;
       'api::home-link9.home-link9': ApiHomeLink9HomeLink9;
       'api::home-new.home-new': ApiHomeNewHomeNew;
-      'api::html-accessibility.html-accessibility': ApiHtmlAccessibilityHtmlAccessibility;
-      'api::html-banner.html-banner': ApiHtmlBannerHtmlBanner;
-      'api::html-course.html-course': ApiHtmlCourseHtmlCourse;
-      'api::html-devtool.html-devtool': ApiHtmlDevtoolHtmlDevtool;
-      'api::html-jump.html-jump': ApiHtmlJumpHtmlJump;
-      'api::html-new-to-html.html-new-to-html': ApiHtmlNewToHtmlHtmlNewToHtml;
-      'api::html-performance.html-performance': ApiHtmlPerformanceHtmlPerformance;
       'api::identity-banner.identity-banner': ApiIdentityBannerIdentityBanner;
       'api::identity-card-1.identity-card-1': ApiIdentityCard1IdentityCard1;
       'api::identity-link-1.identity-link-1': ApiIdentityLink1IdentityLink1;
       'api::identity-link-2.identity-link-2': ApiIdentityLink2IdentityLink2;
       'api::identity-link.identity-link': ApiIdentityLinkIdentityLink;
-      'api::identity-new-to-html-form.identity-new-to-html-form': ApiIdentityNewToHtmlFormIdentityNewToHtmlForm;
       'api::identity-overview-1.identity-overview-1': ApiIdentityOverview1IdentityOverview1;
       'api::identity-overview-2.identity-overview-2': ApiIdentityOverview2IdentityOverview2;
       'api::identity-overview.identity-overview': ApiIdentityOverviewIdentityOverview;
@@ -6286,13 +5119,7 @@ declare module '@strapi/strapi' {
       'api::inp-banner.inp-banner': ApiInpBannerInpBanner;
       'api::inp-link.inp-link': ApiInpLinkInpLink;
       'api::inp-overview.inp-overview': ApiInpOverviewInpOverview;
-      'api::javascript-third-party.javascript-third-party': ApiJavascriptThirdPartyJavascriptThirdParty;
-      'api::js-banner.js-banner': ApiJsBannerJsBanner;
-      'api::js-new-to-js.js-new-to-js': ApiJsNewToJsJsNewToJs;
-      'api::js.js': ApiJsJs;
-      'api::jscommonuse.jscommonuse': ApiJscommonuseJscommonuse;
       'api::learn-accessibility-item.learn-accessibility-item': ApiLearnAccessibilityItemLearnAccessibilityItem;
-      'api::learn-article-html-item.learn-article-html-item': ApiLearnArticleHtmlItemLearnArticleHtmlItem;
       'api::learn-banner.learn-banner': ApiLearnBannerLearnBanner;
       'api::learn-css-item.learn-css-item': ApiLearnCssItemLearnCssItem;
       'api::learn-design-item.learn-design-item': ApiLearnDesignItemLearnDesignItem;
@@ -6312,19 +5139,13 @@ declare module '@strapi/strapi' {
       'api::learn-row-banner-3.learn-row-banner-3': ApiLearnRowBanner3LearnRowBanner3;
       'api::learn-row-banner-4.learn-row-banner-4': ApiLearnRowBanner4LearnRowBanner4;
       'api::learn-row-banner-5.learn-row-banner-5': ApiLearnRowBanner5LearnRowBanner5;
-      'api::learn-row-banner-6.learn-row-banner-6': ApiLearnRowBanner6LearnRowBanner6;
-      'api::learn-row-banner-7.learn-row-banner-7': ApiLearnRowBanner7LearnRowBanner7;
       'api::learn-row-banner-8.learn-row-banner-8': ApiLearnRowBanner8LearnRowBanner8;
       'api::learn-row-banner-9.learn-row-banner-9': ApiLearnRowBanner9LearnRowBanner9;
       'api::learn-row-banner.learn-row-banner': ApiLearnRowBannerLearnRowBanner;
       'api::learn-testing-item.learn-testing-item': ApiLearnTestingItemLearnTestingItem;
       'api::learn.learn': ApiLearnLearn;
-      'api::newcssfeature.newcssfeature': ApiNewcssfeatureNewcssfeature;
-      'api::newhtmlfeature.newhtmlfeature': ApiNewhtmlfeatureNewhtmlfeature;
-      'api::newjsfeature.newjsfeature': ApiNewjsfeatureNewjsfeature;
       'api::newsletter-banner.newsletter-banner': ApiNewsletterBannerNewsletterBanner;
       'api::newsletter-card.newsletter-card': ApiNewsletterCardNewsletterCard;
-      'api::optimizejspoor.optimizejspoor': ApiOptimizejspoorOptimizejspoor;
       'api::pattern.pattern': ApiPatternPattern;
       'api::performance-banner.performance-banner': ApiPerformanceBannerPerformanceBanner;
       'api::performance-case-studie-title.performance-case-studie-title': ApiPerformanceCaseStudieTitlePerformanceCaseStudieTitle;
@@ -6335,9 +5156,9 @@ declare module '@strapi/strapi' {
       'api::performance-debug.performance-debug': ApiPerformanceDebugPerformanceDebug;
       'api::performance-dive.performance-dive': ApiPerformanceDivePerformanceDive;
       'api::performance-jump.performance-jump': ApiPerformanceJumpPerformanceJump;
-      'api::performance-new-to-oerformance.performance-new-to-oerformance': ApiPerformanceNewToOerformancePerformanceNewToOerformance;
+      'api::performance-new-to-performance.performance-new-to-performance': ApiPerformanceNewToPerformancePerformanceNewToPerformance;
+      'api::performance-newly-basline-title.performance-newly-basline-title': ApiPerformanceNewlyBaslineTitlePerformanceNewlyBaslineTitle;
       'api::performance-newly-basline.performance-newly-basline': ApiPerformanceNewlyBaslinePerformanceNewlyBasline;
-      'api::performance-nwely-basline-title.performance-nwely-basline-title': ApiPerformanceNwelyBaslineTitlePerformanceNwelyBaslineTitle;
       'api::performance-optimize-title.performance-optimize-title': ApiPerformanceOptimizeTitlePerformanceOptimizeTitle;
       'api::performance-optimize.performance-optimize': ApiPerformanceOptimizePerformanceOptimize;
       'api::performance-page-speed.performance-page-speed': ApiPerformancePageSpeedPerformancePageSpeed;
@@ -6345,17 +5166,12 @@ declare module '@strapi/strapi' {
       'api::progressive-link.progressive-link': ApiProgressiveLinkProgressiveLink;
       'api::progressive-overview.progressive-overview': ApiProgressiveOverviewProgressiveOverview;
       'api::security-banner.security-banner': ApiSecurityBannerSecurityBanner;
-      'api::security-card-1.security-card-1': ApiSecurityCard1SecurityCard1;
-      'api::security-card-2.security-card-2': ApiSecurityCard2SecurityCard2;
-      'api::security-card-3.security-card-3': ApiSecurityCard3SecurityCard3;
       'api::security-link-2.security-link-2': ApiSecurityLink2SecurityLink2;
       'api::security-link-3.security-link-3': ApiSecurityLink3SecurityLink3;
       'api::security-link.security-link': ApiSecurityLinkSecurityLink;
       'api::security-overview-1.security-overview-1': ApiSecurityOverview1SecurityOverview1;
       'api::security-overview-2.security-overview-2': ApiSecurityOverview2SecurityOverview2;
       'api::security-overview.security-overview': ApiSecurityOverviewSecurityOverview;
-      'api::security-title-1.security-title-1': ApiSecurityTitle1SecurityTitle1;
-      'api::security-title-2.security-title-2': ApiSecurityTitle2SecurityTitle2;
       'api::shows-banner.shows-banner': ApiShowsBannerShowsBanner;
       'api::shows-card.shows-card': ApiShowsCardShowsCard;
       'api::shows-nav-item.shows-nav-item': ApiShowsNavItemShowsNavItem;

@@ -4,13 +4,12 @@
   "info": {
     "singularName": "home-card",
     "pluralName": "home-cards",
-    "displayName": "homeCard",
+    "displayName": "home-card",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -30,12 +29,10 @@
     },
     "button": {
       "type": "text",
-      "required": true,
-      "default": "Learn More"
+      "required": true
     },
     "path": {
-      "type": "text",
-      "required": true
+      "type": "text"
     }
   }
 }

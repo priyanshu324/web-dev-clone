@@ -3,8 +3,73 @@ import useFetch from '../../hooks/useFetch';
 import { Link } from 'react-router-dom'; // Importing Link from react-router-dom for routing
 import { FaChrome } from 'react-icons/fa';
 
-// List_1 Component
 export const List_1 = ({ items }) => {
+    return (
+        <>
+            {
+                items.map((item) => (
+                    <div key={item.key}>
+                        <div className='block bg-[#F0F4F8] dark:bg-[#121212] dark:text-white pb-20 dark:mt-[-20px]
+                             sm:grid sm:grid-cols-2
+                             xl:grid xl:grid-cols-2
+                             2xl:grid-cols-2'>
+
+                            {/* Left side of the banner */}
+                            <div>
+                                {/* Banner Heading */}
+                                <a href="#" className='hover:underline underline-offset-2'>
+                                    <h3 className='text-[#212121] dark:text-[#EEEEEE] text-6xl pl-4 mt-5 w-[420px]
+                                        xl:text-5xl xl:font-bold
+                                        2xl:text-6xl'>
+                                        {item.title}
+                                    </h3>
+                                </a>
+                                {/* Banner Description */}
+                                <p className='text-[#757575] dark:text-[#BDBDBD] text-[25px] w-[350px] leading-relaxed pl-4 mt-10
+                                    lg:w-[600px]
+                                    xl:w-[750px]
+                                    2xl:w-[900px]'>
+                                    {item.content}
+                                </p>
+                                {/* "About Web.dev" Button (Mobile Only) */}
+                                <div className='mt-14 pl-20 lg:hidden'>
+                                    <div className='border-[#42A5F5] hover:border-[#8BC34A] border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] h-11 text-[#42A5F5] hover:text-[#8BC34A] font-bold transition-colors duration-200 dark:text-[#42A5F5] dark:hover:text-[#8BC34A]'>
+                                        <a href='#' className="dark:text-[#42A5F5] dark:hover:text-[#8BC34A]">{item.button}</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right side of the banner (Image) */}
+                            <div className='mt-5'>
+                                {/* Container for the banner image */}
+                                <figure className='bg-none'>
+                                    <a href="#">
+                                        <picture>
+                                            {/* Banner Image */}
+                                            <img
+                                                src={item.imglink}
+                                                alt={item.title}
+                                                className='w-[375px] h-[300px] pl-4
+                                               sm:w-[300px] sm:h-[200px] sm:mt-52 sm:ml-5 sm:mr-20
+                                               md:ml-28
+                                               lg:ml-80
+                                               xl:mt-10 xl:ml-[300px] xl:w-[50%] xl:h-[50%] xl:max-w-auto
+                                               2xl:ml-[200px] 2xl:mt-10 2xl:w-[60%] 2xl:h-[60%]'
+                                            />
+                                        </picture>
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </>
+    )
+}
+
+// List_1 Component
+export const List_2 = ({ items }) => {
     return (
         // Main container for the list
         <div>
@@ -53,8 +118,7 @@ export const List_1 = ({ items }) => {
 };
 
 // List_2 Component
-
-export const List_2 = ({ items }) => {
+export const List_3 = ({ items }) => {
     return (
         <>
             {items.map((item) => (
@@ -143,12 +207,8 @@ export const List_2 = ({ items }) => {
     );
 };
 
-
-
-
 // List_3 component to render a list of items with icons, titles, and buttons.
-
-export const List_3 = ({ items }) => {
+export const List_4 = ({ items }) => {
     return (
         <div className=" flex flex-col  items-start justify-start w-full"> {/* Changed to flex-col for responsive stacking */}
             {items.map((item, index) => (
@@ -178,9 +238,8 @@ export const List_3 = ({ items }) => {
     );
 };
 
-
 // lsit_4
-export const List_4 = ({ items }) => {
+export const List_5 = ({ items }) => {
 
     const getVideoId = (url) => {
         try {
@@ -243,9 +302,8 @@ export const List_4 = ({ items }) => {
     );
 };
 
-
 // list 5
-export const List_5 = ({ items }) => {
+export const List_6 = ({ items }) => {
     return (
         <>
             {/* Image Container */}
@@ -267,9 +325,9 @@ export const List_5 = ({ items }) => {
                       dark:bg-[#202124] dark:text-white mt-[-50px] pb-20 px-4 sm:px-0"
             >
                 {/* Map through the items array and render each item */}
-                {items.map((item, index) => (
+                {items.map((item) => (
                     // Container for each list item
-                    <div className="p-4" key={index}> {/* Added padding for spacing */}
+                    <div className="p-4" key={item.key}> {/* Added padding for spacing */}
                         {/* Container for each individual item card */}
                         <div className="bg-white border-[#f5f6f7] border-2 border-solid rounded-2xl dark:bg-[#202124] flex flex-col"> {/* Removed fixed height */}
                             {/* Item Title */}
@@ -305,7 +363,7 @@ export const List_5 = ({ items }) => {
 };
 
 // list 6
-export const List_6 = ({ items }) => {
+export const List_7 = ({ items }) => {
     return (
         <>
             {items.map((item) => (
@@ -360,7 +418,7 @@ export const List_6 = ({ items }) => {
 };
 
 // list 7
-export const List_7 = ({ items }) => {
+export const List_8 = ({ items }) => {
     return (
         <>
             {items.map((item) => (
@@ -392,13 +450,13 @@ export const List_7 = ({ items }) => {
                                 <div className="border-[#1a73e8]  border-2 border-solid rounded-3xl flex items-center justify-center w-[220px] h-11 text-[#1a73e8] font-bold hover:text-black dark:hover:text-white hover:border-black hover:border-2 hover:border-soild dark:hover:border-white dark:hover:border-solid dark:hover:border-2">
                                     {item.path && item.path.startsWith('/') ? (
                                         <Link
-                                            to={item.path}
+                                        // to={item.path}
                                         >
                                             {item.button}
                                         </Link>
                                     ) : (
                                         <a
-                                            href={item.path}
+                                        // href={item.path}
                                         >
                                             {item.button}
                                         </a>
@@ -428,13 +486,13 @@ export const List_7 = ({ items }) => {
                                 <div className="border-[#1a73e8] border-2 border-solid rounded-3xl flex items-center justify-center w-[220px] h-11 text-[#1a73e8] font-bold hover:text-black dark:hover:text-white hover:border-black hover:border-2 hover:border-soild dark:hover:border-white dark:hover:border-solid dark:hover:border-2">
                                     {item.path_1 && item.path_1.startsWith('/') ? (
                                         <Link
-                                            to={item.path_1}
+                                        // to={item.path_1}
                                         >
                                             {item.button_1}
                                         </Link>
                                     ) : (
                                         <a
-                                            href={item.path_1}
+                                        // href={item.path_1}
                                         >
                                             {item.button_1}
                                         </a>
@@ -449,8 +507,8 @@ export const List_7 = ({ items }) => {
     );
 };
 
-
-export const List_8 = ({ items }) => {
+// list 8
+export const List_9 = ({ items }) => {
     return (
         <div className="flex flex-col items-start justify-start w-full">
             {items.map((item, index) => (
@@ -477,9 +535,8 @@ export const List_8 = ({ items }) => {
     );
 };
 
-
-
-export const List_9 = ({ items }) => {
+// list 9
+export const List_10 = ({ items }) => {
     const getVideoId = (url) => {
         try {
             const urlObj = new URL(url);
@@ -544,9 +601,10 @@ export const List_9 = ({ items }) => {
 // Ai_1 Component
 const Ai_1 = () => {
     // API endpoint
-    const api1 = 'http://localhost:1337/api/ai-cards';
-    const api2 = 'http://localhost:1337/api/ai-rows';
-    const api3 = 'http://localhost:1337/api/ai-row-1s';
+
+    const api1 = 'http://localhost:1337/api/ai-banners';
+    const api2 = 'http://localhost:1337/api/ai-cards';
+    const api3 = 'http://localhost:1337/api/ai-rows';
     const api4 = 'http://localhost:1337/api/ai-chrome-video-titles';
     const api5 = 'http://localhost:1337/api/ai-chrome-videos';
     const api6 = 'http://localhost:1337/api/ai-geminis';
@@ -570,50 +628,16 @@ const Ai_1 = () => {
 
     return (
         <>
-            {/* Main container for the ai page */}
-            <div className='block dark:bg-[#202124] dark:text-white pb-20 dark:mt-[-20px]  sm:grid sm:grid-cols-2 xl:grid xl:grid-cols-2 mt-40'>
-                {/* Left section of the banner */}
-                <div>
-                    {/* Heading of the section */}
-                    <a href="#" className='hover:underline underline-offset-2'>
-                        <h3 className='text-6xl pl-4 mt-5 w-[420px] xl:text-5xl xl:font-bold 2xl:text-6xl'>
-                            AI and the Web
-                        </h3>
-                    </a>
-                    {/* Description of the section */}
-                    <p className='text-[25px] w-[350px]  leading-relaxed pl-4 mt-10 lg:w-[600px] xl:w-[750px] 2xl:w-[900px]'>
-                        AI is often used interchangeably to represent different types of technology in the field, including machine learning, large language models, generative AI, and more. Find resources built to help you understand AI now, on the web.
-                    </p>
-                    {/* Button in mobile view */}
-                    <div className='mt-14 pl-20 lg:hidden'>
-                        <div className='border-[#1a73e8] border-2 border-solid rounded-3xl flex items-center justify-center w-[150px] xl:w-[1340px] h-11 text-[#1a73e8] font-bold'>
-                            <a href='#'>About Web.dev</a>
-                        </div>
-                    </div>
-                </div>
-                {/* Right section of the banner */}
-                <div className='mt-5'>
-                    {/* Image container */}
-                    <figure className='bg-none'>
-                        <a href="#">
-                            <picture>
-                                {/* Image */}
-                                <img src="../src/assets/explore/cover-6.png" alt="peroid" className=' w-[375px] h-[300px] pl-4 sm:w-[300px] sm:h-[200px] sm:mt-52 sm:ml-5 sm:mr-20 md:ml-28 lg:ml-80 xl:mt-10 xl:ml-[300px] xl:w-[50%] xl:h-[50%]  xl:max-w-auto 2xl:ml-[270px] 2xl:mt-10 2xl:w-[60%] 2xl:h-[60%] ' />
-                            </picture>
-                        </a>
-                    </figure>
-                </div>
 
-                    {/* Main container for the cards */}
-                    <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
-                        {/* Data loading and error handling */}
-                        {loading1 && <p>Loading...</p>}
-                        {error1 && <p className="text-red-500">{error1}</p>}
-                        {/* List_1 Component to render the data */}
-                        {!loading1 && !error1 && <List_1 items={data1.data || []} />}
-                    </div>
+            {/* Main container for the List_2  */}
+            <div className='mt-10 lg:mt-40 dark:bg-[#202124] dark:text-white'>
+                {/* Data loading and error handling */}
+                {loading1 && <p>Loading...</p>}
+                {error1 && <p className="text-red-500">{error1}</p>}
+                {/* List_2 Component to render the data */}
+                {!loading1 && !error1 && <List_1 items={data1.data || []} />}
             </div>
-            <div className='border-[0.5px] border-solid border-[#5f6368] '></div>
+            {/* <div className='border-[0.5px] border-solid border-[#5f6368] '></div> */}
             {/* Main container for the List_2  */}
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
                 {/* Data loading and error handling */}
@@ -629,17 +653,25 @@ const Ai_1 = () => {
                 {loading3 && <p>Loading...</p>}
                 {error3 && <p className="text-red-500">{error3}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading3 && !error3 && <List_2 items={data3.data || []} />}
+                {!loading3 && !error3 && <List_3 items={data3.data || []} />}
             </div>
-            <div className='border-[0.5px] border-solid border-[#5f6368] '></div>
+            {/* <div className='border-[0.5px] border-solid border-[#5f6368] '></div> */}
 
+            {/* Main container for the List_2  */}
+            <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
+                {/* Data loading and error handling */}
+                {loading3 && <p>Loading...</p>}
+                {error3 && <p className="text-red-500">{error3}</p>}
+                {/* List_2 Component to render the data */}
+                {!loading3 && !error3 && <List_3 items={data3.data || []} />}
+            </div>
             {/* Main container for the List_2  */}
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
                 {/* Data loading and error handling */}
                 {loading4 && <p>Loading...</p>}
                 {error4 && <p className="text-red-500">{error4}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading4 && !error4 && <List_3 items={data4.data || []} />}
+                {!loading4 && !error4 && <List_4 items={data4.data || []} />}
             </div>
             {/* Main container for the List_2  */}
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
@@ -647,15 +679,15 @@ const Ai_1 = () => {
                 {loading5 && <p>Loading...</p>}
                 {error5 && <p className="text-red-500">{error5}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading5 && !error5 && <List_4 items={data5.data || []} />}
+                {!loading5 && !error5 && <List_5 items={data5.data || []} />}
             </div>
-            {/* Main container for the List_2  */}
+
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
                 {/* Data loading and error handling */}
                 {loading6 && <p>Loading...</p>}
                 {error6 && <p className="text-red-500">{error6}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading6 && !error6 && <List_5 items={data6.data || []} />}
+                {!loading6 && !error6 && <List_6 items={data6.data || []} />}
             </div>
 
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
@@ -663,7 +695,7 @@ const Ai_1 = () => {
                 {loading7 && <p>Loading...</p>}
                 {error7 && <p className="text-red-500">{error7}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading7 && !error7 && <List_6 items={data7.data || []} />}
+                {!loading7 && !error7 && <List_7 items={data7.data || []} />}
             </div>
 
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
@@ -671,7 +703,7 @@ const Ai_1 = () => {
                 {loading8 && <p>Loading...</p>}
                 {error8 && <p className="text-red-500">{error8}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading8 && !error8 && <List_7 items={data8.data || []} />}
+                {!loading8 && !error8 && <List_8 items={data8.data || []} />}
             </div>
 
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
@@ -679,7 +711,7 @@ const Ai_1 = () => {
                 {loading9 && <p>Loading...</p>}
                 {error9 && <p className="text-red-500">{error9}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading9 && !error8 && <List_8 items={data9.data || []} />}
+                {!loading9 && !error9 && <List_9 items={data9.data || []} />}
             </div>
 
             <div className='mt-10 lg:mt-20 dark:bg-[#202124] dark:text-white'>
@@ -687,9 +719,8 @@ const Ai_1 = () => {
                 {loading10 && <p>Loading...</p>}
                 {error10 && <p className="text-red-500">{error10}</p>}
                 {/* List_2 Component to render the data */}
-                {!loading10 && !error8 && <List_9 items={data10.data || []} />}
+                {!loading10 && !error10 && <List_10 items={data10.data || []} />}
             </div>
-
         </>
     );
 };

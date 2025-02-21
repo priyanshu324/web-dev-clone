@@ -4,12 +4,11 @@
   "info": {
     "singularName": "home-link5",
     "pluralName": "home-link5s",
-    "displayName": "homeLink5"
+    "displayName": "home-link5"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",

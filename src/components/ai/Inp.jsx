@@ -46,7 +46,6 @@ export const List_1 = ({ items }) => {
     )
 }
 
-
 // list 2
 export const List_2 = ({ items }) => {
     return (
@@ -77,7 +76,6 @@ export const List_2 = ({ items }) => {
 };
 
 // list 3
-
 export const List_3 = ({ items }) => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-5 px-4">
@@ -135,6 +133,14 @@ export const List_3 = ({ items }) => {
                                 {item.link_6}
                             </a>
                         )}
+                        {item.link_7 && (
+                            <a
+                                href="#"
+                                className="text-lg hover:underline hover:underline-offset-2 mt-2 dark:text-gray-300 hover:text-blue-500"
+                            >
+                                {item.link_7}
+                            </a>
+                        )}
                     </div>
                 </div>
             ))}
@@ -143,16 +149,12 @@ export const List_3 = ({ items }) => {
 };
 
 
-
-
 const Inp = () => {
 
     // API endpoint
     const api1 = 'http://localhost:1337/api/inp-banners';
     const api2 = 'http://localhost:1337/api/inp-overviews';
     const api3 = 'http://localhost:1337/api/inp-links';
-
-
 
     // Fetch data using custom hook
     const { data: data1, loading: loading1, error: error1 } = useFetch(api1);
@@ -188,10 +190,7 @@ const Inp = () => {
                     {/* List_1 Component to render the data */}
                     {!loading3 && !error3 && <List_3 items={data3.data || []} />}
                 </div>
-
             </div>
-
-
 
         </>
     )

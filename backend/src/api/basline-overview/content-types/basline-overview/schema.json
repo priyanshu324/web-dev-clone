@@ -10,7 +10,6 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "key": {
       "type": "integer",
@@ -18,11 +17,11 @@
     },
     "main_title": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "main_content": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "title": {
       "type": "text",
