@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "html_banners",
+  "info": {
+    "singularName": "html-banner",
+    "pluralName": "html-banners",
+    "displayName": "html-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

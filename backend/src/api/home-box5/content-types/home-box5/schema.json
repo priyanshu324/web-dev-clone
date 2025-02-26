@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_box5s",
+  "info": {
+    "singularName": "home-box5",
+    "pluralName": "home-box5s",
+    "displayName": "home-box5",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_google_video_titles",
+  "info": {
+    "singularName": "ai-google-video-title",
+    "pluralName": "ai-google-video-titles",
+    "displayName": "ai-google-video-title"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true,
+      "default": "Watch to Learn"
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "movie"
+    }
+  }
+}

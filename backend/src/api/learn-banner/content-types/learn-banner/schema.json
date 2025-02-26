@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_banners",
+  "info": {
+    "singularName": "learn-banner",
+    "pluralName": "learn-banners",
+    "displayName": "learn-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

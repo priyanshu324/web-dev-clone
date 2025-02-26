@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shows_cards",
+  "info": {
+    "singularName": "shows-card",
+    "pluralName": "shows-cards",
+    "displayName": "shows-card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_links",
+  "info": {
+    "singularName": "identity-link",
+    "pluralName": "identity-links",
+    "displayName": "identity-link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "link_1": {
+      "type": "text"
+    },
+    "link_2": {
+      "type": "text"
+    },
+    "link_3": {
+      "type": "text"
+    }
+  }
+}

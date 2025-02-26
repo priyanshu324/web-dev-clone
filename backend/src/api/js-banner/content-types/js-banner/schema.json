@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "js_banners",
+  "info": {
+    "singularName": "js-banner",
+    "pluralName": "js-banners",
+    "displayName": "js-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

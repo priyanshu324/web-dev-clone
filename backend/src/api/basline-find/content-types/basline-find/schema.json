@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basline_finds",
+  "info": {
+    "singularName": "basline-find",
+    "pluralName": "basline-finds",
+    "displayName": "basline-find",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    }
+  }
+}

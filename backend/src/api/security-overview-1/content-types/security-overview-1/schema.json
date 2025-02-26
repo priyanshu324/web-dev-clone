@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_overview_1s",
+  "info": {
+    "singularName": "security-overview-1",
+    "pluralName": "security-overview-1s",
+    "displayName": "security-overview-1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

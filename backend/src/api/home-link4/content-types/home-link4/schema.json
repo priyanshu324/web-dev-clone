@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_link4s",
+  "info": {
+    "singularName": "home-link4",
+    "pluralName": "home-link4s",
+    "displayName": "home-link4"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

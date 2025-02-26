@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_banners",
+  "info": {
+    "singularName": "about-banner",
+    "pluralName": "about-banners",
+    "displayName": "about-banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Get Started"
+    }
+  }
+}

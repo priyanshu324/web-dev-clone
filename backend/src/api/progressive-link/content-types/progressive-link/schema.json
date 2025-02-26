@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progressive_links",
+  "info": {
+    "singularName": "progressive-link",
+    "pluralName": "progressive-links",
+    "displayName": "progressive-link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "link_1": {
+      "type": "text",
+      "required": false
+    },
+    "link_2": {
+      "type": "text",
+      "required": false
+    },
+    "link_3": {
+      "type": "text"
+    },
+    "link_4": {
+      "type": "string"
+    },
+    "link_5": {
+      "type": "text"
+    },
+    "link_6": {
+      "type": "text"
+    },
+    "link_7": {
+      "type": "text"
+    },
+    "link_8": {
+      "type": "text"
+    },
+    "link_9": {
+      "type": "text"
+    }
+  }
+}

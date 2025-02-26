@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "html_jumps",
+  "info": {
+    "singularName": "html-jump",
+    "pluralName": "html-jumps",
+    "displayName": "html-jump"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": false
+    },
+    "icons": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

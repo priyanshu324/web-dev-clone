@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "explores",
+  "info": {
+    "singularName": "explore",
+    "pluralName": "explores",
+    "displayName": "explore",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    }
+  }
+}

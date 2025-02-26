@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_box1s",
+  "info": {
+    "singularName": "home-box1",
+    "pluralName": "home-box1s",
+    "displayName": "home-box1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Explore CSS",
+      "required": true
+    }
+  }
+}

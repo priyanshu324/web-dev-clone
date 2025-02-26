@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "css_banners",
+  "info": {
+    "singularName": "css-banner",
+    "pluralName": "css-banners",
+    "displayName": "css-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

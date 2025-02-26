@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_overview_2s",
+  "info": {
+    "singularName": "identity-overview-2",
+    "pluralName": "identity-overview-2s",
+    "displayName": "identity-overview-2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

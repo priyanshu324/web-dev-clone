@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "explore_banners",
+  "info": {
+    "singularName": "explore-banner",
+    "pluralName": "explore-banners",
+    "displayName": "explore-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

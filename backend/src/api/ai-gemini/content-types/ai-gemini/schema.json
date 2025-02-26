@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_geminis",
+  "info": {
+    "singularName": "ai-gemini",
+    "pluralName": "ai-geminis",
+    "displayName": "ai-gemini",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    },
+    "button_1": {
+      "type": "text"
+    },
+    "imglink": {
+      "type": "text"
+    }
+  }
+}

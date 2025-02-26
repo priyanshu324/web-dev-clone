@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_optimizes",
+  "info": {
+    "singularName": "performance-optimize",
+    "pluralName": "performance-optimizes",
+    "displayName": "performance-optimize"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn More"
+    }
+  }
+}

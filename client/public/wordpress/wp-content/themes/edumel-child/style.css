@@ -1,0 +1,23 @@
+/*
+ Theme Name:   Edumel Child Theme
+ Theme URI:    http://pxelcode.com/wp/edumel
+ Description:  This is edumel Child Theme
+ Author:       Pxelcode
+ Author URI:   https://themeforest.net/user/pxelcode
+ Template:     edumel
+ Version:      1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:  two-columns, right-sidebar
+ Text Domain:  edumel-child
+*/
+
+.menu-toggle {
+  display: none;
+}
+@media (max-width: 991px){
+	.menu-toggle {
+		top: -5px;
+	  display: block;
+	}	
+}

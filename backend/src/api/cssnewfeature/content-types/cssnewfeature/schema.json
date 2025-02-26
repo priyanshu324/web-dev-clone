@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cssnewfeatures",
+  "info": {
+    "singularName": "cssnewfeature",
+    "pluralName": "cssnewfeatures",
+    "displayName": "cssnewfeature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": false
+    },
+    "main_content": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "check"
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

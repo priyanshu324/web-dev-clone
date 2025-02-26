@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_link9s",
+  "info": {
+    "singularName": "home-link9",
+    "pluralName": "home-link9s",
+    "displayName": "home-link9"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

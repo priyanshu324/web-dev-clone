@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_privacy_items",
+  "info": {
+    "singularName": "learn-privacy-item",
+    "pluralName": "learn-privacy-items",
+    "displayName": "learn-privacy-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Read Article"
+    },
+    "articleLink": {
+      "type": "text"
+    }
+  }
+}

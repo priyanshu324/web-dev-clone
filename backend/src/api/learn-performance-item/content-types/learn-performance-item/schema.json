@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_performance_items",
+  "info": {
+    "singularName": "learn-performance-item",
+    "pluralName": "learn-performance-items",
+    "displayName": "learn-performance-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "bookmark"
+    },
+    "articleLink": {
+      "type": "text"
+    }
+  }
+}

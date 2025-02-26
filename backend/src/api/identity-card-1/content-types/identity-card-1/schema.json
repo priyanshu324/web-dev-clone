@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_card_1s",
+  "info": {
+    "singularName": "identity-card-1",
+    "pluralName": "identity-card-1s",
+    "displayName": "identity-card-1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Read case study",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    }
+  }
+}

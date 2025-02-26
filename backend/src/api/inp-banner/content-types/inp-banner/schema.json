@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inp_banners",
+  "info": {
+    "singularName": "inp-banner",
+    "pluralName": "inp-banners",
+    "displayName": "inp-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text"
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

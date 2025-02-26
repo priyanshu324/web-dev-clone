@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_page_speeds",
+  "info": {
+    "singularName": "performance-page-speed",
+    "pluralName": "performance-page-speeds",
+    "displayName": "performance-page-speed"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Get Started"
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

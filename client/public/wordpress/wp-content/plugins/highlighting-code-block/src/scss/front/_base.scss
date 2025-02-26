@@ -1,0 +1,274 @@
+@import "../root";
+
+
+// ベース（テーマに上書きされないよう、クラス２重にして詳細度あげておく）
+.hcb_wrap.hcb_wrap {
+	position: relative;
+	z-index: 0;
+	display: block;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding: 0;
+	font-size: var(--hcb--fz, 14px);
+
+	> pre {
+		position: static;
+		display: block;
+		box-sizing: border-box;
+		margin: 0;
+		padding: var(--hcb--pY) var(--hcb--pX);
+		overflow: auto;
+		font-size: inherit;
+		font-family: var(--hcb--ff);
+		line-height: 1.5;
+		letter-spacing: 0.1px;
+		border-radius: var(--hcb--radius, 0);
+		-webkit-overflow-scrolling: touch;
+	}
+
+	> pre,
+	> pre > code {
+		color: var(--hcb--c);
+		white-space: pre;
+		text-align: left;
+		text-shadow: var(--hcb--tsh);
+		word-wrap: normal;
+		word-break: normal;
+		word-spacing: normal;
+		tab-size: 4;
+		hyphens: none;
+		background: var(--hcb--bgc);
+		border: none;
+	}
+
+	:is(code, span) {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0; // 一部の海外テーマでズレが生じるのを防ぐ
+		font-size: inherit;
+		font-family: inherit;
+		line-height: inherit;
+	}
+}
+
+
+/*
+  Note: .line-highlight の出現位置は、行数表示があるかどうかで変わる。
+    行数表示がある → pre > .line-highlight
+    行数表示がない → pre > code > .line-highlight
+        また、このとき、.line-highlight は data-start, data-end を持つようになる。
+*/
+.hcb_wrap {
+	// .prism[data-line] > .line-highlight
+	.line-highlight {
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin-top: var(--hcb--pY);
+		padding: 0;
+		font-size: inherit;
+		line-height: inherit;
+		white-space: pre;
+		background: var(--hcb--highlight-color);
+		pointer-events: none;
+
+
+		// 1.8.0 で廃止
+		// &::before,
+		// &::after {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	box-sizing: border-box;
+		// 	min-width: 1.5em;
+		// 	padding: 1px 2px;
+		// 	color: var(--hcb--highlight-c);
+		// 	font-size: 12px;
+		// 	line-height: inherit;
+		// 	text-align: center;
+		// 	text-shadow: none;
+		// 	vertical-align: middle;
+		// 	background-color: var(--hcb--highlight-bgc);
+		// 	border-radius: 0;
+		// }
+
+		// &[data-start]::before {
+		// 	content: attr(data-start);
+		// }
+
+		// &[data-end]::after {
+		// 	top: auto;
+		// 	bottom: 0;
+		// 	content: attr(data-end);
+		// }
+	}
+
+	> .prism.line-numbers {
+		position: static; // pre の親の .hcb_wrap に追従させたい
+		padding-left: calc(var(--hcb--pX) + var(--hcb--linenumW)); // .hcb_wrap.hcb_wrap > pre に詳細度勝たないといけない
+		counter-reset: linenumber;
+
+		> code {
+			position: relative;
+			white-space: inherit;
+		}
+	}
+
+	.line-numbers-rows {
+		position: absolute;
+		top: -0.125em;
+		left: calc(-1px - var(--hcb--linenumW) - var(--hcb--pX) / 2);
+		min-width: var(--hcb--linenumW);
+		font-size: inherit;
+		// letter-spacing: -1px;
+		border-right: 1px solid var(--hcb--line-numbers--c);
+		user-select: none;
+		pointer-events: none;
+	}
+
+	.line-numbers-rows > span {
+		display: block;
+		letter-spacing: -0.25px;
+		text-align: center;
+		counter-increment: linenumber;
+		pointer-events: none;
+	}
+
+	.line-numbers-rows > span::before {
+		display: block;
+		color: var(--hcb--line-numbers--c);
+		content: counter(linenumber);
+	}
+
+	// scrollbar
+	> pre::-webkit-scrollbar {
+		height: 6px;
+	}
+
+	> pre::-webkit-scrollbar-track {
+		background: var(--hcb--scbar-track--bgc);
+		border: none;
+	}
+
+	> pre::-webkit-scrollbar-thumb {
+		background: var(--hcb--scbar-thumb--bgc);
+		border-radius: 3px;
+	}
+}
+
+
+// Inline code
+:not(pre) > code.prism {
+	padding: 0.1em;
+	white-space: normal;
+	border-radius: 0.3em;
+}
+
+
+// Lang Name, File Name
+.hcb_wrap > pre::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	box-sizing: border-box;
+	min-width: 4em;
+	padding: 0 10px;
+	color: var(--hcb--data-label--c);
+	font-size: 0.925em;
+	font-family: inherit;
+	line-height: 20px;
+	text-align: center;
+	background-color: var(--hcb--data-label--bgc);
+	border-radius: 0 var(--hcb--radius);
+	content: var(--hcb--data-label);
+}
+
+
+// 強制オフ時
+.hcb_wrap > pre[data-show-lang="0"] {
+	--hcb--data-label: none;
+}
+// 強制オン時
+.hcb_wrap > pre[data-show-lang="1"] {
+	--hcb--data-label: attr(data-lang);
+}
+
+
+// コピーボタンがある時
+// .hcb-clipboard + pre::before {
+// 	right: 26px;
+// }
+
+// ファイル名を表示する時
+.hcb_wrap > pre[data-file]::before {
+	padding: 0 8px 0 20px;
+	// background-colorを打ち消さないように分けて書く
+	background-image: var(--hcb--file-icon);
+	background-repeat: no-repeat;
+	background-position: center left 8px;
+	background-size: auto 10px;
+	content: attr(data-file);
+}
+
+// data-show-lang
+
+// コピーボタン
+/* stylelint-disable-next-line no-duplicate-selectors */
+.hcb_wrap {
+	--hcb-clipbtn-opacity: 0;
+}
+
+.hcb_wrap:hover,
+.hcb-clipboard:focus-visible {
+	--hcb-clipbtn-opacity: 100;
+}
+
+.hcb-clipboard {
+	position: absolute;
+	top: calc(var(--hcb--btn-offset, 0px) + 8px);
+	right: 8px;
+	z-index: 2;
+	box-sizing: border-box;
+	width: 2.25em;
+	height: 2.25em;
+	padding: 0;
+	color: #000;
+	text-align: center;
+	background: url(../../assets/img/clipboard-to-copy.svg) no-repeat center / 64% auto;
+	background-color: rgba(250, 250, 250, 0.8);
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(#3d3d3d, 0.25);
+	opacity: var(--hcb-clipbtn-opacity);
+	backdrop-filter: blur(2px);
+	transition: opacity 0.25s;
+
+	[data-show-lang="0"] + & {
+		--hcb--btn-offset: 0px;
+	}
+
+	[data-show-lang="1"] + & {
+		--hcb--btn-offset: 20px;
+	}
+
+	&.-done {
+		background-image: url(../../assets/img/clipboard-copied.svg);
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			right: calc(4px + 100%);
+			display: block;
+			padding: 2px 4px 2px 2px;
+			color: inherit;
+			font-size: 12px;
+			font-family: Arial, Helvetica, sans-serif;
+			line-height: 1;
+			background-color: inherit;
+			border-radius: 8px;
+			content: "✓Copied";
+			translate: 0 -50%;
+		}
+	}
+}

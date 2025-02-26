@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dive_into_css_patterns",
+  "info": {
+    "singularName": "dive-into-css-pattern",
+    "pluralName": "dive-into-css-patterns",
+    "displayName": "dive-into-css-pattern"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": false
+    },
+    "main_content": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "See Patterns",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

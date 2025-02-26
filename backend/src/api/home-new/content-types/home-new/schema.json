@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_news",
+  "info": {
+    "singularName": "home-new",
+    "pluralName": "home-news",
+    "displayName": "home-new",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn More"
+    },
+    "main_title": {
+      "type": "text",
+      "required": false
+    },
+    "main_content": {
+      "type": "text",
+      "required": false
+    }
+  }
+}

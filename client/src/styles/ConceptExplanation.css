@@ -1,0 +1,62 @@
+.concept-explanation {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 400px;
+}
+
+.concept-title {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.concept-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: #555;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.section-content {
+    line-height: 1.6;
+}
+
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.bullet-list li {
+    margin-bottom: 5px;
+}
+
+.code-block {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    /* Horizontal scroll if needed */
+    margin: 10px 0;
+}
+
+.code-block code {
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #222;
+    /* Adjust code color as needed */
+    display: block;
+    /* Ensures the code takes its own line */
+    white-space: pre;
+    /* Preserves whitespace and line breaks */
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_box4s",
+  "info": {
+    "singularName": "home-box4",
+    "pluralName": "home-box4s",
+    "displayName": "home-box4"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

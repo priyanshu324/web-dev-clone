@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_link10s",
+  "info": {
+    "singularName": "home-link10",
+    "pluralName": "home-link10s",
+    "displayName": "home-link10"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

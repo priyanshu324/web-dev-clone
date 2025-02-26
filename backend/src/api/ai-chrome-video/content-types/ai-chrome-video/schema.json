@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_chrome_videos",
+  "info": {
+    "singularName": "ai-chrome-video",
+    "pluralName": "ai-chrome-videos",
+    "displayName": "ai-chrome-video"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "videoLink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Watch on YouTube"
+    }
+  }
+}

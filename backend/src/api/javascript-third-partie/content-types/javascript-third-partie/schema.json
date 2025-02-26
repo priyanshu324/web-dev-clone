@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "javascript_third_parties",
+  "info": {
+    "singularName": "javascript-third-partie",
+    "pluralName": "javascript-third-parties",
+    "displayName": "javascript-third-partie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "main_content": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "default": "article",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

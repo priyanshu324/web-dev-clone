@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350" height="192" version="1.1" viewBox="0 0 350 192" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>React logo</title>
+ <g id="00-React" transform="translate(79)" fill="none" fill-rule="evenodd" stroke="#000">
+  <g id="Group" transform="translate(12,7)">
+   <ellipse id="Oval-Copy" transform="rotate(120,84,89)" cx="84" cy="89" rx="83.164" ry="30.959"/>
+   <ellipse transform="rotate(60,84,89)" cx="84" cy="89" rx="83.164" ry="30.959"/>
+   <ellipse cx="84" cy="89" rx="83.5" ry="30.832"/>
+  </g>
+  <circle id="Oval" cx="96" cy="96" r="15" fill="#2979ff"/>
+ </g>
+</svg>

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "html_new_to_htmls",
+  "info": {
+    "singularName": "html-new-to-html",
+    "pluralName": "html-new-to-htmls",
+    "displayName": "html-new-to-html",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "default": "COURSE",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn HTML!",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

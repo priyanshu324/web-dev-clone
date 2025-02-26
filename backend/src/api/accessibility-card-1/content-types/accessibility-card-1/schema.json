@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_card_1s",
+  "info": {
+    "singularName": "accessibility-card-1",
+    "pluralName": "accessibility-card-1s",
+    "displayName": "accessibility-card-1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": true,
+      "default": "COURSE"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    },
+    "main_title_1": {
+      "type": "text"
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

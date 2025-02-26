@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_chromes",
+  "info": {
+    "singularName": "ai-chrome",
+    "pluralName": "ai-chromes",
+    "displayName": "ai-chrome"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Read the doc",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

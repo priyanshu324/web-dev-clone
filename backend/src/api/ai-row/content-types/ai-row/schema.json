@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_rows",
+  "info": {
+    "singularName": "ai-row",
+    "pluralName": "ai-rows",
+    "displayName": "ai-row",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Read the doc"
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    },
+    "button_1": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    },
+    "path_1": {
+      "type": "text"
+    }
+  }
+}

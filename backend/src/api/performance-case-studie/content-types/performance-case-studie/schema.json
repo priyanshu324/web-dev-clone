@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_case_studies",
+  "info": {
+    "singularName": "performance-case-studie",
+    "pluralName": "performance-case-studies",
+    "displayName": "performance-case-studie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "speed"
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn More"
+    }
+  }
+}

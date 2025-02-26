@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "html_devtools",
+  "info": {
+    "singularName": "html-devtool",
+    "pluralName": "html-devtools",
+    "displayName": "html-devtool",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": false
+    },
+    "main_content": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "code"
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

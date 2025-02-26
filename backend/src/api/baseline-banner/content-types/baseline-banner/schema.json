@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "baseline_banners",
+  "info": {
+    "singularName": "baseline-banner",
+    "pluralName": "baseline-banners",
+    "displayName": "baseline-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

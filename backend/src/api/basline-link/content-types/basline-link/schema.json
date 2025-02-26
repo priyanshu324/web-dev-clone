@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basline_links",
+  "info": {
+    "singularName": "basline-link",
+    "pluralName": "basline-links",
+    "displayName": "basline-link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "link_1": {
+      "type": "text"
+    },
+    "link_2": {
+      "type": "text"
+    },
+    "link_3": {
+      "type": "string"
+    },
+    "link_4": {
+      "type": "text"
+    }
+  }
+}

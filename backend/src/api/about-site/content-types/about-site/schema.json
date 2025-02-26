@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_sites",
+  "info": {
+    "singularName": "about-site",
+    "pluralName": "about-sites",
+    "displayName": "about-site"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_2": {
+      "type": "text",
+      "required": true
+    },
+    "content_3": {
+      "type": "text",
+      "required": true
+    },
+    "content_4": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

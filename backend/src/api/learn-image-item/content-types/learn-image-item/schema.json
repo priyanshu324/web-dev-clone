@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_image_items",
+  "info": {
+    "singularName": "learn-image-item",
+    "pluralName": "learn-image-items",
+    "displayName": "learn-image-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Read Article",
+      "required": true
+    },
+    "articleLink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

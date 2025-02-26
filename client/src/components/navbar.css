@@ -1,0 +1,241 @@
+/* Custom CSS for NavBar */
+
+/* Styles for the logo */
+.nav-logo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #202124;
+    text-decoration: none;
+    /* Adding Transition for smooth hover effect */
+    transition: color 0.3s ease;
+}
+
+.nav-logo:hover{
+    color: #5f6368;
+}
+
+.dark .nav-logo {
+    color: #fff;
+}
+.dark .nav-logo:hover {
+    color: #e8eaed;
+}
+
+/* Styles for navigation links */
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #5f6368;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem; /* Padding for spacing */
+    border-radius: 0.25rem; /* Border radius */
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #202124;
+}
+
+.dark .nav-link {
+    color: #e8eaed;
+}
+.dark .nav-link:hover {
+    color: #fff;
+}
+
+/* Styles for active navigation links */
+.nav-link-active {
+    color: #1a73e8;
+}
+.dark .nav-link-active {
+  color: #8ab4f8;
+}
+
+/* Styles for the search input field */
+.search-input {
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5rem; /* Default padding */
+    border: 1px solid #dadce0; /* Default border */
+    border-radius: 0.25rem;
+    outline: none;
+    transition: border-color 0.2s ease-in-out; /* Smooth border color transition */
+    width: 150px; /* Default width */
+     height: 30px;
+}
+
+.search-input:focus {
+    border-color: #1a73e8;
+}
+.dark .search-input {
+  background-color: #3c4043;
+  border-color: #5f6368;
+  color: #e8eaed;
+}
+.dark .search-input:focus {
+  border-color: #8ab4f8;
+}
+
+/* Styles for the search close button */
+.search-close-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+/* Styles for the toggle slider (dark mode switch) */
+.toggle-slider {
+  display: inline-block;
+  width: 36px; /* Default width of the toggle switch */
+  height: 20px; /* Default height of the toggle switch */
+  background-color: #dadce0;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.dark .toggle-slider {
+  background-color: #5f6368;
+}
+
+/* Styles for the toggle slider handle */
+.toggle-slider::after {
+    content: '';
+    position: absolute;
+    width: 16px; /* Default width of the slider handle */
+    height: 16px; /* Default height of the slider handle */
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease; /* Smooth transition for the slider handle */
+}
+
+/* Style when the checkbox is checked */
+input[type='checkbox']:checked + .toggle-slider::after {
+    left: 18px; /* Move the slider to the right when checked */
+}
+
+/* Styles for the sign-in button */
+.sign-in-button {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.sign-in-button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sign-in-button:hover {
+    background-color: #134680;
+}
+
+.dark .sign-in-button {
+  background-color: #8ab4f8;
+  color: #202124;
+}
+
+.dark .sign-in-button:hover {
+    background-color: #5272a0;
+}
+/* Responsive styles using breakpoints */
+/*  Mobile: sm (640px)  */
+@media (min-width: 640px) {
+    .search-input {
+         padding: 0.6rem;
+         width: 200px;
+          height: 35px;
+    }
+    .toggle-slider{
+        width: 40px;
+        height: 22px;
+    }
+    .toggle-slider::after{
+        width: 18px;
+        height: 18px;
+    }
+     input[type='checkbox']:checked + .toggle-slider::after {
+        left: 20px; /* Move the slider to the right when checked */
+    }
+}
+/*  Tablet and laptop: md (768px) */
+@media (min-width: 768px) {
+    .search-input {
+         padding: 0.7rem;
+         width: 250px;
+         height: 40px;
+    }
+    .toggle-slider{
+        width: 44px;
+        height: 24px;
+    }
+    .toggle-slider::after{
+        width: 20px;
+        height: 20px;
+    }
+     input[type='checkbox']:checked + .toggle-slider::after {
+        left: 22px; /* Move the slider to the right when checked */
+    }
+}
+/* Large screen: lg (1024px) and above  */
+@media (min-width: 1024px) {
+    .search-input {
+        padding: 0.8rem;
+        width: 300px;
+        height: 45px;
+    }
+     .toggle-slider{
+        width: 48px;
+        height: 26px;
+    }
+    .toggle-slider::after{
+        width: 22px;
+        height: 22px;
+    }
+     input[type='checkbox']:checked + .toggle-slider::after {
+         left: 24px; /* Move the slider to the right when checked */
+    }
+}
+/* Larger screen: xl (1280px) and above */
+@media (min-width: 1280px) {
+    .search-input {
+        padding: 0.9rem;
+        width: 350px;
+         height: 50px;
+    }
+    .toggle-slider{
+        width: 52px;
+        height: 28px;
+    }
+    .toggle-slider::after{
+        width: 24px;
+        height: 24px;
+    }
+    input[type='checkbox']:checked + .toggle-slider::after {
+       left: 26px; /* Move the slider to the right when checked */
+    }
+}
+/* Extra large screen: 2xl(1536px) and above  */
+@media (min-width: 1536px) {
+    .search-input {
+        padding: 1rem;
+        width: 400px;
+         height: 55px;
+    }
+     .toggle-slider{
+        width: 56px;
+        height: 30px;
+    }
+    .toggle-slider::after{
+        width: 26px;
+        height: 26px;
+    }
+   input[type='checkbox']:checked + .toggle-slider::after {
+       left: 28px; /* Move the slider to the right when checked */
+    }
+}

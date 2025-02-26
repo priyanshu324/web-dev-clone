@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_accessibility_items",
+  "info": {
+    "singularName": "learn-accessibility-item",
+    "pluralName": "learn-accessibility-items",
+    "displayName": "learn-accessibility-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Read Article"
+    },
+    "articleLink": {
+      "type": "text"
+    }
+  }
+}

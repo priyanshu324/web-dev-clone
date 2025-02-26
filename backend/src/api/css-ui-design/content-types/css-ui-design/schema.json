@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "css_ui_designs",
+  "info": {
+    "singularName": "css-ui-design",
+    "pluralName": "css-ui-designs",
+    "displayName": "css-ui-design",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "main_content": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "default": "article",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_pmcs",
+  "info": {
+    "singularName": "identity-pmc",
+    "pluralName": "identity-pmcs",
+    "displayName": "identity-pmc"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    }
+  }
+}

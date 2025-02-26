@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_links",
+  "info": {
+    "singularName": "security-link",
+    "pluralName": "security-links",
+    "displayName": "security-link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "link_1": {
+      "type": "text",
+      "required": false
+    },
+    "link_2": {
+      "type": "text",
+      "required": false
+    },
+    "link_3": {
+      "type": "text"
+    },
+    "link_4": {
+      "type": "text"
+    },
+    "link_5": {
+      "type": "text"
+    },
+    "link_6": {
+      "type": "text"
+    }
+  }
+}

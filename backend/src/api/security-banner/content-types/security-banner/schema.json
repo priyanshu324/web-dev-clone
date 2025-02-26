@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "security_banners",
+  "info": {
+    "singularName": "security-banner",
+    "pluralName": "security-banners",
+    "displayName": "security-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

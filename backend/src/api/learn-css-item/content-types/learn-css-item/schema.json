@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_css_items",
+  "info": {
+    "singularName": "learn-css-item",
+    "pluralName": "learn-css-items",
+    "displayName": "learn-css-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Read Article",
+      "required": true
+    },
+    "articleLink": {
+      "type": "text",
+      "required": false
+    }
+  }
+}

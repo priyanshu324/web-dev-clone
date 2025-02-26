@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learns",
+  "info": {
+    "singularName": "learn",
+    "pluralName": "learns",
+    "displayName": "learn"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": true,
+      "default": "Course"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Start Course",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

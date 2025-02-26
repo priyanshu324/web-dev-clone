@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_overviews",
+  "info": {
+    "singularName": "identity-overview",
+    "pluralName": "identity-overviews",
+    "displayName": "identity-overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

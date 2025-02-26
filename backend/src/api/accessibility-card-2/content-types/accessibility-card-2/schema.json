@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_card_2s",
+  "info": {
+    "singularName": "accessibility-card-2",
+    "pluralName": "accessibility-card-2s",
+    "displayName": "accessibility-card-2",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "article"
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Learn More"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

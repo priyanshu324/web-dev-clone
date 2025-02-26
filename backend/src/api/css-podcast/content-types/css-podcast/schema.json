@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "css_podcasts",
+  "info": {
+    "singularName": "css-podcast",
+    "pluralName": "css-podcasts",
+    "displayName": "css-podcast"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Listen Now!",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

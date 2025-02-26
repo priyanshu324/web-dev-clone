@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_link7s",
+  "info": {
+    "singularName": "home-link7",
+    "pluralName": "home-link7s",
+    "displayName": "home-link7",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

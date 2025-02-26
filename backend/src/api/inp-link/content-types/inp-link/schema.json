@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inp_links",
+  "info": {
+    "singularName": "inp-link",
+    "pluralName": "inp-links",
+    "displayName": "inp-link",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "link_1": {
+      "type": "text"
+    },
+    "link_2": {
+      "type": "text"
+    },
+    "link_3": {
+      "type": "text"
+    },
+    "link_4": {
+      "type": "text"
+    },
+    "link_5": {
+      "type": "text"
+    },
+    "link_6": {
+      "type": "text"
+    },
+    "link_7": {
+      "type": "text"
+    }
+  }
+}

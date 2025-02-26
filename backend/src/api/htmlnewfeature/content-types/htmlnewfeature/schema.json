@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "htmlnewfeatures",
+  "info": {
+    "singularName": "htmlnewfeature",
+    "pluralName": "htmlnewfeatures",
+    "displayName": "htmlnewfeature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "main_content": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "check"
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

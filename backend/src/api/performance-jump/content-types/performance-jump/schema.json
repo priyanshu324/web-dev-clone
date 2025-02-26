@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_jumps",
+  "info": {
+    "singularName": "performance-jump",
+    "pluralName": "performance-jumps",
+    "displayName": "performance-jump",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    }
+  }
+}

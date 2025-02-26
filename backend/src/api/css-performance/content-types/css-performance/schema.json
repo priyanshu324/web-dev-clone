@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "css_performances",
+  "info": {
+    "singularName": "css-performance",
+    "pluralName": "css-performances",
+    "displayName": "css-performance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "main_content": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "required": true,
+      "default": "article"
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

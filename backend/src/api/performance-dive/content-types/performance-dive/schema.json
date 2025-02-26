@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_dives",
+  "info": {
+    "singularName": "performance-dive",
+    "pluralName": "performance-dives",
+    "displayName": "performance-dive",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn More",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

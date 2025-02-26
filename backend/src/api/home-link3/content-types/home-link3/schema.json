@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_link3s",
+  "info": {
+    "singularName": "home-link3",
+    "pluralName": "home-link3s",
+    "displayName": "home-link3"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

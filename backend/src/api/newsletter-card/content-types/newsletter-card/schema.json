@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsletter_cards",
+  "info": {
+    "singularName": "newsletter-card",
+    "pluralName": "newsletter-cards",
+    "displayName": "newsletter-card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

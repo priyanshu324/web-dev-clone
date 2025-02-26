@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "js_new_to_jses",
+  "info": {
+    "singularName": "js-new-to-js",
+    "pluralName": "js-new-to-jses",
+    "displayName": "js-new-to-js"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn Javascript!",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

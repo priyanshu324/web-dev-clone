@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basline_overviews",
+  "info": {
+    "singularName": "basline-overview",
+    "pluralName": "basline-overviews",
+    "displayName": "basline-overview",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": false
+    },
+    "main_content": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text"
+    },
+    "title_2": {
+      "type": "text"
+    },
+    "title_3": {
+      "type": "text"
+    }
+  }
+}

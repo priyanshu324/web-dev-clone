@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_core_web_titles",
+  "info": {
+    "singularName": "performance-core-web-title",
+    "pluralName": "performance-core-web-titles",
+    "displayName": "performance-core-web-title",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

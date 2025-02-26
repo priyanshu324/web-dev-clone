@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_html_items",
+  "info": {
+    "singularName": "learn-html-item",
+    "pluralName": "learn-html-items",
+    "displayName": "learn-html-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Read Article"
+    },
+    "articleLink": {
+      "type": "text"
+    }
+  }
+}

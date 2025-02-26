@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsletter_banners",
+  "info": {
+    "singularName": "newsletter-banner",
+    "pluralName": "newsletter-banners",
+    "displayName": "newsletter-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

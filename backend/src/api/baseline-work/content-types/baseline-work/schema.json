@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "baseline_works",
+  "info": {
+    "singularName": "baseline-work",
+    "pluralName": "baseline-works",
+    "displayName": "baseline-work"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text",
+      "required": false
+    },
+    "icons": {
+      "type": "text",
+      "default": "check",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

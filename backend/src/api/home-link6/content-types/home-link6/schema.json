@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_link6s",
+  "info": {
+    "singularName": "home-link6",
+    "pluralName": "home-link6s",
+    "displayName": "home-link6"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

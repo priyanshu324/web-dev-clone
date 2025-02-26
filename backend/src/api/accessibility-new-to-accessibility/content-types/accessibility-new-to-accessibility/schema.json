@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessibility_new_to_accessibilities",
+  "info": {
+    "singularName": "accessibility-new-to-accessibility",
+    "pluralName": "accessibility-new-to-accessibilities",
+    "displayName": "accessibility-new-to-accessibility",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": "Learn Accessibility",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

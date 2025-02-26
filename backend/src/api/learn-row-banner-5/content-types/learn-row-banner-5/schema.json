@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_row_banner_5s",
+  "info": {
+    "singularName": "learn-row-banner-5",
+    "pluralName": "learn-row-banner-5s",
+    "displayName": "learn-row-banner-5"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "icons": {
+      "type": "text",
+      "default": "bookmark",
+      "required": true
+    },
+    "activities": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

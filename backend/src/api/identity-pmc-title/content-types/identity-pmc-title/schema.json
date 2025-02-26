@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_pmc_titles",
+  "info": {
+    "singularName": "identity-pmc-title",
+    "pluralName": "identity-pmc-titles",
+    "displayName": "identity-pmc-title"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

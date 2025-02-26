@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_case_studie_titles",
+  "info": {
+    "singularName": "performance-case-studie-title",
+    "pluralName": "performance-case-studie-titles",
+    "displayName": "performance-case-studie-title",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

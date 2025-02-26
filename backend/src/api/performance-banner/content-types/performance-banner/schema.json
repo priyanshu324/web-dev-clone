@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "performance_banners",
+  "info": {
+    "singularName": "performance-banner",
+    "pluralName": "performance-banners",
+    "displayName": "performance-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

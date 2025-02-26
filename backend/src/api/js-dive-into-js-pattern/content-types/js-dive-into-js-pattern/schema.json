@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "js_dive_into_js_patterns",
+  "info": {
+    "singularName": "js-dive-into-js-pattern",
+    "pluralName": "js-dive-into-js-patterns",
+    "displayName": "js-dive-into-js-pattern"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "main_title": {
+      "type": "text",
+      "required": false
+    },
+    "main_content": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "See Patterns"
+    },
+    "path": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "explore_excellent_websites",
+  "info": {
+    "singularName": "explore-excellent-website",
+    "pluralName": "explore-excellent-websites",
+    "displayName": "explore-excellent-website",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "imglink": {
+      "type": "text",
+      "required": true
+    },
+    "main_title": {
+      "type": "text"
+    }
+  }
+}

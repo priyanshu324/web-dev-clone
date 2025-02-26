@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_chrome_1s",
+  "info": {
+    "singularName": "ai-chrome-1",
+    "pluralName": "ai-chrome-1s",
+    "displayName": "ai-chrome-1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title_1": {
+      "type": "text",
+      "required": true
+    },
+    "content_1": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Read the doc"
+    },
+    "button_1": {
+      "type": "text",
+      "default": "Read the doc",
+      "required": true
+    }
+  }
+}

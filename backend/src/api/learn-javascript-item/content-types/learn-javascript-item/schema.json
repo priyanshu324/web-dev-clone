@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learn_javascript_items",
+  "info": {
+    "singularName": "learn-javascript-item",
+    "pluralName": "learn-javascript-items",
+    "displayName": "learn-javascript-item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "required": true,
+      "default": "Read Article"
+    },
+    "articleLink": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

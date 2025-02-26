@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ai_chrome_video_titles",
+  "info": {
+    "singularName": "ai-chrome-video-title",
+    "pluralName": "ai-chrome-video-titles",
+    "displayName": "ai-chrome-video-title"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true,
+      "default": "Web AI Summit 2024"
+    },
+    "icons": {
+      "type": "text",
+      "default": "movie",
+      "required": true
+    },
+    "button": {
+      "type": "text",
+      "default": " Watch the recordings",
+      "required": true
+    }
+  }
+}

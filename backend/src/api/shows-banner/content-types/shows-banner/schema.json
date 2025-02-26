@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shows_banners",
+  "info": {
+    "singularName": "shows-banner",
+    "pluralName": "shows-banners",
+    "displayName": "shows-banner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

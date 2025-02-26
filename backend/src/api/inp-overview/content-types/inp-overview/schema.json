@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inp_overviews",
+  "info": {
+    "singularName": "inp-overview",
+    "pluralName": "inp-overviews",
+    "displayName": "inp-overview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "key": {
+      "type": "integer",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
